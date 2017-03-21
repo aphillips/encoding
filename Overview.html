@@ -1191,15 +1191,15 @@ specification, excluding <a data-link-type="dfn" href="#index-single-byte" id="r
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="index-big5">index Big5</dfn> 
       <td><a href="https://encoding.spec.whatwg.org/index-big5.txt">index-big5.txt</a> 
-      <td><a href="big5.html">index Big5 visualization</a> 
-      <td><a href="big5-bmp.html">index Big5 BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/big5.html">index Big5 visualization</a> 
+      <td><a href="https://encoding.spec.whatwg.org/big5-bmp.html">index Big5 BMP coverage</a> 
       <td>This matches the Big5 standard in combination with the
   Hong Kong Supplementary Character Set and other common extensions. 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="index-euc-kr">index EUC-KR</dfn> 
       <td><a href="https://encoding.spec.whatwg.org/index-euc-kr.txt">index-euc-kr.txt</a> 
-      <td><a href="euc-kr.html">index EUC-KR visualization</a> 
-      <td><a href="euc-kr-bmp.html">index EUC-KR BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/euc-kr.html">index EUC-KR visualization</a> 
+      <td><a href="https://encoding.spec.whatwg.org/euc-kr-bmp.html">index EUC-KR BMP coverage</a> 
       <td>This matches the KS X 1001 standard and the Unified Hangul Code, more commonly known together
   as Windows Codepage 949. It covers the Hangul Syllables block of Unicode in its entirety. The
   Hangul block whose top left corner in the visualization is at pointer 9026 is in the Unicode
@@ -1208,8 +1208,8 @@ specification, excluding <a data-link-type="dfn" href="#index-single-byte" id="r
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="index-gb18030">index gb18030</dfn> 
       <td><a href="https://encoding.spec.whatwg.org/index-gb18030.txt">index-gb18030.txt</a> 
-      <td><a href="gb18030.html">index gb18030 visualization</a> 
-      <td><a href="gb18030-bmp.html">index gb18030 BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/gb18030.html">index gb18030 visualization</a> 
+      <td><a href="https://encoding.spec.whatwg.org/gb18030-bmp.html">index gb18030 BMP coverage</a> 
       <td>This matches the GB18030-2005 standard for code points encoded as two bytes, except for
   0xA3 0xA0 which maps to U+3000 to be compatible with deployed content. This index covers the
   CJK Unified Ideographs block of Unicode in its entirety. Entries from that block that are above or
@@ -1224,15 +1224,15 @@ specification, excluding <a data-link-type="dfn" href="#index-single-byte" id="r
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="index-jis0208">index jis0208</dfn> 
       <td><a href="https://encoding.spec.whatwg.org/index-jis0208.txt">index-jis0208.txt</a> 
-      <td><a href="jis0208.html">index jis0208 visualization</a>, <a href="shift_jis.html">Shift_JIS visualization</a> 
-      <td><a href="jis0208-bmp.html">index jis0208 BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/jis0208.html">index jis0208 visualization</a>, <a href="shift_jis.html">Shift_JIS visualization</a> 
+      <td><a href="https://encoding.spec.whatwg.org/jis0208-bmp.html">index jis0208 BMP coverage</a> 
       <td>This is the JIS X 0208 standard including formerly proprietary
   extensions from IBM and NEC. 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="index-jis0212">index jis0212</dfn> 
       <td><a href="https://encoding.spec.whatwg.org/index-jis0212.txt">index-jis0212.txt</a> 
-      <td><a href="jis0212.html">index jis0212 visualization</a> 
-      <td><a href="jis0212-bmp.html">index jis0212 BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/jis0212.html">index jis0212 visualization</a> 
+      <td><a href="https://encoding.spec.whatwg.org/jis0212-bmp.html">index jis0212 BMP coverage</a> 
       <td>This is the JIS X 0212 standard. It is only used by the <a data-link-type="dfn" href="#euc-jp-decoder" id="ref-for-euc-jp-decoder-1">EUC-JP decoder</a> due to lack of widespread support elsewhere. 
    </table>
    <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="index-gb18030-ranges-code-point">index gb18030 ranges code point</dfn> for <var>pointer</var> is
@@ -2769,7 +2769,19 @@ the extent possible under law, the editors have waived all copyright and related
 neighboring rights to this work. </p>
 
 <h2 class="no-num heading settled" id="changes"><span class="content">Changes</span><a class="self-link" href="#changes"></a></h2>
-   <p></p>
+   <p>Changes since this document was previously updated are editorial and can be found <a href="https://github.com/whatwg/encoding/commits/master">in the GitHub log</a>. 
+      The following changes have been made since the previous W3C version of this document:</p>
+   <ol>
+	   <li>Link web-platform-tests</li>
+	   <li>Fix formatting of code and add new to a constructor</li>
+	   <li>Add visualizations for the indexes<br>Exposing the PUA code points as PUA in HTML is useful to seeing what those code points map 
+	       to (if to anything) in system fonts, which may give insights about their usage. Exposing singletons (compatibility ideographs and 
+	       scientific units) without normalizing them is useful for having browser "Find" functionality match whatever you get as output of a 
+	       converter you might be developing.</li>
+	   <li>Mark certain references non-normative</li>
+	   <li>Fixed HTML validation errors.</li>
+	   <li>Remove the DOM reference as it’s not actually needed for anything.</li>
+   </ol>
   
   
 </main>
