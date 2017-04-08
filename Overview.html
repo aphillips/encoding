@@ -1,13 +1,13 @@
-<!doctype html><html lang="en">
+<!doctype html><html lang="en" dir="ltr">
  <head>
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <meta charset="UTF-8">
   <title>Encoding</title>
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
   <meta content="CR" name="w3c-status">
   <meta content="The Encoding Standard defines encodings and their JavaScript API." name="abstract">
 
-  <meta content="Bikeshed version fa6d32dea6b39d19cbb9dd6d5e69f189e8bdd53f" name="generator">
-  <link href="visualization-colors.css" rel="stylesheet">
+  <meta content="Bikeshed version 81c00a31d8c468599cf8337dd150a8be9a2b4e5d" name="generator">
+  <link href="https://www.w3.org/TR/encoding/" rel="canonical">
   <link rel="stylesheet" href="https://www.w3.org/TR/encoding/local.css" type="text/css">
 <style>/* style-md-lists */
 
@@ -251,17 +251,17 @@ pre.idl.highlight { color: #708090; }
         .highlight .vi { color: #0077aa } /* Name.Variable.Instance */
         .highlight .il { color: #000000 } /* Literal.Number.Integer.Long */
         </style>
-        <link href="https://www.w3.org/StyleSheets/TR/2016/W3C-CR" rel="stylesheet" type="text/css">
-        <script src="//www.w3.org/scripts/TR/2016/fixup.js"></script>
+     <script src="//www.w3.org/scripts/TR/2016/fixup.js"></script>
+     <link href="https://www.w3.org/StyleSheets/TR/2016/W3C-CR" rel="stylesheet" type="text/css">
  <body class="h-entry">
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72"> </a> </p>
    <h1 class="p-name no-ref" id="title">Encoding</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">W3C Candidate Recommendation, <time class="dt-updated" datetime="2017-03-17">17 March 2017</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">W3C Candidate Recommendation, <time class="dt-updated" datetime="2017-04-08">8 April 2017</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
-     <dd><a class="u-url" href="https://www.w3.org/TR/2017/CR-encoding-20170317/">https://www.w3.org/TR/2017/CR-encoding-20170317/</a>
+     <dd><a class="u-url" href="https://www.w3.org/TR/2017/CR-encoding-20170408/">https://www.w3.org/TR/2017/CR-encoding-20170408/</a>
      <dt>Latest published version:
      <dd><a href="https://www.w3.org/TR/encoding/">https://www.w3.org/TR/encoding/</a>
      <dt>Editor's Draft:
@@ -272,7 +272,8 @@ pre.idl.highlight { color: #708090; }
      <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:annevk@annevk.nl">Anne van Kesteren</a>
      <dd class="editor p-author h-card vcard"><span class="p-name fn">Joshua Bell</span> (<span class="p-org org">Google</span>)
      <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:addison@amazon.com">Addison Phillips</a> (<span class="p-org org">Invited Expert</span>)
-     <dt>Implementation report:</dt>
+    </dl>
+          <dt>Implementation report:</dt>
       <dd><a href="https://www.w3.org/International/docs/encoding/implementation-report">https://www.w3.org/International/docs/encoding/implementation-report</a></dd>
       <dt>Bug tracker:</dt>
       <dd><a href="https://github.com/whatwg/encoding/issues">file a bug</a> (<a href="https://github.com/whatwg/encoding/issues">open bugs</a>)</dd>
@@ -280,7 +281,6 @@ pre.idl.highlight { color: #708090; }
       <dd>
         <a href="https://github.com/whatwg/encoding/">repository</a>
       </dd>
-    </dl>
    </div>
    <div data-fill-with="warning"></div>
    <p class="copyright" data-fill-with="copyright"><a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2017 <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="http://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="http://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>). W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply. </p>
@@ -288,7 +288,7 @@ pre.idl.highlight { color: #708090; }
   </div>
   <h2 class="no-num no-toc no-ref heading settled" id="abstract"><span class="content">Abstract</span></h2>
   <div class="p-summary" data-fill-with="abstract">
-    <p>The UTF-8 encoding is the most appropriate encoding for interchange of Unicode, the universal coded character set. Therefore for new protocols and formats, as well as existing formats deployed in new contexts, this specification requires (and defines) the utf-8 encoding. </p>
+	      <p>The utf-8 encoding is the most appropriate encoding for interchange of Unicode, the universal coded character set. Therefore for new protocols and formats, as well as existing formats deployed in new contexts, this specification requires (and defines) the utf-8 encoding. </p>
     <p>The other (legacy) encodings have been defined to some extent in the past. However, user agents have not always implemented them in the same way, have not always used the same labels, and often differ in dealing with undefined and former proprietary areas of encodings. This specification addresses those gaps so that new user agents do not have to reverse engineer encoding implementations and existing user agents can converge. </p>
   </div>
   <h2 class="no-num no-toc no-ref heading settled" id="status"><span class="content">Status of this document</span></h2>
@@ -297,7 +297,7 @@ pre.idl.highlight { color: #708090; }
 		Other documents may supersede this document.
 		A list of current W3C publications and the latest revision of this technical report
 		can be found in the <a href="https://www.w3.org/TR/">W3C technical reports index at https://www.w3.org/TR/.</a></em> </p>
-     <p class="stability" id="wip">The body of this spec is an exact copy of the WHATWG version as of the date of its publication, intended to provide a stable reference for other specifications. For the latest updates, including changes since this snapshot was published, please look at the <a href="http://encoding.spec.whatwg.org/">WHATWG version</a>.
+  <p class="stability" id="wip">The body of this spec is an exact copy of the WHATWG version as of the date of its publication, intended to provide a stable reference for other specifications. For the latest updates, including changes since this snapshot was published, please look at the <a href="http://encoding.spec.whatwg.org/">WHATWG version</a>.
 <input onclick="closeWarning(this.parentNode)" type="button" value="X"></p>
   <script>
    function closeWarning(element) {
@@ -314,8 +314,8 @@ pre.idl.highlight { color: #708090; }
   </script>
 
 
-    <p>This is a snapshot of the WHATWG document, as of 17 March 2017, published with the knowledge of the WHATWG editors. No changes have been made in the body of this document other than to align with <abbr title="World Wide Web Consortium">W3C</abbr> house styles. The primary reason that <abbr title="World Wide Web Consortium">W3C</abbr> is publishing this document is so that HTML5 and other specifications may normatively refer to a stable <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation.</p>
-    <p>This update of the Candidate Recommendation reflects editorial changes made to the editor's draft since its previous publication as CR.</p>
+    <p>This is a snapshot of the WHATWG document, as of 8 April 2017, published with the knowledge of the WHATWG editors. No changes have been made in the body of this document other than to align with <abbr title="World Wide Web Consortium">W3C</abbr> house styles. The primary reason that <abbr title="World Wide Web Consortium">W3C</abbr> is publishing this document is so that HTML5 and other specifications may normatively refer to a stable <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation.</p>
+    <p>This update of the Candidate Recommendation reflects editorial changes made to the WHATWG version since its previous publication as CR.</p>
     <div class="note">
       <div class="note-title marker" aria-level="3" role="heading" id="h-note1"><span>Note</span></div>
       <div class="">
@@ -344,7 +344,8 @@ pre.idl.highlight { color: #708090; }
    <p> This document is governed by the <a href="https://www.w3.org/2017/Process-20170301/" id="w3c_process_revision">1 March 2017 W3C Process Document</a>. </p>
    <p> For changes since the last draft,
 	see the <a href="#changes">Changes</a> section. </p>
-	<p>Please see the Working Group's <a href="https://www.w3.org/International/docs/encoding/implementation-report">implementation report</a>.</p>
+   <p>Please see the Working Group's <a href="https://www.w3.org/International/docs/encoding/implementation-report">implementation report</a>.</p>
+
    <p></p>
   </div>
   <div data-fill-with="at-risk"></div>
@@ -474,16 +475,15 @@ pre.idl.highlight { color: #708090; }
        </ol>
      </ol>
     <li><a href="#browser-ui"><span class="secno">15</span> <span class="content">Browser UI</span></a>
+    <li><a href="#implementation-considerations"><span class="secno"></span> <span class="content">Implementation considerations</span></a>
+    <li><a href="#changes"><span class="secno"></span> <span class="content">Changes</span></a>
     <li><a href="#acknowledgments"><span class="secno"></span> <span class="content">Acknowledgments</span></a>
-     <li>
-     <a href="#changes"><span class="secno"></span> <span class="content">Changes</span></a></li>
     <li>
      <a href="#references"><span class="secno"></span> <span class="content">References</span></a>
      <ol class="toc">
       <li><a href="#normative"><span class="secno"></span> <span class="content">Normative References</span></a>
       <li><a href="#informative"><span class="secno"></span> <span class="content">Informative References</span></a>
      </ol>
-
    </ol>
   </nav>
   <main>
@@ -537,9 +537,9 @@ many reasons that is now the mandatory encoding for all things. </p>
    <p>This specification depends on the Infra Standard. <a data-link-type="biblio" href="#biblio-infra">[INFRA]</a> </p>
    <p>Hexadecimal numbers are prefixed with "0x". </p>
    <p>In equations, all numbers are integers, addition is represented by "+", subtraction by "−",
-multiplication by "×", division by "/", calculating the remainder of a division (also known as
-modulo) by "%", logical left shifts by "&lt;&lt;", logical right shifts by ">>", bitwise AND by
-"&amp;", and bitwise OR by "|". floor(<var>x</var>) is the largest integer not greater than <var>x</var>. </p>
+multiplication by "×", integer division by "/" (returns the quotient), modulo by "%" (returns the
+remainder of an integer division), logical left shifts by "&lt;&lt;", logical right shifts by ">>",
+bitwise AND by "&amp;", and bitwise OR by "|". </p>
    <p>For logical right shifts operands must have at least twenty-one bits precision. </p>
    <hr>
    <p>A <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="concept-token">token</dfn> is a piece of data, such as a <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#byte">byte</a> or <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#code-point">code point</a>. </p>
@@ -1502,7 +1502,7 @@ the <a data-link-type="dfn" href="#decode" id="ref-for-decode-2">decode</a> algo
 control. </p>
    <hr>
    <dl class="domintro">
-    <dt><code><var>decoder</var> = new <a class="idl-code" data-link-type="constructor" href="#dom-textdecoder" id="ref-for-dom-textdecoder-2">TextDecoder([<var>label</var> = "utf-8" [, <var>options</var>]])</a></code> 
+    <dt><code><var>decoder</var> = new <a class="idl-code" data-link-type="constructor">TextDecoder([<var>label</var> = "utf-8" [, <var>options</var>]])</a></code> 
     <dd>
      <p>Returns a new <code class="idl"><a data-link-type="idl" href="#textdecoder" id="ref-for-textdecoder-4">TextDecoder</a></code> object. </p>
      <p>If <var>label</var> is either not a <a data-link-type="dfn" href="#label" id="ref-for-label-10">label</a> or is a <a data-link-type="dfn" href="#label" id="ref-for-label-11">label</a> for <a data-link-type="dfn" href="#replacement" id="ref-for-replacement-6">replacement</a>, <a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-throw">throws</a> a <code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#exceptiondef-rangeerror">RangeError</a></code>. </p>
@@ -1516,7 +1516,7 @@ control. </p>
     <dt><code><var>decoder</var> . <a class="idl-code" data-link-type="attribute" href="#dom-textdecoder-ignorebom" id="ref-for-dom-textdecoder-ignorebom-2">ignoreBOM</a></code> 
     <dd>
      <p>Returns true if <a data-link-type="dfn" href="#textdecoder-ignore-bom-flag" id="ref-for-textdecoder-ignore-bom-flag-2">ignore BOM flag</a> is set, and false otherwise. </p>
-    <dt><code><var>decoder</var> . <a class="idl-code" data-link-type="method" href="#dom-textdecoder-decode" id="ref-for-dom-textdecoder-decode-2">decode([<var>input</var> [, <var>options</var>]])</a></code> 
+    <dt><code><var>decoder</var> . <a class="idl-code" data-link-type="method">decode([<var>input</var> [, <var>options</var>]])</a></code> 
     <dd>
      <p>Returns the result of running <a data-link-type="dfn" href="#textdecoder-encoding" id="ref-for-textdecoder-encoding-3">encoding</a>’s <a data-link-type="dfn" href="#decoder" id="ref-for-decoder-12">decoder</a>. The method can
   be invoked zero or more times with <var>options</var>’s <code>stream</code> set to true, and then
@@ -1560,7 +1560,10 @@ true if <a data-link-type="dfn" href="#textdecoder-ignore-bom-flag" id="ref-for-
     <li>
      <p>If <var>options</var>’s <code>stream</code> is true, set the <a data-link-type="dfn" href="#textdecoder-do-not-flush-flag" id="ref-for-textdecoder-do-not-flush-flag-2">do not flush flag</a>, and unset the <a data-link-type="dfn" href="#textdecoder-do-not-flush-flag" id="ref-for-textdecoder-do-not-flush-flag-3">do not flush flag</a> otherwise. </p>
     <li>
-     <p>If <var>input</var> is given, <a data-link-type="dfn" href="#concept-stream-push" id="ref-for-concept-stream-push-3">push</a> a <a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-get-buffer-source-copy">copy of</a> <var>input</var> to <a data-link-type="dfn" href="#textdecoder-stream" id="ref-for-textdecoder-stream-2">stream</a>. </p>
+     <p>If <var>input</var> is given, then <a data-link-type="dfn" href="#concept-stream-push" id="ref-for-concept-stream-push-3">push</a> a <a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-get-buffer-source-copy">copy of</a> <var>input</var> to <a data-link-type="dfn" href="#textdecoder-stream" id="ref-for-textdecoder-stream-2">stream</a>. </p>
+     <p class="note" role="note">Implementations are strongly encouraged to use an implementation strategy that
+  avoids this copy. When doing so they will have to make sure that changes to <var>input</var> do
+  not affect future calls to <a class="idl-code" data-link-type="method" href="#dom-textdecoder-decode" id="ref-for-dom-textdecoder-decode-2"><code>decode()</code></a>. </p>
     <li>
      <p>Let <var>output</var> be a new <a data-link-type="dfn" href="#concept-stream" id="ref-for-concept-stream-16">stream</a>. </p>
     <li>
@@ -1604,7 +1607,7 @@ buffering of scalar values. </p>
     <dt><code><var>encoder</var> . <a class="idl-code" data-link-type="attribute" href="#dom-textencoder-encoding" id="ref-for-dom-textencoder-encoding-2">encoding</a></code> 
     <dd>
      <p>Returns "<code>utf-8</code>". </p>
-    <dt><code><var>encoder</var> . <a class="idl-code" data-link-type="method" href="#dom-textencoder-encode" id="ref-for-dom-textencoder-encode-2">encode([<var>input</var> = ""])</a></code> 
+    <dt><code><var>encoder</var> . <a class="idl-code" data-link-type="method">encode([<var>input</var> = ""])</a></code> 
     <dd>
      <p>Returns the result of running <a data-link-type="dfn" href="#utf-8" id="ref-for-utf-8-16">UTF-8</a>’s <a data-link-type="dfn" href="#encoder" id="ref-for-encoder-10">encoder</a>. </p>
    </dl>
@@ -1777,145 +1780,145 @@ unique <a data-link-type="dfn" href="#index" id="ref-for-index-11">index</a>. </
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="ibm866">IBM866</dfn>
       <td><a href="https://encoding.spec.whatwg.org/index-ibm866.txt">index-ibm866.txt</a>
-      <td><a href="ibm866.html">index IBM866 visualization</a>
-      <td><a href="ibm866-bmp.html">index IBM866 BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/ibm866.html">index IBM866 visualization</a>
+      <td><a href="https://encoding.spec.whatwg.org/ibm866-bmp.html">index IBM866 BMP coverage</a> 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="iso-8859-2">ISO-8859-2</dfn>
       <td><a href="https://encoding.spec.whatwg.org/index-iso-8859-2.txt">index-iso-8859-2.txt</a>
-      <td><a href="iso-8859-2.html">index ISO-8859-2 visualization</a>
-      <td><a href="iso-8859-2-bmp.html">index ISO-8859-2 BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/iso-8859-2.html">index ISO-8859-2 visualization</a>
+      <td><a href="https://encoding.spec.whatwg.org/iso-8859-2-bmp.html">index ISO-8859-2 BMP coverage</a> 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="iso-8859-3">ISO-8859-3</dfn>
       <td><a href="https://encoding.spec.whatwg.org/index-iso-8859-3.txt">index-iso-8859-3.txt</a>
-      <td><a href="iso-8859-3.html">index ISO-8859-3 visualization</a>
-      <td><a href="iso-8859-3-bmp.html">index ISO-8859-3 BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/iso-8859-3.html">index ISO-8859-3 visualization</a>
+      <td><a href="https://encoding.spec.whatwg.org/iso-8859-3-bmp.html">index ISO-8859-3 BMP coverage</a> 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="iso-8859-4">ISO-8859-4</dfn>
       <td><a href="https://encoding.spec.whatwg.org/index-iso-8859-4.txt">index-iso-8859-4.txt</a>
-      <td><a href="iso-8859-4.html">index ISO-8859-4 visualization</a>
-      <td><a href="iso-8859-4-bmp.html">index ISO-8859-4 BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/iso-8859-4.html">index ISO-8859-4 visualization</a>
+      <td><a href="https://encoding.spec.whatwg.org/iso-8859-4-bmp.html">index ISO-8859-4 BMP coverage</a> 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="iso-8859-5">ISO-8859-5</dfn>
       <td><a href="https://encoding.spec.whatwg.org/index-iso-8859-5.txt">index-iso-8859-5.txt</a>
-      <td><a href="iso-8859-5.html">index ISO-8859-5 visualization</a>
-      <td><a href="iso-8859-5-bmp.html">index ISO-8859-5 BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/iso-8859-5.html">index ISO-8859-5 visualization</a>
+      <td><a href="https://encoding.spec.whatwg.org/iso-8859-5-bmp.html">index ISO-8859-5 BMP coverage</a> 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="iso-8859-6">ISO-8859-6</dfn>
       <td><a href="https://encoding.spec.whatwg.org/index-iso-8859-6.txt">index-iso-8859-6.txt</a>
-      <td><a href="iso-8859-6.html">index ISO-8859-6 visualization</a>
-      <td><a href="iso-8859-6-bmp.html">index ISO-8859-6 BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/iso-8859-6.html">index ISO-8859-6 visualization</a>
+      <td><a href="https://encoding.spec.whatwg.org/iso-8859-6-bmp.html">index ISO-8859-6 BMP coverage</a> 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="iso-8859-7">ISO-8859-7</dfn>
       <td><a href="https://encoding.spec.whatwg.org/index-iso-8859-7.txt">index-iso-8859-7.txt</a>
-      <td><a href="iso-8859-7.html">index ISO-8859-7 visualization</a>
-      <td><a href="iso-8859-7-bmp.html">index ISO-8859-7 BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/iso-8859-7.html">index ISO-8859-7 visualization</a>
+      <td><a href="https://encoding.spec.whatwg.org/iso-8859-7-bmp.html">index ISO-8859-7 BMP coverage</a> 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="iso-8859-8">ISO-8859-8</dfn>
       <td rowspan="2"><a href="https://encoding.spec.whatwg.org/index-iso-8859-8.txt">index-iso-8859-8.txt</a>
-      <td rowspan="2"><a href="iso-8859-8.html">index ISO-8859-8 visualization</a>
-      <td rowspan="2"><a href="iso-8859-8-bmp.html">index ISO-8859-8 BMP coverage</a> 
+      <td rowspan="2"><a href="https://encoding.spec.whatwg.org/iso-8859-8.html">index ISO-8859-8 visualization</a>
+      <td rowspan="2"><a href="https://encoding.spec.whatwg.org/iso-8859-8-bmp.html">index ISO-8859-8 BMP coverage</a> 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="iso-8859-8-i">ISO-8859-8-I</dfn> 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="iso-8859-10">ISO-8859-10</dfn>
       <td><a href="https://encoding.spec.whatwg.org/index-iso-8859-10.txt">index-iso-8859-10.txt</a>
-      <td><a href="iso-8859-10.html">index ISO-8859-10 visualization</a>
-      <td><a href="iso-8859-10-bmp.html">index ISO-8859-10 BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/iso-8859-10.html">index ISO-8859-10 visualization</a>
+      <td><a href="https://encoding.spec.whatwg.org/iso-8859-10-bmp.html">index ISO-8859-10 BMP coverage</a> 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="iso-8859-13">ISO-8859-13</dfn>
       <td><a href="https://encoding.spec.whatwg.org/index-iso-8859-13.txt">index-iso-8859-13.txt</a>
-      <td><a href="iso-8859-13.html">index ISO-8859-13 visualization</a>
-      <td><a href="iso-8859-13-bmp.html">index ISO-8859-13 BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/iso-8859-13.html">index ISO-8859-13 visualization</a>
+      <td><a href="https://encoding.spec.whatwg.org/iso-8859-13-bmp.html">index ISO-8859-13 BMP coverage</a> 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="iso-8859-14">ISO-8859-14</dfn>
       <td><a href="https://encoding.spec.whatwg.org/index-iso-8859-14.txt">index-iso-8859-14.txt</a>
-      <td><a href="iso-8859-14.html">index ISO-8859-14 visualization</a>
-      <td><a href="iso-8859-14-bmp.html">index ISO-8859-14 BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/iso-8859-14.html">index ISO-8859-14 visualization</a>
+      <td><a href="https://encoding.spec.whatwg.org/iso-8859-14-bmp.html">index ISO-8859-14 BMP coverage</a> 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="iso-8859-15">ISO-8859-15</dfn>
       <td><a href="https://encoding.spec.whatwg.org/index-iso-8859-15.txt">index-iso-8859-15.txt</a>
-      <td><a href="iso-8859-15.html">index ISO-8859-15 visualization</a>
-      <td><a href="iso-8859-15-bmp.html">index ISO-8859-15 BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/iso-8859-15.html">index ISO-8859-15 visualization</a>
+      <td><a href="https://encoding.spec.whatwg.org/iso-8859-15-bmp.html">index ISO-8859-15 BMP coverage</a> 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="iso-8859-16">ISO-8859-16</dfn>
       <td><a href="https://encoding.spec.whatwg.org/index-iso-8859-16.txt">index-iso-8859-16.txt</a>
-      <td><a href="iso-8859-16.html">index ISO-8859-16 visualization</a>
-      <td><a href="iso-8859-16-bmp.html">index ISO-8859-16 BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/iso-8859-16.html">index ISO-8859-16 visualization</a>
+      <td><a href="https://encoding.spec.whatwg.org/iso-8859-16-bmp.html">index ISO-8859-16 BMP coverage</a> 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="koi8-r">KOI8-R</dfn>
       <td><a href="https://encoding.spec.whatwg.org/index-koi8-r.txt">index-koi8-r.txt</a>
-      <td><a href="koi8-r.html">index KOI8-R visualization</a>
-      <td><a href="koi8-r-bmp.html">index KOI8-R BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/koi8-r.html">index KOI8-R visualization</a>
+      <td><a href="https://encoding.spec.whatwg.org/koi8-r-bmp.html">index KOI8-R BMP coverage</a> 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="koi8-u">KOI8-U</dfn>
       <td><a href="https://encoding.spec.whatwg.org/index-koi8-u.txt">index-koi8-u.txt</a>
-      <td><a href="koi8-u.html">index KOI8-U visualization</a>
-      <td><a href="koi8-u-bmp.html">index KOI8-U BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/koi8-u.html">index KOI8-U visualization</a>
+      <td><a href="https://encoding.spec.whatwg.org/koi8-u-bmp.html">index KOI8-U BMP coverage</a> 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="macintosh">macintosh</dfn>
       <td><a href="https://encoding.spec.whatwg.org/index-macintosh.txt">index-macintosh.txt</a>
-      <td><a href="macintosh.html">index macintosh visualization</a>
-      <td><a href="macintosh-bmp.html">index macintosh BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/macintosh.html">index macintosh visualization</a>
+      <td><a href="https://encoding.spec.whatwg.org/macintosh-bmp.html">index macintosh BMP coverage</a> 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="windows-874">windows-874</dfn>
       <td><a href="https://encoding.spec.whatwg.org/index-windows-874.txt">index-windows-874.txt</a>
-      <td><a href="windows-874.html">index windows-874 visualization</a>
-      <td><a href="windows-874-bmp.html">index windows-874 BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/windows-874.html">index windows-874 visualization</a>
+      <td><a href="https://encoding.spec.whatwg.org/windows-874-bmp.html">index windows-874 BMP coverage</a> 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="windows-1250">windows-1250</dfn>
       <td><a href="https://encoding.spec.whatwg.org/index-windows-1250.txt">index-windows-1250.txt</a>
-      <td><a href="windows-1250.html">index windows-1250 visualization</a>
-      <td><a href="windows-1250-bmp.html">index windows-1250 BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/windows-1250.html">index windows-1250 visualization</a>
+      <td><a href="https://encoding.spec.whatwg.org/windows-1250-bmp.html">index windows-1250 BMP coverage</a> 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="windows-1251">windows-1251</dfn>
       <td><a href="https://encoding.spec.whatwg.org/index-windows-1251.txt">index-windows-1251.txt</a>
-      <td><a href="windows-1251.html">index windows-1251 visualization</a>
-      <td><a href="windows-1251-bmp.html">index windows-1251 BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/windows-1251.html">index windows-1251 visualization</a>
+      <td><a href="https://encoding.spec.whatwg.org/windows-1251-bmp.html">index windows-1251 BMP coverage</a> 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="windows-1252">windows-1252</dfn>
       <td><a href="https://encoding.spec.whatwg.org/index-windows-1252.txt">index-windows-1252.txt</a>
-      <td><a href="windows-1252.html">index windows-1252 visualization</a>
-      <td><a href="windows-1252-bmp.html">index windows-1252 BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/windows-1252.html">index windows-1252 visualization</a>
+      <td><a href="https://encoding.spec.whatwg.org/windows-1252-bmp.html">index windows-1252 BMP coverage</a> 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="windows-1253">windows-1253</dfn>
       <td><a href="https://encoding.spec.whatwg.org/index-windows-1253.txt">index-windows-1253.txt</a>
-      <td><a href="windows-1253.html">index windows-1253 visualization</a>
-      <td><a href="windows-1253-bmp.html">index windows-1253 BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/windows-1253.html">index windows-1253 visualization</a>
+      <td><a href="https://encoding.spec.whatwg.org/windows-1253-bmp.html">index windows-1253 BMP coverage</a> 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="windows-1254">windows-1254</dfn>
       <td><a href="https://encoding.spec.whatwg.org/index-windows-1254.txt">index-windows-1254.txt</a>
-      <td><a href="windows-1254.html">index windows-1254 visualization</a>
-      <td><a href="windows-1254-bmp.html">index windows-1254 BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/windows-1254.html">index windows-1254 visualization</a>
+      <td><a href="https://encoding.spec.whatwg.org/windows-1254-bmp.html">index windows-1254 BMP coverage</a> 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="windows-1255">windows-1255</dfn>
       <td><a href="https://encoding.spec.whatwg.org/index-windows-1255.txt">index-windows-1255.txt</a>
-      <td><a href="windows-1255.html">index windows-1255 visualization</a>
-      <td><a href="windows-1255-bmp.html">index windows-1255 BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/windows-1255.html">index windows-1255 visualization</a>
+      <td><a href="https://encoding.spec.whatwg.org/windows-1255-bmp.html">index windows-1255 BMP coverage</a> 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="windows-1256">windows-1256</dfn>
       <td><a href="https://encoding.spec.whatwg.org/index-windows-1256.txt">index-windows-1256.txt</a>
-      <td><a href="windows-1256.html">index windows-1256 visualization</a>
-      <td><a href="windows-1256-bmp.html">index windows-1256 BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/windows-1256.html">index windows-1256 visualization</a>
+      <td><a href="https://encoding.spec.whatwg.org/windows-1256-bmp.html">index windows-1256 BMP coverage</a> 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="windows-1257">windows-1257</dfn>
       <td><a href="https://encoding.spec.whatwg.org/index-windows-1257.txt">index-windows-1257.txt</a>
-      <td><a href="windows-1257.html">index windows-1257 visualization</a>
-      <td><a href="windows-1257-bmp.html">index windows-1257 BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/windows-1257.html">index windows-1257 visualization</a>
+      <td><a href="https://encoding.spec.whatwg.org/windows-1257-bmp.html">index windows-1257 BMP coverage</a> 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="windows-1258">windows-1258</dfn>
       <td><a href="https://encoding.spec.whatwg.org/index-windows-1258.txt">index-windows-1258.txt</a>
-      <td><a href="windows-1258.html">index windows-1258 visualization</a>
-      <td><a href="windows-1258-bmp.html">index windows-1258 BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/windows-1258.html">index windows-1258 visualization</a>
+      <td><a href="https://encoding.spec.whatwg.org/windows-1258-bmp.html">index windows-1258 BMP coverage</a> 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="x-mac-cyrillic">x-mac-cyrillic</dfn>
       <td><a href="https://encoding.spec.whatwg.org/index-x-mac-cyrillic.txt">index-x-mac-cyrillic.txt</a>
-      <td><a href="x-mac-cyrillic.html">index x-mac-cyrillic visualization</a>
-      <td><a href="x-mac-cyrillic-bmp.html">index x-mac-cyrillic BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/x-mac-cyrillic.html">index x-mac-cyrillic visualization</a>
+      <td><a href="https://encoding.spec.whatwg.org/x-mac-cyrillic-bmp.html">index x-mac-cyrillic BMP coverage</a> 
    </table>
    <p class="note" role="note"><a data-link-type="dfn" href="#iso-8859-8" id="ref-for-iso-8859-8-2">ISO-8859-8</a> and <a data-link-type="dfn" href="#iso-8859-8-i" id="ref-for-iso-8859-8-i-2">ISO-8859-8-I</a> are
 distinct <a data-link-type="dfn" href="#encoding" id="ref-for-encoding-21">encoding</a> <a data-link-type="dfn" href="#name" id="ref-for-name-5">names</a>, because <a data-link-type="dfn" href="#iso-8859-8" id="ref-for-iso-8859-8-3">ISO-8859-8</a> has influence on the layout direction. And although
 historically this might have been the case for <a data-link-type="dfn" href="#iso-8859-6" id="ref-for-iso-8859-6-2">ISO-8859-6</a> and
-"iso-8859-6-i" as well, that is no longer true. </p>
+"ISO-8859-6-I" as well, that is no longer true. </p>
    <h3 class="heading settled dfn-paneled" data-dfn-type="dfn" data-export="" data-level="9.1" data-lt="single-byte decoder" id="single-byte-decoder"><span class="secno">9.1. </span><span class="content">single-byte decoder</span></h3>
    <p><a data-link-type="dfn" href="#single-byte-encoding" id="ref-for-single-byte-encoding-4">Single-byte encodings</a>’s <a data-link-type="dfn" href="#decoder" id="ref-for-decoder-18">decoder</a>’s <a data-link-type="dfn" href="#handler" id="ref-for-handler-5">handler</a>, given a <var>stream</var> and <var>byte</var>, runs these steps: </p>
    <ol>
@@ -2046,7 +2049,7 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
      <p>If <var>pointer</var> is not null, run these substeps: </p>
      <ol>
       <li>
-       <p>Let <var>lead</var> be floor(<var>pointer</var> / 190) + 0x81. </p>
+       <p>Let <var>lead</var> be <var>pointer</var> / 190 + 0x81. </p>
       <li>
        <p>Let <var>trail</var> be <var>pointer</var> % 190. </p>
       <li>
@@ -2060,15 +2063,15 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
     <li>
      <p>Set <var>pointer</var> to the <a data-link-type="dfn" href="#index-gb18030-ranges-pointer" id="ref-for-index-gb18030-ranges-pointer-2">index gb18030 ranges pointer</a> for <var>code point</var>. </p>
     <li>
-     <p>Let <var>byte1</var> be floor(<var>pointer</var> / (10 × 126 × 10)). </p>
+     <p>Let <var>byte1</var> be <var>pointer</var> / (10 × 126 × 10). </p>
     <li>
      <p>Set <var>pointer</var> to <var>pointer</var> % (10 × 126 × 10). </p>
     <li>
-     <p>Let <var>byte2</var> be floor(<var>pointer</var> / (10 × 126)). </p>
+     <p>Let <var>byte2</var> be <var>pointer</var> / (10 × 126). </p>
     <li>
      <p>Set <var>pointer</var> to <var>pointer</var> % (10 × 126). </p>
     <li>
-     <p>Let <var>byte3</var> be floor(<var>pointer</var> / 10). </p>
+     <p>Let <var>byte3</var> be <var>pointer</var> / 10. </p>
     <li>
      <p>Let <var>byte4</var> be <var>pointer</var> % 10. </p>
     <li>
@@ -2152,7 +2155,7 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
     <li>
      <p>If <var>pointer</var> is null, return <a data-link-type="dfn" href="#error" id="ref-for-error-23">error</a> with <var>code point</var>. </p>
     <li>
-     <p>Let <var>lead</var> be floor(<var>pointer</var> / 157) + 0x81. </p>
+     <p>Let <var>lead</var> be <var>pointer</var> / 157 + 0x81. </p>
     <li>
      <p>Let <var>trail</var> be <var>pointer</var> % 157. </p>
     <li>
@@ -2229,7 +2232,7 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
     <li>
      <p>If <var>pointer</var> is null, return <a data-link-type="dfn" href="#error" id="ref-for-error-27">error</a> with <var>code point</var>. </p>
     <li>
-     <p>Let <var>lead</var> be floor(<var>pointer</var> / 94) + 0xA1. </p>
+     <p>Let <var>lead</var> be <var>pointer</var> / 94 + 0xA1. </p>
     <li>
      <p>Let <var>trail</var> be <var>pointer</var> % 94 + 0xA1. </p>
     <li>
@@ -2240,7 +2243,7 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
    <p><a data-link-type="dfn" href="#iso-2022-jp" id="ref-for-iso-2022-jp-3">ISO-2022-JP</a>’s <a data-link-type="dfn" href="#decoder" id="ref-for-decoder-27">decoder</a> has an associated <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="iso-2022-jp-decoder-state">ISO-2022-JP decoder state</dfn> (initially <a data-link-type="dfn" href="#iso-2022-jp-decoder-ascii" id="ref-for-iso-2022-jp-decoder-ascii-1">ASCII</a>), <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="iso-2022-jp-decoder-output-state">ISO-2022-JP decoder output state</dfn> (initially <a data-link-type="dfn" href="#iso-2022-jp-decoder-ascii" id="ref-for-iso-2022-jp-decoder-ascii-2">ASCII</a>), <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="iso-2022-jp-lead">ISO-2022-JP lead</dfn> (initially 0x00), and <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="iso-2022-jp-output-flag">ISO-2022-JP output flag</dfn> (initially unset). </p>
    <p><a data-link-type="dfn" href="#iso-2022-jp" id="ref-for-iso-2022-jp-4">ISO-2022-JP</a>’s <a data-link-type="dfn" href="#decoder" id="ref-for-decoder-28">decoder</a>’s <a data-link-type="dfn" href="#handler" id="ref-for-handler-13">handler</a>, given a <var>stream</var> and <var>byte</var>, runs these steps, switching on <a data-link-type="dfn" href="#iso-2022-jp-decoder-state" id="ref-for-iso-2022-jp-decoder-state-1">ISO-2022-JP decoder state</a>: </p>
    <dl class="switch">
-    <dt><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="iso 2022 jp decoder ASCII" data-noexport="" id="iso-2022-jp-decoder-ascii">ASCII</dfn> 
+    <dt><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="ISO-2022-JP decoder ASCII" data-noexport="" id="iso-2022-jp-decoder-ascii">ASCII</dfn> 
     <dd>
      <p>Based on <var>byte</var>: </p>
      <dl class="switch">
@@ -2258,7 +2261,7 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
       <dd>
        <p>Unset the <a data-link-type="dfn" href="#iso-2022-jp-output-flag" id="ref-for-iso-2022-jp-output-flag-2">ISO-2022-JP output flag</a> and return <a data-link-type="dfn" href="#error" id="ref-for-error-28">error</a>. </p>
      </dl>
-    <dt><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="iso 2022 jp decoder Roman" data-noexport="" id="iso-2022-jp-decoder-roman">Roman</dfn> 
+    <dt><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="ISO-2022-JP decoder Roman" data-noexport="" id="iso-2022-jp-decoder-roman">Roman</dfn> 
     <dd>
      <p>Based on <var>byte</var>: </p>
      <dl class="switch">
@@ -2282,7 +2285,7 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
       <dd>
        <p>Unset the <a data-link-type="dfn" href="#iso-2022-jp-output-flag" id="ref-for-iso-2022-jp-output-flag-6">ISO-2022-JP output flag</a> and return <a data-link-type="dfn" href="#error" id="ref-for-error-29">error</a>. </p>
      </dl>
-    <dt><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="iso 2022 jp decoder Katakana" data-noexport="" id="iso-2022-jp-decoder-katakana">Katakana</dfn> 
+    <dt><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="ISO-2022-JP decoder Katakana" data-noexport="" id="iso-2022-jp-decoder-katakana">Katakana</dfn> 
     <dd>
      <p>Based on <var>byte</var>: </p>
      <dl class="switch">
@@ -2300,7 +2303,7 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
       <dd>
        <p>Unset the <a data-link-type="dfn" href="#iso-2022-jp-output-flag" id="ref-for-iso-2022-jp-output-flag-8">ISO-2022-JP output flag</a> and return <a data-link-type="dfn" href="#error" id="ref-for-error-30">error</a>. </p>
      </dl>
-    <dt><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="iso 2022 jp decoder lead byte" data-noexport="" id="iso-2022-jp-decoder-lead-byte">Lead byte</dfn> 
+    <dt><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="ISO-2022-JP decoder lead byte" data-noexport="" id="iso-2022-jp-decoder-lead-byte">Lead byte</dfn> 
     <dd>
      <p>Based on <var>byte</var>: </p>
      <dl class="switch">
@@ -2317,7 +2320,7 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
       <dd>
        <p>Unset the <a data-link-type="dfn" href="#iso-2022-jp-output-flag" id="ref-for-iso-2022-jp-output-flag-10">ISO-2022-JP output flag</a> and return <a data-link-type="dfn" href="#error" id="ref-for-error-31">error</a>. </p>
      </dl>
-    <dt><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="iso 2022 jp decoder trail byte" data-noexport="" id="iso-2022-jp-decoder-trail-byte">Trail byte</dfn> 
+    <dt><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="ISO-2022-JP decoder trail byte" data-noexport="" id="iso-2022-jp-decoder-trail-byte">Trail byte</dfn> 
     <dd>
      <p>Based on <var>byte</var>: </p>
      <dl class="switch">
@@ -2346,7 +2349,7 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
       <dd>
        <p>Set <a data-link-type="dfn" href="#iso-2022-jp-decoder-state" id="ref-for-iso-2022-jp-decoder-state-10">ISO-2022-JP decoder state</a> to <a data-link-type="dfn" href="#iso-2022-jp-decoder-lead-byte" id="ref-for-iso-2022-jp-decoder-lead-byte-3">lead byte</a> and return <a data-link-type="dfn" href="#error" id="ref-for-error-35">error</a>. </p>
      </dl>
-    <dt><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="iso 2022 jp decoder escape start" data-noexport="" id="iso-2022-jp-decoder-escape-start">Escape start</dfn> 
+    <dt><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="ISO-2022-JP decoder escape start" data-noexport="" id="iso-2022-jp-decoder-escape-start">Escape start</dfn> 
     <dd>
      <ol>
       <li>
@@ -2356,7 +2359,7 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
       <li>
        <p>Unset the <a data-link-type="dfn" href="#iso-2022-jp-output-flag" id="ref-for-iso-2022-jp-output-flag-11">ISO-2022-JP output flag</a>, set <a data-link-type="dfn" href="#iso-2022-jp-decoder-state" id="ref-for-iso-2022-jp-decoder-state-12">ISO-2022-JP decoder state</a> to <a data-link-type="dfn" href="#iso-2022-jp-decoder-output-state" id="ref-for-iso-2022-jp-decoder-output-state-1">ISO-2022-JP decoder output state</a>, and return <a data-link-type="dfn" href="#error" id="ref-for-error-36">error</a>. </p>
      </ol>
-    <dt><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="iso 2022 jp decoder escape" data-noexport="" id="iso-2022-jp-decoder-escape">Escape</dfn> 
+    <dt><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="ISO-2022-JP decoder escape" data-noexport="" id="iso-2022-jp-decoder-escape">Escape</dfn> 
     <dd>
      <ol>
       <li>
@@ -2390,8 +2393,8 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
        <p>Unset the <a data-link-type="dfn" href="#iso-2022-jp-output-flag" id="ref-for-iso-2022-jp-output-flag-14">ISO-2022-JP output flag</a>, set <a data-link-type="dfn" href="#iso-2022-jp-decoder-state" id="ref-for-iso-2022-jp-decoder-state-14">ISO-2022-JP decoder state</a> to <a data-link-type="dfn" href="#iso-2022-jp-decoder-output-state" id="ref-for-iso-2022-jp-decoder-output-state-3">ISO-2022-JP decoder output state</a> and return <a data-link-type="dfn" href="#error" id="ref-for-error-38">error</a>. </p>
      </ol>
    </dl>
-   <h4 class="heading settled" data-dfn-type="dfn" data-export="" data-level="12.2.2" data-lt="ISO-2022-JP encoder" id="iso-2022-jp-encoder"><span class="secno">12.2.2. </span><span class="content">ISO-2022-JP encoder</span><a class="self-link" href="#iso-2022-jp-encoder"></a></h4>
-   <p><a data-link-type="dfn" href="#iso-2022-jp" id="ref-for-iso-2022-jp-5">ISO-2022-JP</a>’s <a data-link-type="dfn" href="#encoder" id="ref-for-encoder-22">encoder</a> has an associated <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="iso-2022-jp-encoder-state">ISO-2022-JP encoder state</dfn> which is <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="iso 2022 jp encoder ASCII" data-noexport="" id="iso-2022-jp-encoder-ascii">ASCII</dfn>, <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="iso 2022 jp encoder Roman" data-noexport="" id="iso-2022-jp-encoder-roman">Roman</dfn>, or <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="iso 2022 jp encoder jis0208" data-noexport="" id="iso-2022-jp-encoder-jis0208">jis0208</dfn> (initially <a data-link-type="dfn" href="#iso-2022-jp-encoder-ascii" id="ref-for-iso-2022-jp-encoder-ascii-1">ASCII</a>). </p>
+   <h4 class="heading settled dfn-paneled" data-dfn-type="dfn" data-export="" data-level="12.2.2" data-lt="ISO-2022-JP encoder" id="iso-2022-jp-encoder"><span class="secno">12.2.2. </span><span class="content">ISO-2022-JP encoder</span></h4>
+   <p><a data-link-type="dfn" href="#iso-2022-jp" id="ref-for-iso-2022-jp-5">ISO-2022-JP</a>’s <a data-link-type="dfn" href="#encoder" id="ref-for-encoder-22">encoder</a> has an associated <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="iso-2022-jp-encoder-state">ISO-2022-JP encoder state</dfn> which is <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="ISO-2022-JP encoder ASCII" data-noexport="" id="iso-2022-jp-encoder-ascii">ASCII</dfn>, <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="ISO-2022-JP encoder Roman" data-noexport="" id="iso-2022-jp-encoder-roman">Roman</dfn>, or <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="ISO-2022-JP encoder jis0208" data-noexport="" id="iso-2022-jp-encoder-jis0208">jis0208</dfn> (initially <a data-link-type="dfn" href="#iso-2022-jp-encoder-ascii" id="ref-for-iso-2022-jp-encoder-ascii-1">ASCII</a>). </p>
    <p><a data-link-type="dfn" href="#iso-2022-jp" id="ref-for-iso-2022-jp-6">ISO-2022-JP</a>’s <a data-link-type="dfn" href="#encoder" id="ref-for-encoder-23">encoder</a>’s <a data-link-type="dfn" href="#handler" id="ref-for-handler-14">handler</a>, given a <var>stream</var> and <var>code point</var>, runs these steps: </p>
    <ol>
     <li>
@@ -2402,7 +2405,7 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
     <li>
      <p>If <a data-link-type="dfn" href="#iso-2022-jp-encoder-state" id="ref-for-iso-2022-jp-encoder-state-4">ISO-2022-JP encoder state</a> is <a data-link-type="dfn" href="#iso-2022-jp-encoder-ascii" id="ref-for-iso-2022-jp-encoder-ascii-5">ASCII</a> or <a data-link-type="dfn" href="#iso-2022-jp-encoder-roman" id="ref-for-iso-2022-jp-encoder-roman-1">Roman</a>, and <var>code point</var> is U+000E, U+000F,
   or U+001B, return <a data-link-type="dfn" href="#error" id="ref-for-error-39">error</a> with U+FFFD. </p>
-     <p class="note" role="note">This returns U+FFFD rather than the <var>code point</var> to prevent attacks. </p>
+     <p class="note" role="note">This returns U+FFFD rather than <var>code point</var> to prevent attacks. </p>
     <li>
      <p>If <a data-link-type="dfn" href="#iso-2022-jp-encoder-state" id="ref-for-iso-2022-jp-encoder-state-5">ISO-2022-JP encoder state</a> is <a data-link-type="dfn" href="#iso-2022-jp-encoder-ascii" id="ref-for-iso-2022-jp-encoder-ascii-6">ASCII</a> and <var>code point</var> is an <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#ascii-code-point">ASCII code point</a>, return a byte whose value is <var>code point</var>. </p>
     <li>
@@ -2434,7 +2437,7 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
      <p>If <a data-link-type="dfn" href="#iso-2022-jp-encoder-state" id="ref-for-iso-2022-jp-encoder-state-11">ISO-2022-JP encoder state</a> is not <a data-link-type="dfn" href="#iso-2022-jp-encoder-jis0208" id="ref-for-iso-2022-jp-encoder-jis0208-1">jis0208</a>, <a data-link-type="dfn" href="#concept-stream-prepend" id="ref-for-concept-stream-prepend-17">prepend</a> <var>code point</var> to <var>stream</var>, set <a data-link-type="dfn" href="#iso-2022-jp-encoder-state" id="ref-for-iso-2022-jp-encoder-state-12">ISO-2022-JP encoder state</a> to <a data-link-type="dfn" href="#iso-2022-jp-encoder-jis0208" id="ref-for-iso-2022-jp-encoder-jis0208-2">jis0208</a>, and return three bytes
  0x1B 0x24 0x42. </p>
     <li>
-     <p>Let <var>lead</var> be floor(<var>pointer</var> / 94) + 0x21. </p>
+     <p>Let <var>lead</var> be <var>pointer</var> / 94 + 0x21. </p>
     <li>
      <p>Let <var>trail</var> be <var>pointer</var> % 94 + 0x21. </p>
     <li>
@@ -2509,7 +2512,7 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
     <li>
      <p>If <var>pointer</var> is null, return <a data-link-type="dfn" href="#error" id="ref-for-error-44">error</a> with <var>code point</var>. </p>
     <li>
-     <p>Let <var>lead</var> be floor(<var>pointer</var> / 188). </p>
+     <p>Let <var>lead</var> be <var>pointer</var> / 188. </p>
     <li>
      <p>Let <var>lead offset</var> be 0x81, if <var>lead</var> is
  less than 0x1F, and 0xC1 otherwise. </p>
@@ -2570,7 +2573,7 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
     <li>
      <p>If <var>pointer</var> is null, return <a data-link-type="dfn" href="#error" id="ref-for-error-48">error</a> with <var>code point</var>. </p>
     <li>
-     <p>Let <var>lead</var> be floor(<var>pointer</var> / 190) + 0x81. </p>
+     <p>Let <var>lead</var> be <var>pointer</var> / 190 + 0x81. </p>
     <li>
      <p>Let <var>trail</var> be <var>pointer</var> % 190 + 0x41. </p>
     <li>
@@ -2693,6 +2696,36 @@ it is defined separately as it can be implemented algorithmically. </p>
    <p>Browsers are encouraged to not enable overriding the encoding of a resource. If such a
 feature is nonetheless present, browsers should not offer either <a data-link-type="dfn" href="#utf-16be" id="ref-for-utf-16be-10">UTF-16BE</a> or <a data-link-type="dfn" href="#utf-16le" id="ref-for-utf-16le-11">UTF-16LE</a> as option due to aforementioned security
 issues. Browsers also should disable this feature if the resource was decoded using either <a data-link-type="dfn" href="#utf-16be" id="ref-for-utf-16be-11">UTF-16BE</a> or <a data-link-type="dfn" href="#utf-16le" id="ref-for-utf-16le-12">UTF-16LE</a>. </p>
+   <h2 class="no-num heading settled" id="implementation-considerations"><span class="content">Implementation considerations</span><a class="self-link" href="#implementation-considerations"></a></h2>
+   <p>Instead of supporting <a data-link-type="dfn" href="#concept-stream" id="ref-for-concept-stream-19">streams</a> with arbitrary <a data-link-type="dfn" href="#concept-stream-prepend" id="ref-for-concept-stream-prepend-21">prepend</a>, the <a data-link-type="dfn" href="#decoder" id="ref-for-decoder-38">decoders</a> for <a data-link-type="dfn" href="#encoding" id="ref-for-encoding-24">encodings</a> in this standard could be implemented with: </p>
+   <ol>
+    <li>
+     <p>The ability to unread the current byte. </p>
+    <li>
+     <p>A single-byte buffer for <a data-link-type="dfn" href="#gb18030" id="ref-for-gb18030-9">gb18030</a> (an <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#ascii-byte">ASCII byte</a>) and <a data-link-type="dfn" href="#iso-2022-jp" id="ref-for-iso-2022-jp-7">ISO-2022-JP</a> (0x24 or
+  0x28). </p>
+     <p class="example" id="example-d0f9fcde"><a class="self-link" href="#example-d0f9fcde"></a>For <a data-link-type="dfn" href="#gb18030" id="ref-for-gb18030-10">gb18030</a> when hitting a bogus byte while <a data-link-type="dfn" href="#gb18030-third" id="ref-for-gb18030-third-9">gb18030 third</a> is not
+  0x00, <a data-link-type="dfn" href="#gb18030-second" id="ref-for-gb18030-second-11">gb18030 second</a> could be moved into the single-byte buffer to be returned next, and <a data-link-type="dfn" href="#gb18030-third" id="ref-for-gb18030-third-10">gb18030 third</a> would be the new <a data-link-type="dfn" href="#gb18030-first" id="ref-for-gb18030-first-11">gb18030 first</a>, checked for not being 0x00 after the
+  single-byte buffer was returned and emptied. This is possible as the range for the first and third
+  byte in <a data-link-type="dfn" href="#gb18030" id="ref-for-gb18030-11">gb18030</a> is identical. </p>
+   </ol>
+   <p>The <a data-link-type="dfn" href="#iso-2022-jp-encoder" id="ref-for-iso-2022-jp-encoder-1">ISO-2022-JP encoder</a> needs <a data-link-type="dfn" href="#iso-2022-jp-encoder-state" id="ref-for-iso-2022-jp-encoder-state-13">ISO-2022-JP encoder state</a> as additional state, but
+other than that, none of the <a data-link-type="dfn" href="#encoder" id="ref-for-encoder-27">encoders</a> for <a data-link-type="dfn" href="#encoding" id="ref-for-encoding-25">encodings</a> in this standard
+require additional state or buffers. </p>
+   <h2 class="no-num heading settled" id="changes"><span class="content">Changes</span><a class="self-link" href="#changes"></a></h2>
+   <p>Changes since this document was previously updated are editorial and can be found <a href="https://github.com/whatwg/encoding/commits/master">in the GitHub log</a>. 
+      The following changes have been made since the previous W3C version of this document:</p>
+   <ol>
+    <li>Link web-platform-tests
+    <li>Fix formatting of code and add new to a constructor
+    <li>Add visualizations for the indexes<br>Exposing the PUA code points as PUA in HTML is useful to seeing what those code points map 
+	       to (if to anything) in system fonts, which may give insights about their usage. Exposing singletons (compatibility ideographs and 
+	       scientific units) without normalizing them is useful for having browser "Find" functionality match whatever you get as output of a 
+	       converter you might be developing.
+    <li>Mark certain references non-normative
+    <li>Fixed HTML validation errors.
+    <li>Remove the DOM reference as it’s not actually needed for anything.
+   </ol>
    <h2 class="no-num heading settled" id="acknowledgments"><span class="content">Acknowledgments</span><a class="self-link" href="#acknowledgments"></a></h2>
    <p>There have been a lot of people that have helped make encodings more
 interoperable over the years and thereby furthered the goals of this
@@ -2767,24 +2800,7 @@ was initially written by Joshua Bell (<a href="https://www.google.com/">Google</
    <p>Per <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="license">CC0</a>, to
 the extent possible under law, the editors have waived all copyright and related or
 neighboring rights to this work. </p>
-
-<h2 class="no-num heading settled" id="changes"><span class="content">Changes</span><a class="self-link" href="#changes"></a></h2>
-   <p>Changes since this document was previously updated are editorial and can be found <a href="https://github.com/whatwg/encoding/commits/master">in the GitHub log</a>. 
-      The following changes have been made since the previous W3C version of this document:</p>
-   <ol>
-	   <li>Link web-platform-tests</li>
-	   <li>Fix formatting of code and add new to a constructor</li>
-	   <li>Add visualizations for the indexes<br>Exposing the PUA code points as PUA in HTML is useful to seeing what those code points map 
-	       to (if to anything) in system fonts, which may give insights about their usage. Exposing singletons (compatibility ideographs and 
-	       scientific units) without normalizing them is useful for having browser "Find" functionality match whatever you get as output of a 
-	       converter you might be developing.</li>
-	   <li>Mark certain references non-normative</li>
-	   <li>Fixed HTML validation errors.</li>
-	   <li>Remove the DOM reference as it’s not actually needed for anything.</li>
-   </ol>
-  
-  
-</main>
+  </main>
 <script>
 (function() {
   "use strict";
@@ -2927,9 +2943,9 @@ neighboring rights to this work. </p>
   <h3 class="no-num no-ref heading settled" id="informative"><span class="content">Informative References</span><a class="self-link" href="#informative"></a></h3>
   <dl>
    <dt id="biblio-html">[HTML]
-   <dd>Anne van Kesteren; et al. <a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a>. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a>
+   <dd>Ian Hickson; et al. <a href="https://www.w3.org/TR/html5/">HTML5</a>. W3C Recommendation. URL: <a href="https://www.w3.org/TR/html5/">https://www.w3.org/TR/html5/</a>
    <dt id="biblio-url">[URL]
-   <dd>Anne van Kesteren. <a href="https://url.spec.whatwg.org/">URL Standard</a>. Living Standard. URL: <a href="https://url.spec.whatwg.org/">https://url.spec.whatwg.org/</a>
+   <dd>Anne van Kesteren. <a href="https://url.spec.whatwg.org/">URL Standard</a>. WHATWG Living Standard. URL: <a href="https://url.spec.whatwg.org/">https://url.spec.whatwg.org/</a>
    <dt id="biblio-xml">[XML]
    <dd>Tim Bray; et al. <a href="https://www.w3.org/TR/xml">Extensible Markup Language (XML) 1.0 (Fifth Edition)</a>. 26 November 2008. REC. URL: <a href="https://www.w3.org/TR/xml">https://www.w3.org/TR/xml</a>
   </dl>
@@ -2948,6 +2964,7 @@ neighboring rights to this work. </p>
     <li><a href="#ref-for-concept-stream-10">6. Specification hooks</a> <a href="#ref-for-concept-stream-11">(2)</a> <a href="#ref-for-concept-stream-12">(3)</a> <a href="#ref-for-concept-stream-13">(4)</a>
     <li><a href="#ref-for-concept-stream-14">7.1. Interface TextDecoder</a> <a href="#ref-for-concept-stream-15">(2)</a> <a href="#ref-for-concept-stream-16">(3)</a>
     <li><a href="#ref-for-concept-stream-17">7.2. Interface TextEncoder</a> <a href="#ref-for-concept-stream-18">(2)</a>
+    <li><a href="#ref-for-concept-stream-19">Implementation considerations</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="end-of-stream">
@@ -3001,6 +3018,7 @@ neighboring rights to this work. </p>
     <li><a href="#ref-for-concept-stream-prepend-18">12.3.1. Shift_JIS decoder</a>
     <li><a href="#ref-for-concept-stream-prepend-19">13.1.1. EUC-KR decoder</a>
     <li><a href="#ref-for-concept-stream-prepend-20">14.2.1. shared UTF-16 decoder</a>
+    <li><a href="#ref-for-concept-stream-prepend-21">Implementation considerations</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="concept-stream-push">
@@ -3021,6 +3039,7 @@ neighboring rights to this work. </p>
     <li><a href="#ref-for-encoding-18">6. Specification hooks</a> <a href="#ref-for-encoding-19">(2)</a>
     <li><a href="#ref-for-encoding-20">9. Legacy single-byte encodings</a> <a href="#ref-for-encoding-21">(2)</a>
     <li><a href="#ref-for-encoding-22">14.1. replacement</a> <a href="#ref-for-encoding-23">(2)</a>
+    <li><a href="#ref-for-encoding-24">Implementation considerations</a> <a href="#ref-for-encoding-25">(2)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="name">
@@ -3062,6 +3081,7 @@ neighboring rights to this work. </p>
     <li><a href="#ref-for-decoder-35">14.3.1. UTF-16BE decoder</a>
     <li><a href="#ref-for-decoder-36">14.4.1. UTF-16LE decoder</a>
     <li><a href="#ref-for-decoder-37">14.5.1. x-user-defined decoder</a>
+    <li><a href="#ref-for-decoder-38">Implementation considerations</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="encoder">
@@ -3082,6 +3102,7 @@ neighboring rights to this work. </p>
     <li><a href="#ref-for-encoder-24">12.3.2. Shift_JIS encoder</a>
     <li><a href="#ref-for-encoder-25">13.1.2. EUC-KR encoder</a>
     <li><a href="#ref-for-encoder-26">14.5.2. x-user-defined encoder</a>
+    <li><a href="#ref-for-encoder-27">Implementation considerations</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="handler">
@@ -3420,7 +3441,7 @@ neighboring rights to this work. </p>
   <aside class="dfn-panel" data-for="dom-textdecoder">
    <b><a href="#dom-textdecoder">#dom-textdecoder</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-textdecoder-1">7.1. Interface TextDecoder</a> <a href="#ref-for-dom-textdecoder-2">(2)</a>
+    <li><a href="#ref-for-dom-textdecoder-1">7.1. Interface TextDecoder</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-textdecoder-encoding">
@@ -3475,7 +3496,7 @@ neighboring rights to this work. </p>
   <aside class="dfn-panel" data-for="dom-textencoder-encode">
    <b><a href="#dom-textencoder-encode">#dom-textencoder-encode</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-textencoder-encode-1">7.2. Interface TextEncoder</a> <a href="#ref-for-dom-textencoder-encode-2">(2)</a>
+    <li><a href="#ref-for-dom-textencoder-encode-1">7.2. Interface TextEncoder</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="utf-8">
@@ -3745,24 +3766,28 @@ neighboring rights to this work. </p>
     <li><a href="#ref-for-gb18030-3">10.1.2. GBK encoder</a> <a href="#ref-for-gb18030-4">(2)</a>
     <li><a href="#ref-for-gb18030-5">10.2.1. gb18030 decoder</a> <a href="#ref-for-gb18030-6">(2)</a>
     <li><a href="#ref-for-gb18030-7">10.2.2. gb18030 encoder</a> <a href="#ref-for-gb18030-8">(2)</a>
+    <li><a href="#ref-for-gb18030-9">Implementation considerations</a> <a href="#ref-for-gb18030-10">(2)</a> <a href="#ref-for-gb18030-11">(3)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="gb18030-first">
    <b><a href="#gb18030-first">#gb18030-first</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="#ref-for-gb18030-first-1">10.2.1. gb18030 decoder</a> <a href="#ref-for-gb18030-first-2">(2)</a> <a href="#ref-for-gb18030-first-3">(3)</a> <a href="#ref-for-gb18030-first-4">(4)</a> <a href="#ref-for-gb18030-first-5">(5)</a> <a href="#ref-for-gb18030-first-6">(6)</a> <a href="#ref-for-gb18030-first-7">(7)</a> <a href="#ref-for-gb18030-first-8">(8)</a> <a href="#ref-for-gb18030-first-9">(9)</a> <a href="#ref-for-gb18030-first-10">(10)</a>
+    <li><a href="#ref-for-gb18030-first-11">Implementation considerations</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="gb18030-second">
    <b><a href="#gb18030-second">#gb18030-second</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="#ref-for-gb18030-second-1">10.2.1. gb18030 decoder</a> <a href="#ref-for-gb18030-second-2">(2)</a> <a href="#ref-for-gb18030-second-3">(3)</a> <a href="#ref-for-gb18030-second-4">(4)</a> <a href="#ref-for-gb18030-second-5">(5)</a> <a href="#ref-for-gb18030-second-6">(6)</a> <a href="#ref-for-gb18030-second-7">(7)</a> <a href="#ref-for-gb18030-second-8">(8)</a> <a href="#ref-for-gb18030-second-9">(9)</a> <a href="#ref-for-gb18030-second-10">(10)</a>
+    <li><a href="#ref-for-gb18030-second-11">Implementation considerations</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="gb18030-third">
    <b><a href="#gb18030-third">#gb18030-third</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="#ref-for-gb18030-third-1">10.2.1. gb18030 decoder</a> <a href="#ref-for-gb18030-third-2">(2)</a> <a href="#ref-for-gb18030-third-3">(3)</a> <a href="#ref-for-gb18030-third-4">(4)</a> <a href="#ref-for-gb18030-third-5">(5)</a> <a href="#ref-for-gb18030-third-6">(6)</a> <a href="#ref-for-gb18030-third-7">(7)</a> <a href="#ref-for-gb18030-third-8">(8)</a>
+    <li><a href="#ref-for-gb18030-third-9">Implementation considerations</a> <a href="#ref-for-gb18030-third-10">(2)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="gbk-flag">
@@ -3819,6 +3844,7 @@ neighboring rights to this work. </p>
     <li><a href="#ref-for-iso-2022-jp-2">4.2. Names and labels</a>
     <li><a href="#ref-for-iso-2022-jp-3">12.2.1. ISO-2022-JP decoder</a> <a href="#ref-for-iso-2022-jp-4">(2)</a>
     <li><a href="#ref-for-iso-2022-jp-5">12.2.2. ISO-2022-JP encoder</a> <a href="#ref-for-iso-2022-jp-6">(2)</a>
+    <li><a href="#ref-for-iso-2022-jp-7">Implementation considerations</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="iso-2022-jp-decoder-state">
@@ -3887,10 +3913,17 @@ neighboring rights to this work. </p>
     <li><a href="#ref-for-iso-2022-jp-decoder-escape-1">12.2.1. ISO-2022-JP decoder</a>
    </ul>
   </aside>
+  <aside class="dfn-panel" data-for="iso-2022-jp-encoder">
+   <b><a href="#iso-2022-jp-encoder">#iso-2022-jp-encoder</a></b><b>Referenced in:</b>
+   <ul>
+    <li><a href="#ref-for-iso-2022-jp-encoder-1">Implementation considerations</a>
+   </ul>
+  </aside>
   <aside class="dfn-panel" data-for="iso-2022-jp-encoder-state">
    <b><a href="#iso-2022-jp-encoder-state">#iso-2022-jp-encoder-state</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="#ref-for-iso-2022-jp-encoder-state-1">12.2.2. ISO-2022-JP encoder</a> <a href="#ref-for-iso-2022-jp-encoder-state-2">(2)</a> <a href="#ref-for-iso-2022-jp-encoder-state-3">(3)</a> <a href="#ref-for-iso-2022-jp-encoder-state-4">(4)</a> <a href="#ref-for-iso-2022-jp-encoder-state-5">(5)</a> <a href="#ref-for-iso-2022-jp-encoder-state-6">(6)</a> <a href="#ref-for-iso-2022-jp-encoder-state-7">(7)</a> <a href="#ref-for-iso-2022-jp-encoder-state-8">(8)</a> <a href="#ref-for-iso-2022-jp-encoder-state-9">(9)</a> <a href="#ref-for-iso-2022-jp-encoder-state-10">(10)</a> <a href="#ref-for-iso-2022-jp-encoder-state-11">(11)</a> <a href="#ref-for-iso-2022-jp-encoder-state-12">(12)</a>
+    <li><a href="#ref-for-iso-2022-jp-encoder-state-13">Implementation considerations</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="iso-2022-jp-encoder-ascii">
@@ -4081,5 +4114,5 @@ neighboring rights to this work. </p>
 
         });
         </script>
-   </body>
- </html>
+        </body>
+        </html>

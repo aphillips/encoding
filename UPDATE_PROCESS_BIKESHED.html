@@ -1,0 +1,222 @@
+PROCESS FOR PRODUCING AN ENCODING SPEC SNAPSHOT
+
+
+take a copy of the latest encoding.bs source from the raw view at
+https://github.com/whatwg/encoding/blob/master/encoding.bs
+
+(I have my own copy of encoding that I forked from whatwg/encoding)
+
+save it to a file locally.  Let's call it 
+encoding.bs
+
+
+Edit the file as follows:
+
+[1] replace the pre at the top with the following:
+
+
+--
+<pre class=metadata>
+Title: Encoding
+Group: WHATWG
+H1: Encoding
+Shortname: encoding
+Status: CR
+Deadline: 2016-12-20
+Previous version: https://www.w3.org/TR/2016/CR-encoding-20161110/
+TR: https://www.w3.org/TR/encoding/
+ED: https://encoding.spec.whatwg.org/
+Group: i18n
+Level: 
+Editor: Anne van Kesteren, annevk@annevk.nl
+Editor: Joshua Bell, Google
+Editor: Addison Phillips, Invited Expert, addison@inter-locale.com
+Abstract: The Encoding Standard defines encodings and their JavaScript API.
+Logo: https://resources.whatwg.org/logo-encoding.svg
+Boilerplate: omit feedback-header, omit conformance, omit index, omit idl-index
+Markup Shorthands: css off
+Translate IDs: dictdef-textdecoderoptions textdecoderoptions,dictdef-textdecodeoptions textdecodeoptions
+</pre>
+
+<script src=https://resources.whatwg.org/file-issue.js async></script>
+<script src=https://resources.whatwg.org/commit-snapshot-shortcut-key.js async></script>
+<script src=https://resources.whatwg.org/dfn.js defer></script>
+
+<pre class=link-defaults>
+spec:infra; type:dfn;
+    text:code point
+    text:ascii case-insensitive
+</pre>
+--
+
+[2] edit the previous version link
+
+[3] if this is a substantive change, edit the deadline 
+
+[4] add a paragraph to the end with the id 'changes'. This might be something like:
+
+--
+<h2 class=no-num id=changes>Changes</h2>
+
+   <p>Changes since this document was previously updated are editorial and can be found <a href="https://github.com/whatwg/encoding/commits/master">in the GitHub log</a>. 
+      The following changes have been made since the previous W3C version of this document:</p>
+   <ol>
+	   <li>Link web-platform-tests</li>
+	   <li>Fix formatting of code and add new to a constructor</li>
+	   <li>Add visualizations for the indexes<br>Exposing the PUA code points as PUA in HTML is useful to seeing what those code points map 
+	       to (if to anything) in system fonts, which may give insights about their usage. Exposing singletons (compatibility ideographs and 
+	       scientific units) without normalizing them is useful for having browser "Find" functionality match whatever you get as output of a 
+	       converter you might be developing.</li>
+	   <li>Mark certain references non-normative</li>
+	   <li>Fixed HTML validation errors.</li>
+	   <li>Remove the DOM reference as it’s not actually needed for anything.</li>
+   </ol>
+--
+
+
+Open
+http://api.csswg.org/bikeshed/
+
+and upload the file, then click on the Process button. 
+
+
+Viewing the source doesn't work: right click the frame and choose "save as..." and save the frame
+source over the file Overview.html. Attempting to view the source crashes FF and Chrome.
+Also, the final </body></html> is not shown - you need to add that yourself after pasting.
+
+You may wish to edit the charset meta to use the modern charset parameter and add dir to <html>
+
+
+
+
+
+The following could probably be added to the status boilerplates at
+https://github.com/tabatkins/bikeshed/tree/master/bikeshed/include/i18n
+
+but for now i'll add by hand.  Especially as there's a lot of idiosyncratic stuff involved.
+
+
+
+[1] add the following to the top of the doc under the list of authors.
+
+--
+      <dt>Implementation report:</dt>
+      <dd><a href="https://www.w3.org/International/docs/encoding/implementation-report">https://www.w3.org/International/docs/encoding/implementation-report</a></dd>
+      <dt>Bug tracker:</dt>
+      <dd><a href="https://github.com/whatwg/encoding/issues">file a bug</a> (<a href="https://github.com/whatwg/encoding/issues">open bugs</a>)</dd>
+      <dt>Github:</dt>
+      <dd>
+        <a href="https://github.com/whatwg/encoding/">repository</a>
+      </dd>
+--
+
+
+[2] replace the abstract with this
+
+--
+    <p>The utf-8 encoding is the most appropriate encoding for interchange of Unicode, the universal coded character set. Therefore for new protocols and formats, as well as existing formats deployed in new contexts, this specification requires (and defines) the utf-8 encoding. </p>
+    <p>The other (legacy) encodings have been defined to some extent in the past. However, user agents have not always implemented them in the same way, have not always used the same labels, and often differ in dealing with undefined and former proprietary areas of encodings. This specification addresses those gaps so that new user agents do not have to reverse engineer encoding implementations and existing user agents can converge. </p>
+--
+
+(The WHATWG version says):
+
+--
+   <p>The Encoding Standard defines encodings and their JavaScript API.</p>
+--
+
+
+[3] add the following just after the italic para at the start of the SOTD. 
+
+--
+  <p class="stability" id="wip">The body of this spec is an exact copy of the WHATWG version as of the date of its publication, intended to provide a stable reference for other specifications. For the latest updates, including changes since this snapshot was published, please look at the <a href="http://encoding.spec.whatwg.org/">WHATWG version</a>.
+<input onclick="closeWarning(this.parentNode)" type="button" value="X"></p>
+  <script>
+   function closeWarning(element) {
+     element.parentNode.removeChild(element);
+     var date = new Date();
+     date.setDate(date.getDate()+4);
+     document.cookie = 'hide-obsolescence-warning=1; expires=' + date.toGMTString();
+   }
+   function removeWIP () {
+       document.getElementById('wip').parentNode.removeChild(document.getElementById('wip'));
+   }
+   if (document.documentElement.getAttribute("data-wip") === "false") removeWIP();
+   if (getCookie('hide-obsolescence-warning') == '1') setTimeout(removeWIP, 2000);
+  </script>
+
+
+    <p>This is a snapshot of the WHATWG document, as of 8 April 2017, published with the knowledge of the WHATWG editors. No changes have been made in the body of this document other than to align with <abbr title="World Wide Web Consortium">W3C</abbr> house styles. The primary reason that <abbr title="World Wide Web Consortium">W3C</abbr> is publishing this document is so that HTML5 and other specifications may normatively refer to a stable <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation.</p>
+    <p>This update of the Candidate Recommendation takes into account changes made to the editor's draft since its previous publication as CR. These changes are largely due to issues discovered during implementation.</p>
+    <div class="note">
+      <div class="note-title marker" aria-level="3" role="heading" id="h-note1"><span>Note</span></div>
+      <div class="">
+        <div class="">
+          <p style="font-weight: bold; font-size: 120%">Sending comments on this document</p>
+          <p>If you wish to make comments regarding this document, please raise them as <a href="https://github.com/whatwg/encoding/issues" style="font-size: 120%;">github issues</a> against the <a href="https://encoding.spec.whatwg.org/" style="font-size: 120%">latest editor's draft</a>. Only send comments by email if you are unable to raise issues on github (see links below). All comments are welcome.</p>
+          <p>To make it easier to track comments, please raise separate issues or emails for each comment, and point to the section you are commenting on&nbsp; using a URL for the dated version of the document.</p>
+        </div>
+      </div>
+    </div>
+--
+
+[4] change the date in the above that refers to the date of the snapshot. The above says "8 April 2017", but it 
+should be today's date.
+
+
+[5] for the bit that says:
+
+--
+This update of the Candidate Recommendation takes into account changes made to the editor's draft since its previous publication as CR. These changes are largely due to issues discovered during implementation.
+--
+
+replace it with something like the following for an editorial update
+
+--
+This update of the Candidate Recommendation reflects editorial changes made to the WHATWG version since its previous publication as CR.
+--
+
+
+[6] add the following stylesheet line
+
+  <link rel="stylesheet" href="https://www.w3.org/encoding/local.css" type="text/css">
+  
+Note that using the non-relative link lets me preview using file://
+
+
+
+[7]  Edit the Changes section at the end of the document. Note that I paste the actual text
+into the bikeshed.bs file above, but that needs changes.
+
+
+[8] swap the references for W3C ones. To wit:
+
+--
+   <dt id="biblio-html">[HTML]
+   <dd>Ian Hickson; et al. <a href="https://www.w3.org/TR/html5/">HTML5</a>. W3C Recommendation. URL: <a href="https://www.w3.org/TR/html5/">https://www.w3.org/TR/html5/</a>
+--
+
+
+[9] use the following search/replace to point the links to the whatwg server (note that more links were added)
+
+href="index
+href="https://encoding.spec.whatwg.org/index
+
+also redirect the file /encodings.json
+Note that there is one tricky one that matches Richard's search: don't skip that one. 
+also redirect each of the referenced html links the tables. These don't have an regex
+
+
+[10]  correct bikeshed problems:
+
+a. use the right pp number in the link  (it's 32113). search for this: "href="http://www.w3.org/2004/01/pp-impl/"
+
+b. add a para about the implementation report to the sotd
+	<p>Please see the Working Group's <a href="https://www.w3.org/International/docs/encoding/implementation-report">implementation report</a>.</p>
+    
+c. replace http://www.w3.org with https://www.w3.org
+
+d. just before the body, add
+           <script src="//www.w3.org/scripts/TR/2016/fixup.js"></script>
+
+e. move  <link href="https://www.w3.org/StyleSheets/TR/2016/W3C-CR" rel="stylesheet" type="text/css"> below the inline style
+
