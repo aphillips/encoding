@@ -4,8 +4,8 @@ Group: WHATWG
 H1: Encoding
 Shortname: encoding
 Status: CR
-Deadline: 2016-12-20
-Previous version: https://www.w3.org/TR/2016/CR-encoding-20161215/
+Deadline: 2017-07-28
+Previous version: https://www.w3.org/TR/2017/CR-encoding-20170413/
 TR: https://www.w3.org/TR/encoding/
 ED: https://encoding.spec.whatwg.org/
 Group: i18n
@@ -624,7 +624,7 @@ form submission, which both need exactly this.
 
 <h2 id=indexes>Indexes</h2>
 
-<p>Most legacy <a for=/>encodings</a> make use of an <dfn>index</dfn>. An
+<p>Most legacy <a for=/>encodings</a> make use of an <dfn id=index>index</dfn>. An
 <a>index</a> is an ordered list of entries, each entry consisting of a pointer and a
 corresponding code point. Within an <a>index</a> pointers are unique and code points can be
 duplicated.
@@ -655,10 +655,11 @@ changed, so has the <a>index</a>.
 <var>code point</var> is not in <var>index</var>.
 
 <div class=note id=visualization>
- <p>There is a non-normative visualization for each index other than <a>index gb18030 ranges</a>.
- <a>index jis0208</a> also has an alternative <a>Shift_JIS</a> visualization. Additionally, there is
- visualization of the Basic Multilingual Plane coverage of each index other than
- <a>index gb18030 ranges</a>.
+ <p>There is a non-normative visualization for each <a>index</a> other than
+ <a>index gb18030 ranges</a> and <a>index ISO-2022-JP katakana</a>. <a>index jis0208</a> also has an
+ alternative <a>Shift_JIS</a> visualization. Additionally, there is visualization of the Basic
+ Multilingual Plane coverage of each index other than <a>index gb18030 ranges</a> and
+ <a>index ISO-2022-JP katakana</a>.
 
  <p>The legend for the visualizations is:
 
@@ -748,6 +749,12 @@ specification, excluding <a>index single-byte</a>, which have their own table:
    No JIX X 0212 ISO-2022-JP support:
      https://www.w3.org/Bugs/Public/show_bug.cgi?id=26885
   -->
+ <tr>
+  <td><dfn export>index ISO-2022-JP katakana</dfn>
+  <td colspan=3><a href=index-iso-2022-jp-katakana.txt>index-iso-2022-jp-katakana.txt</a>
+  <td>This maps halfwidth to fullwidth katakana as per Unicode Normalization Form KC, except that
+  U+FF9E and U+FF9F map to U+309B and U+309C rather than U+3099 and U+309A. It is only used by the
+  <a>ISO-2022-JP encoder</a>. [[UNICODE]]
 </table>
 
 <p>The <dfn>index gb18030 ranges code point</dfn> for <var>pointer</var> is
@@ -826,10 +833,9 @@ these steps:
 
 <hr>
 
-<p class="note no-backref">All <a lt=index>indexes</a> are also available as
-non-normative <a href=indexes.json>indexes.json</a> resource.
-(<a>index gb18030 ranges</a> has a slightly different format here, to be able
-to represent ranges.)
+<p class="note no-backref">All <a lt=index>indexes</a> are also available as a non-normative
+<a href=indexes.json>indexes.json</a> resource. (<a>Index gb18030 ranges</a> has a slightly
+different format here, to be able to represent ranges.)
 
 
 
@@ -1082,8 +1088,7 @@ interface TextDecoder {
 
    <li>
     <p>If <a for=TextDecoder>encoding</a> is <a>UTF-8</a>, <a>UTF-16BE</a>, or <a>UTF-16LE</a>, and
-    <a for=TextDecoder>ignore BOM flag</a> and <a for=TextDecoder>BOM seen flag</a> are unset, then
-    run these subsubsteps:
+    <a for=TextDecoder>ignore BOM flag</a> and <a for=TextDecoder>BOM seen flag</a> are unset, then:
 
     <ol>
      <li><p>If <var>token</var> is U+FEFF, then set <a for=TextDecoder>BOM seen flag</a>.
@@ -1108,7 +1113,7 @@ control.
 <hr>
 
 <dl class=domintro>
- <dt><code><var>decoder</var> = new <a constructor for=TextDecoder>TextDecoder([<var>label</var> = "utf-8" [, <var>options</var>]])</a></code>
+ <dt><code><var>decoder</var> = new <a constructor for=TextDecoder lt=TextDecoder()>TextDecoder([<var>label</var> = "utf-8" [, <var>options</var>]])</a></code>
  <dd>
   <p>Returns a new {{TextDecoder}} object.
   <p>If <var>label</var> is either not a <a>label</a> or is a
@@ -1126,13 +1131,13 @@ control.
  <dt><code><var>decoder</var> . <a attribute for=TextDecoder>ignoreBOM</a></code>
  <dd><p>Returns true if <a for=TextDecoder>ignore BOM flag</a> is set, and false otherwise.
 
- <dt><code><var>decoder</var> . <a method for=TextDecoder>decode([<var>input</var> [, <var>options</var>]])</a></code>
+ <dt><code><var>decoder</var> . <a method for=TextDecoder lt=decode()>decode([<var>input</var> [, <var>options</var>]])</a></code>
  <dd>
-  <p>Returns the result of running <a for=TextDecoder>encoding</a>'s <a for=/>decoder</a>. The method can
-  be invoked zero or more times with <var>options</var>'s <code>stream</code> set to true, and then
-  once without <var>options</var>'s <code>stream</code> (or set to false), to process a fragmented
-  stream. If the invocation without <var>options</var>'s <code>stream</code> (or set to false) has
-  no <var>input</var>, it's clearest to omit both arguments.
+  <p>Returns the result of running <a for=TextDecoder>encoding</a>'s <a for=/>decoder</a>. The
+  method can be invoked zero or more times with <var>options</var>'s <code>stream</code> set to
+  true, and then once without <var>options</var>'s <code>stream</code> (or set to false), to process
+  a fragmented stream. If the invocation without <var>options</var>'s <code>stream</code> (or set to
+  false) has no <var>input</var>, it's clearest to omit both arguments.
 
   <pre class=example id=example-end-of-stream><code class=lang-javascript>
 var string = "", decoder = new TextDecoder(encoding), buffer;
@@ -1182,8 +1187,8 @@ method, when invoked, must run these steps:
 
 <ol>
  <li><p>If the <a for=TextDecoder>do not flush flag</a> is unset, set <a for=TextDecoder>decoder</a>
- to a new <a for=TextDecoder>encoding</a>'s <a for=/>decoder</a>, set <a for=TextDecoder>stream</a> to a
- new <a for=/>stream</a>, and unset the <a for=TextDecoder>BOM seen flag</a>.
+ to a new <a for=TextDecoder>encoding</a>'s <a for=/>decoder</a>, set <a for=TextDecoder>stream</a>
+ to a new <a for=/>stream</a>, and unset the <a for=TextDecoder>BOM seen flag</a>.
 
  <li><p>If <var>options</var>'s <code>stream</code> is true, set the
  <a for=TextDecoder>do not flush flag</a>, and unset the <a for=TextDecoder>do not flush flag</a>
@@ -1211,11 +1216,12 @@ method, when invoked, must run these steps:
     is set, then return <var>output</var>, <a lt="serialize stream">serialized</a>.
 
     <p class=note>The way streaming works is to not handle <a>end-of-stream</a> here when the
-    <a for=TextDecoder>do not flush flag</a> is set and to not unset that flag. That way in a subsequent invocation
-    <a for=TextDecoder>decoder</a> is not set anew in the first step of the algorithm and its state is preserved.
+    <a for=TextDecoder>do not flush flag</a> is set and to not unset that flag. That way in a
+    subsequent invocation <a for=TextDecoder>decoder</a> is not set anew in the first step of the
+    algorithm and its state is preserved.
 
    <li>
-    <p>Otherwise, run these subsubsteps:
+    <p>Otherwise:
 
     <ol>
      <li><p>Let <var>result</var> be the result of <a>processing</a> <var>token</var> for
@@ -1225,9 +1231,8 @@ method, when invoked, must run these steps:
      <li><p>If <var>result</var> is <a>finished</a>, then return <var>output</var>,
      <a lt="serialize stream">serialized</a>.
 
-     <li><p>Otherwise, if <var>result</var> is <a>error</a>, <a lt=throw>throw</a> a {{TypeError}}.
-
-     <li><p>Otherwise, do nothing.
+     <li><p>Otherwise, if <var>result</var> is <a>error</a>, then <a lt=throw>throw</a> a
+     {{TypeError}}.
     </ol>
   </ol>
 </ol>
@@ -1246,8 +1251,8 @@ interface TextEncoder {
 <p>A {{TextEncoder}} object has an associated <dfn for=TextEncoder>encoder</dfn>.
 
 <p class="note no-backref">A {{TextEncoder}} object offers no <var>label</var> argument as it only
-supports <a>UTF-8</a>. It also offers no <code>stream</code> option as no <a for=/>encoder</a> requires
-buffering of scalar values.
+supports <a>UTF-8</a>. It also offers no <code>stream</code> option as no <a for=/>encoder</a>
+requires buffering of scalar values.
 
 <hr>
 
@@ -1258,7 +1263,7 @@ buffering of scalar values.
  <dt><code><var>encoder</var> . <a attribute for=TextEncoder>encoding</a></code>
  <dd><p>Returns "<code>utf-8</code>".
 
- <dt><code><var>encoder</var> . <a method for=TextEncoder>encode([<var>input</var> = ""])</a></code>
+ <dt><code><var>encoder</var> . <a method for=TextEncoder lt=encode()>encode([<var>input</var> = ""])</a></code>
  <dd><p>Returns the result of running <a>UTF-8</a>'s <a for=/>encoder</a>.
 </dl>
 
@@ -1285,7 +1290,7 @@ must run these steps:
  <li><p>Let <var>output</var> be a new <a for=/>stream</a>.
 
  <li>
-  <p>While true, run these substeps:
+  <p>While true:
 
   <ol>
    <li><p>Let <var>token</var> be the result of
@@ -1388,9 +1393,8 @@ must run these steps:
   <p>Return <a>continue</a>.
 
  <li>
-  <p>If <var>byte</var> is not in the range
-  <a>UTF-8 lower boundary</a> to <a>UTF-8 upper boundary</a>, inclusive,
-  run these substeps:
+  <p>If <var>byte</var> is not in the range <a>UTF-8 lower boundary</a> to
+  <a>UTF-8 upper boundary</a>, inclusive, then:
 
   <ol>
    <li><p>Set <a>UTF-8 code point</a>,
@@ -1464,7 +1468,7 @@ achieve the same result are obviously fine, even encouraged).
  (<var>code point</var> >> (6 × <var>count</var>)) + <var>offset</var>.
 
  <li>
-  <p>Run these substeps while <var>count</var> is greater than 0:
+  <p>While <var>count</var> is greater than 0:
 
   <ol>
    <li><p>Set <var>temp</var> to
@@ -1618,34 +1622,33 @@ consumers of content generated with <a>GBK</a>'s <a for=/>encoder</a>.
  <a>gb18030 third</a> to 0x00, and return <a>error</a>.
 
  <li>
-  <p>If <a>gb18030 third</a> is not 0x00, run these substeps:
+  <p>If <a>gb18030 third</a> is not 0x00, then:
 
   <ol>
-   <li><p>Let <var>code point</var> be null.
+   <li>
+    <p>If <var>byte</var> is not in the range 0x30 to 0x39, inclusive, then:
 
-   <li><p>If <var>byte</var> is in the range 0x30 to 0x39, inclusive, set
-   <var>code point</var> to the
-   <a>index gb18030 ranges code point</a> for
+    <ol>
+     <li><p><a>Prepend</a> <a>gb18030 second</a>, <a>gb18030 third</a>, and <var>byte</var> to
+     <var>stream</var>.
+
+     <li><p>Set <a>gb18030 first</a>, <a>gb18030 second</a>, and <a>gb18030 third</a> to 0x00.
+
+     <li><p>Return <a>error</a>.
+    </ol>
+
+   <li><p>Let <var>code point</var> be the <a>index gb18030 ranges code point</a> for
    ((<a>gb18030 first</a> &minus; 0x81) × (10 × 126 × 10)) +
    ((<a>gb18030 second</a> &minus; 0x30) × (10 × 126)) +
    ((<a>gb18030 third</a> &minus; 0x81) × 10) + <var>byte</var> &minus; 0x30.
 
-   <li><p>Let <var>buffer</var> be a byte sequence consisting of
-   <a>gb18030 second</a>, <a>gb18030 third</a>, and <var>byte</var>, in
-   order.
-
-   <li><p>Set <a>gb18030 first</a>, <a>gb18030 second</a>, and
-   <a>gb18030 third</a> to 0x00.
-
-   <li><p>If <var>code point</var> is null,
-   <a>prepend</a> <var>buffer</var> to
-   <var>stream</var> and return <a>error</a>.
+   <li><p>If <var>code point</var> is null, return <a>error</a>.
 
    <li><p>Return a code point whose value is <var>code point</var>.
   </ol>
 
  <li>
-  <p>If <a>gb18030 second</a> is not 0x00, run these substeps:
+  <p>If <a>gb18030 second</a> is not 0x00, then:
 
   <ol>
    <li><p>If <var>byte</var> is in the range 0x81 to 0xFE, inclusive, set
@@ -1658,7 +1661,7 @@ consumers of content generated with <a>GBK</a>'s <a for=/>encoder</a>.
   </ol>
 
  <li>
-  <p>If <a>gb18030 first</a> is not 0x00, run these substeps:
+  <p>If <a>gb18030 first</a> is not 0x00, then:
 
   <ol>
    <li><p>If <var>byte</var> is in the range 0x30 to 0x39, inclusive, set
@@ -1678,13 +1681,13 @@ consumers of content generated with <a>GBK</a>'s <a for=/>encoder</a>.
    <var>pointer</var> is null and the <a>index code point</a>
    for <var>pointer</var> in <a>index gb18030</a> otherwise.
 
-   <li><p>If <var>code point</var> is null and <var>byte</var> is an
-   <a>ASCII byte</a>, <a>prepend</a>
-   <var>byte</var> to <var>stream</var>.
+   <li><p>If <var>code point</var> is non-null, return a code point whose value is
+   <var>code point</var>.
 
-   <li><p>If <var>code point</var> is null, return <a>error</a>.
+   <li><p>If <var>byte</var> is an <a>ASCII byte</a>, <a>prepend</a> <var>byte</var> to
+   <var>stream</var>.
 
-   <li><p>Return a code point whose value is <var>code point</var>.
+   <li><p>Return <a>error</a>.
   </ol>
 
  <li><p>If <var>byte</var> is an <a>ASCII byte</a>, return
@@ -1727,7 +1730,7 @@ consumers of content generated with <a>GBK</a>'s <a for=/>encoder</a>.
  <var>code point</var> in <a>index gb18030</a>.
 
  <li>
-  <p>If <var>pointer</var> is not null, run these substeps:
+  <p>If <var>pointer</var> is non-null, then:
 
   <ol>
    <li><p>Let <var>lead</var> be <var>pointer</var> / 190 + 0x81.
@@ -1794,7 +1797,7 @@ consumers of content generated with <a>GBK</a>'s <a for=/>encoder</a>.
  <li>
   <p>If <a>Big5 lead</a> is not 0x00, let <var>lead</var> be
   <a>Big5 lead</a>, let <var>pointer</var> be null, set
-  <a>Big5 lead</a> to 0x00, and then run these substeps:
+  <a>Big5 lead</a> to 0x00, and then:
 
   <ol>
    <li><p>Let <var>offset</var> be 0x40 if <var>byte</var> is
@@ -1826,13 +1829,13 @@ consumers of content generated with <a>GBK</a>'s <a for=/>encoder</a>.
    <var>pointer</var> is null and the <a>index code point</a>
    for <var>pointer</var> in <a>index Big5</a> otherwise.
 
-   <li><p>If <var>code point</var> is null and <var>byte</var> is an
-   <a>ASCII byte</a>, <a>prepend</a>
-   <var>byte</var> to <var>stream</var>.
+   <li><p>If <var>code point</var> is non-null, return a code point whose value is
+   <var>code point</var>.
 
-   <li><p>If <var>code point</var> is null, return <a>error</a>.
+   <li><p>If <var>byte</var> is an <a>ASCII byte</a>, <a>prepend</a> <var>byte</var> to
+   <var>stream</var>.
 
-   <li><p>Return a code point whose value is <var>code point</var>.
+   <li><p>Return <a>error</a>.
   </ol>
 
  <li><p>If <var>byte</var> is an <a>ASCII byte</a>, return
@@ -1901,15 +1904,15 @@ consumers of content generated with <a>GBK</a>'s <a for=/>encoder</a>.
  <li><p>If <a>EUC-JP lead</a> is 0x8E and <var>byte</var> is
  in the range 0xA1 to 0xDF, inclusive, set <a>EUC-JP lead</a> to 0x00 and return
  a code point whose value is 0xFF61 &minus; 0xA1 + <var>byte</var>.
- <!-- katakana; subtraction is done first to avoid upsetting compilers -->
+ <!-- Katakana; subtraction is done first to avoid upsetting compilers -->
 
  <li><p>If <a>EUC-JP lead</a> is 0x8F and <var>byte</var> is in the range
  0xA1 to 0xFE, inclusive, set the <a>EUC-JP jis0212 flag</a>, set
  <a>EUC-JP lead</a> to <var>byte</var>, and return <a>continue</a>.
 
  <li>
-  <p>If <a>EUC-JP lead</a> is not 0x00, let <var>lead</var> be
-  <a>EUC-JP lead</a>, set <a>EUC-JP lead</a> to 0x00, and run these substeps:
+  <p>If <a>EUC-JP lead</a> is not 0x00, let <var>lead</var> be <a>EUC-JP lead</a>, set
+  <a>EUC-JP lead</a> to 0x00, and then:
 
   <ol>
    <li><p>Let <var>code point</var> be null.
@@ -1923,13 +1926,13 @@ consumers of content generated with <a>GBK</a>'s <a for=/>encoder</a>.
 
    <li><p>Unset the <a>EUC-JP jis0212 flag</a>.
 
-   <li><p>If <var>byte</var> is not in the range 0xA1 to 0xFE, inclusive,
-   <a>prepend</a> <var>byte</var> to
+   <li><p>If <var>code point</var> is non-null, return a code point whose value is
+   <var>code point</var>.
+
+   <li><p>If <var>byte</var> is an <a>ASCII byte</a>, <a>prepend</a> <var>byte</var> to
    <var>stream</var>.
 
-   <li><p>If <var>code point</var> is null, return <a>error</a>.
-
-   <li><p>Return a code point whose value is <var>code point</var>.
+   <li><p>Return <a>error</a>.
   </ol>
 
  <li><p>If <var>byte</var> is an <a>ASCII byte</a>, return
@@ -2053,7 +2056,7 @@ consumers of content generated with <a>GBK</a>'s <a for=/>encoder</a>.
    <dd><p>Unset the <a>ISO-2022-JP output flag</a> and return <a>error</a>.
   </dl>
 
- <dt><dfn lt="ISO-2022-JP decoder Katakana">Katakana</dfn>
+ <dt><dfn lt="ISO-2022-JP decoder katakana">katakana</dfn>
  <dd>
   <p>Based on <var>byte</var>:
   <dl class=switch>
@@ -2169,14 +2172,14 @@ consumers of content generated with <a>GBK</a>'s <a for=/>encoder</a>.
    <var>state</var> to <a lt="ISO-2022-JP decoder Roman">Roman</a>.
 
    <li><p>If <var>lead</var> is 0x28 and <var>byte</var> is 0x49<!--I-->, set
-   <var>state</var> to <a lt="ISO-2022-JP decoder Katakana">Katakana</a>.
+   <var>state</var> to <a lt="ISO-2022-JP decoder katakana">katakana</a>.
 
    <li><p>If <var>lead</var> is 0x24 and <var>byte</var> is either
    0x40<!--@--> or 0x42<!--B-->, set <var>state</var> to
    <a lt="ISO-2022-JP decoder lead byte">lead byte</a>.
 
    <li>
-    <p>If <var>state</var> is non-null, run these substeps:
+    <p>If <var>state</var> is non-null, then:
 
     <ol>
      <li><p>Set <a>ISO-2022-JP decoder state</a> and
@@ -2238,10 +2241,9 @@ consumers of content generated with <a>GBK</a>'s <a for=/>encoder</a>.
  <a>ASCII code point</a>, return a byte whose value is <var>code point</var>.
 
  <li>
-  <p>If <a>ISO-2022-JP encoder state</a> is
-  <a lt="ISO-2022-JP encoder Roman">Roman</a> and <var>code point</var> is an
-  <a>ASCII code point</a>, excluding U+005C and U+007E, or is U+00A5 or U+203E, run
-  these substeps:
+  <p>If <a>ISO-2022-JP encoder state</a> is <a lt="ISO-2022-JP encoder Roman">Roman</a> and
+  <var>code point</var> is an <a>ASCII code point</a>, excluding U+005C and U+007E, or is U+00A5 or
+  U+203E, then:
 
   <ol>
    <li><p>If <var>code point</var> is an <a>ASCII code point</a>, return a byte
@@ -2269,6 +2271,10 @@ consumers of content generated with <a>GBK</a>'s <a for=/>encoder</a>.
  0x1B 0x28 0x4A.
 
  <li><p>If <var>code point</var> is U+2212, set it to U+FF0D.
+
+ <li><p>If <var>code point</var> is in the range U+FF61 to U+FF9F, inclusive, set it to the
+ <a>index code point</a> for <var>code point</var> &minus; 0xFF61 in
+ <a>index ISO-2022-JP katakana</a>.
 
  <li>
   <p>Let <var>pointer</var> be the <a>index pointer</a> for <var>code point</var> in
@@ -2315,9 +2321,8 @@ consumers of content generated with <a>GBK</a>'s <a for=/>encoder</a>.
  <a>Shift_JIS lead</a> is 0x00, return <a>finished</a>.
 
  <li>
-  <p>If <a>Shift_JIS lead</a> is not 0x00, let <var>lead</var>
-  be <a>Shift_JIS lead</a>, let <var>pointer</var> be null, set
-  <a>Shift_JIS lead</a> to 0x00, and then run these substeps:
+  <p>If <a>Shift_JIS lead</a> is not 0x00, let <var>lead</var> be <a>Shift_JIS lead</a>, let
+  <var>pointer</var> be null, set <a>Shift_JIS lead</a> to 0x00, and then:
 
   <ol>
    <li><p>Let <var>offset</var> be 0x40, if <var>byte</var> is
@@ -2342,13 +2347,13 @@ consumers of content generated with <a>GBK</a>'s <a for=/>encoder</a>.
    <var>pointer</var> is null, and the <a>index code point</a>
    for <var>pointer</var> in <a>index jis0208</a> otherwise.
 
-   <li><p>If <var>code point</var> is null and <var>byte</var> is an
-   <a>ASCII byte</a>, <a>prepend</a>
-   <var>byte</var> to <var>stream</var>.
+   <li><p>If <var>code point</var> is non-null, return a code point whose value is
+   <var>code point</var>.
 
-   <li><p>If <var>code point</var> is null, return <a>error</a>.
+   <li><p>If <var>byte</var> is an <a>ASCII byte</a>, <a>prepend</a> <var>byte</var> to
+   <var>stream</var>.
 
-   <li><p>Return a code point whose value is <var>code point</var>.
+   <li><p>Return <a>error</a>.
   </ol>
 
  <li><p>If <var>byte</var> is an <a>ASCII byte</a> or 0x80, return a code point
@@ -2433,9 +2438,8 @@ consumers of content generated with <a>GBK</a>'s <a for=/>encoder</a>.
  <a>EUC-KR lead</a> is 0x00, return <a>finished</a>.
 
  <li>
-  <p>If <a>EUC-KR lead</a> is not 0x00, let <var>lead</var> be
-  <a>EUC-KR lead</a>, let <var>pointer</var> be null,
-  set <a>EUC-KR lead</a> to 0x00, and then run these substeps:
+  <p>If <a>EUC-KR lead</a> is not 0x00, let <var>lead</var> be <a>EUC-KR lead</a>, let
+  <var>pointer</var> be null, set <a>EUC-KR lead</a> to 0x00, and then:
 
   <ol>
    <li><p>If <var>byte</var> is in the range  0x41 to 0xFE, inclusive, set
@@ -2446,13 +2450,13 @@ consumers of content generated with <a>GBK</a>'s <a for=/>encoder</a>.
    and the <a>index code point</a> for <var>pointer</var> in
    <a>index EUC-KR</a> otherwise.
 
-   <li><p>If <var>code point</var> is null and <var>byte</var> is an
-   <a>ASCII byte</a>, <a>prepend</a>
-   <var>byte</var> to <var>stream</var>.
+   <li><p>If <var>code point</var> is non-null, return a code point whose value is
+   <var>code point</var>.
 
-   <li><p>If <var>code point</var> is null, return <a>error</a>.
+   <li><p>If <var>byte</var> is an <a>ASCII byte</a>, <a>prepend</a> <var>byte</var> to
+   <var>stream</var>.
 
-   <li><p>Return a code point whose value is <var>code point</var>.
+   <li><p>Return <a>error</a>.
   </ol>
 
  <li><p>If <var>byte</var> is an <a>ASCII byte</a>, return
@@ -2536,7 +2540,7 @@ and <var>byte</var>, runs these steps:
 
 <ol>
  <li><p>If <var>byte</var> is <a>end-of-stream</a> and either
- <a>UTF-16 lead byte</a> or <a>UTF-16 lead surrogate</a> is not null, set
+ <a>UTF-16 lead byte</a> or <a>UTF-16 lead surrogate</a> is non-null, set
  <a>UTF-16 lead byte</a> and <a>UTF-16 lead surrogate</a> to null, and return
  <a>error</a>.
 
@@ -2560,33 +2564,20 @@ and <var>byte</var>, runs these steps:
   <p>Then set <a>UTF-16 lead byte</a> to null.
 
  <li>
-  <p>If <a>UTF-16 lead surrogate</a> is not null, let
-  <var>lead surrogate</var> be <a>UTF-16 lead surrogate</a>, set
-  <a>UTF-16 lead surrogate</a> to null, and then run these substeps:
+  <p>If <a>UTF-16 lead surrogate</a> is non-null, let <var>lead surrogate</var> be
+  <a>UTF-16 lead surrogate</a>, set <a>UTF-16 lead surrogate</a> to null, and then:
 
   <ol>
    <li><p>If <var>code unit</var> is in the range U+DC00 to U+DFFF, inclusive,
    return a code point whose value is
    0x10000 + ((<var>lead surrogate</var> &minus; 0xD800) &lt;&lt; 10) + (<var>code unit</var> &minus; 0xDC00).
 
-   <li>
-    <p>Let <var>bytes</var> be the return value of running these subsubsteps:
+   <li><p>Let <var>byte1</var> be <var>code unit</var> >> 8.
 
-    <ol>
-     <li><p>Let <var>byte1</var> be <var>code unit</var> >> 8.
+   <li><p>Let <var>byte2</var> be <var>code unit</var> &amp; 0x00FF.
 
-     <li><p>Let <var>byte2</var> be <var>code unit</var> &amp; 0x00FF.
-
-     <li>
-      <p>Then return the bytes in order, switching on <a>UTF-16BE decoder flag</a>:
-
-      <dl class=switch>
-       <dt>Set
-       <dd><p><var>byte1</var>, then <var>byte2</var>.
-       <dt>Unset
-       <dd><p><var>byte2</var>, then <var>byte1</var>.
-      </dl>
-    </ol>
+   <li><p>Let <var>bytes</var> be two bytes whose values are <var>byte1</var> and <var>byte2</var>,
+   if the <a>UTF-16BE decoder flag</a> is set, and <var>byte2</var> and <var>byte1</var> otherwise.
 
    <li><p><a>Prepend</a> the <var>bytes</var> to
    <var>stream</var> and return <a>error</a>.
@@ -2697,32 +2688,19 @@ issues. Browsers also should disable this feature if the resource was decoded us
   <p>A single-byte buffer for <a>gb18030</a> (an <a>ASCII byte</a>) and <a>ISO-2022-JP</a> (0x24 or
   0x28).
 
-  <p class="example">For <a>gb18030</a> when hitting a bogus byte while <a>gb18030 third</a> is not
-  0x00, <a>gb18030 second</a> could be moved into the single-byte buffer to be returned next, and
-  <a>gb18030 third</a> would be the new <a>gb18030 first</a>, checked for not being 0x00 after the
-  single-byte buffer was returned and emptied. This is possible as the range for the first and third
-  byte in <a>gb18030</a> is identical.
+  <p class=example id=example-gb18030-implementation-strategy>For <a>gb18030</a> when hitting a
+  bogus byte while <a>gb18030 third</a> is not 0x00, <a>gb18030 second</a> could be moved into the
+  single-byte buffer to be returned next, and <a>gb18030 third</a> would be the new
+  <a>gb18030 first</a>, checked for not being 0x00 after the single-byte buffer was returned and
+  emptied. This is possible as the range for the first and third byte in <a>gb18030</a> is
+  identical.
 </ol>
 
 <p>The <a>ISO-2022-JP encoder</a> needs <a>ISO-2022-JP encoder state</a> as additional state, but
 other than that, none of the <a for=/>encoders</a> for <a for=/>encodings</a> in this standard
 require additional state or buffers.
 
-<h2 class=no-num id=changes>Changes</h2>
 
-   <p>Changes since this document was previously updated are editorial and can be found <a href="https://github.com/whatwg/encoding/commits/master">in the GitHub log</a>. 
-      The following changes have been made since the previous W3C version of this document:</p>
-   <ol>
-	   <li>Link web-platform-tests</li>
-	   <li>Fix formatting of code and add new to a constructor</li>
-	   <li>Add visualizations for the indexes<br>Exposing the PUA code points as PUA in HTML is useful to seeing what those code points map 
-	       to (if to anything) in system fonts, which may give insights about their usage. Exposing singletons (compatibility ideographs and 
-	       scientific units) without normalizing them is useful for having browser "Find" functionality match whatever you get as output of a 
-	       converter you might be developing.</li>
-	   <li>Mark certain references non-normative</li>
-	   <li>Fixed HTML validation errors.</li>
-	   <li>Remove the DOM reference as it’s not actually needed for anything.</li>
-   </ol>
 
 <h2 class=no-num id=acknowledgments>Acknowledgments</h2>
 
@@ -2805,3 +2783,17 @@ was initially written by Joshua Bell (<a href=https://www.google.com/>Google</a>
 <p>Per <a rel=license href=https://creativecommons.org/publicdomain/zero/1.0/>CC0</a>, to
 the extent possible under law, the editors have waived all copyright and related or
 neighboring rights to this work.
+
+<h2 class=no-num id=changes>Changes</h2>
+
+   <p>Changes since this document was previously updated contain both substantive and editorial changes.
+   These can be found <a href="https://github.com/whatwg/encoding/commits/master">in the GitHub log</a>. 
+      The following changes have been made since the previous W3C version of this document:</p>
+   <ol>
+	   <li>(substantive) GB18030 Decoder: unwind from fourth byte when it's not a digit</li>
+	   <li>(substantive) ISO-2022-JP Encoder: convert half-width katakana to full-width katakana</li>
+	   <li>(substantive) EUC-JP Decoder: only unwind ASCII bytes</li>
+	   <li>Remove substeps as a concept</li>
+	   <li>Check non-null before null</li>
+	   <li>Various editorial changes to make links work and suppress warnings</li>
+   </ol>

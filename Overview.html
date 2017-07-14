@@ -1,4 +1,5 @@
-<!doctype html><html lang="en" dir="ltr">
+<!doctype html>
+<html lang="en" dir="ltr">
  <head>
   <meta charset="UTF-8">
   <title>Encoding</title>
@@ -6,9 +7,10 @@
   <meta content="CR" name="w3c-status">
   <meta content="The Encoding Standard defines encodings and their JavaScript API." name="abstract">
 
-  <meta content="Bikeshed version 81c00a31d8c468599cf8337dd150a8be9a2b4e5d" name="generator">
+  <link rel="stylesheet" href="https://www.w3.org/encoding/local.css" type="text/css">
+
+  <meta content="Bikeshed version f9aa96bada6cc0645a943ca5dd1cd55eb004d4c0" name="generator">
   <link href="https://www.w3.org/TR/encoding/" rel="canonical">
-  <link rel="stylesheet" href="https://www.w3.org/TR/encoding/local.css" type="text/css">
 <style>/* style-md-lists */
 
             /* This is a weird hack for me not yet following the commonmark spec
@@ -195,101 +197,103 @@
         </style>
 <style>/* style-syntax-highlighting */
 pre.idl.highlight { color: #708090; }
-        .highlight:not(.idl) { background: hsl(24, 20%, 95%); }
-        code.highlight { padding: .1em; border-radius: .3em; }
-        pre.highlight, pre > code.highlight { display: block; padding: 1em; margin: .5em 0; overflow: auto; border-radius: 0; }
-        .highlight .c { color: #708090 } /* Comment */
-        .highlight .k { color: #990055 } /* Keyword */
-        .highlight .l { color: #000000 } /* Literal */
-        .highlight .n { color: #0077aa } /* Name */
-        .highlight .o { color: #999999 } /* Operator */
-        .highlight .p { color: #999999 } /* Punctuation */
-        .highlight .cm { color: #708090 } /* Comment.Multiline */
-        .highlight .cp { color: #708090 } /* Comment.Preproc */
-        .highlight .c1 { color: #708090 } /* Comment.Single */
-        .highlight .cs { color: #708090 } /* Comment.Special */
-        .highlight .kc { color: #990055 } /* Keyword.Constant */
-        .highlight .kd { color: #990055 } /* Keyword.Declaration */
-        .highlight .kn { color: #990055 } /* Keyword.Namespace */
-        .highlight .kp { color: #990055 } /* Keyword.Pseudo */
-        .highlight .kr { color: #990055 } /* Keyword.Reserved */
-        .highlight .kt { color: #990055 } /* Keyword.Type */
-        .highlight .ld { color: #000000 } /* Literal.Date */
-        .highlight .m { color: #000000 } /* Literal.Number */
-        .highlight .s { color: #a67f59 } /* Literal.String */
-        .highlight .na { color: #0077aa } /* Name.Attribute */
-        .highlight .nc { color: #0077aa } /* Name.Class */
-        .highlight .no { color: #0077aa } /* Name.Constant */
-        .highlight .nd { color: #0077aa } /* Name.Decorator */
-        .highlight .ni { color: #0077aa } /* Name.Entity */
-        .highlight .ne { color: #0077aa } /* Name.Exception */
-        .highlight .nf { color: #0077aa } /* Name.Function */
-        .highlight .nl { color: #0077aa } /* Name.Label */
-        .highlight .nn { color: #0077aa } /* Name.Namespace */
-        .highlight .py { color: #0077aa } /* Name.Property */
-        .highlight .nt { color: #669900 } /* Name.Tag */
-        .highlight .nv { color: #222222 } /* Name.Variable */
-        .highlight .ow { color: #999999 } /* Operator.Word */
-        .highlight .mb { color: #000000 } /* Literal.Number.Bin */
-        .highlight .mf { color: #000000 } /* Literal.Number.Float */
-        .highlight .mh { color: #000000 } /* Literal.Number.Hex */
-        .highlight .mi { color: #000000 } /* Literal.Number.Integer */
-        .highlight .mo { color: #000000 } /* Literal.Number.Oct */
-        .highlight .sb { color: #a67f59 } /* Literal.String.Backtick */
-        .highlight .sc { color: #a67f59 } /* Literal.String.Char */
-        .highlight .sd { color: #a67f59 } /* Literal.String.Doc */
-        .highlight .s2 { color: #a67f59 } /* Literal.String.Double */
-        .highlight .se { color: #a67f59 } /* Literal.String.Escape */
-        .highlight .sh { color: #a67f59 } /* Literal.String.Heredoc */
-        .highlight .si { color: #a67f59 } /* Literal.String.Interpol */
-        .highlight .sx { color: #a67f59 } /* Literal.String.Other */
-        .highlight .sr { color: #a67f59 } /* Literal.String.Regex */
-        .highlight .s1 { color: #a67f59 } /* Literal.String.Single */
-        .highlight .ss { color: #a67f59 } /* Literal.String.Symbol */
-        .highlight .vc { color: #0077aa } /* Name.Variable.Class */
-        .highlight .vg { color: #0077aa } /* Name.Variable.Global */
-        .highlight .vi { color: #0077aa } /* Name.Variable.Instance */
-        .highlight .il { color: #000000 } /* Literal.Number.Integer.Long */
-        </style>
-     <script src="//www.w3.org/scripts/TR/2016/fixup.js"></script>
-     <link href="https://www.w3.org/StyleSheets/TR/2016/W3C-CR" rel="stylesheet" type="text/css">
+.highlight:not(.idl) { background: hsl(24, 20%, 95%); }
+code.highlight { padding: .1em; border-radius: .3em; }
+pre.highlight, pre > code.highlight { display: block; padding: 1em; margin: .5em 0; overflow: auto; border-radius: 0; }
+.highlight .c { color: #708090 } /* Comment */
+.highlight .k { color: #990055 } /* Keyword */
+.highlight .l { color: #000000 } /* Literal */
+.highlight .n { color: #0077aa } /* Name */
+.highlight .o { color: #999999 } /* Operator */
+.highlight .p { color: #999999 } /* Punctuation */
+.highlight .cm { color: #708090 } /* Comment.Multiline */
+.highlight .cp { color: #708090 } /* Comment.Preproc */
+.highlight .c1 { color: #708090 } /* Comment.Single */
+.highlight .cs { color: #708090 } /* Comment.Special */
+.highlight .kc { color: #990055 } /* Keyword.Constant */
+.highlight .kd { color: #990055 } /* Keyword.Declaration */
+.highlight .kn { color: #990055 } /* Keyword.Namespace */
+.highlight .kp { color: #990055 } /* Keyword.Pseudo */
+.highlight .kr { color: #990055 } /* Keyword.Reserved */
+.highlight .kt { color: #990055 } /* Keyword.Type */
+.highlight .ld { color: #000000 } /* Literal.Date */
+.highlight .m { color: #000000 } /* Literal.Number */
+.highlight .s { color: #a67f59 } /* Literal.String */
+.highlight .na { color: #0077aa } /* Name.Attribute */
+.highlight .nc { color: #0077aa } /* Name.Class */
+.highlight .no { color: #0077aa } /* Name.Constant */
+.highlight .nd { color: #0077aa } /* Name.Decorator */
+.highlight .ni { color: #0077aa } /* Name.Entity */
+.highlight .ne { color: #0077aa } /* Name.Exception */
+.highlight .nf { color: #0077aa } /* Name.Function */
+.highlight .nl { color: #0077aa } /* Name.Label */
+.highlight .nn { color: #0077aa } /* Name.Namespace */
+.highlight .py { color: #0077aa } /* Name.Property */
+.highlight .nt { color: #669900 } /* Name.Tag */
+.highlight .nv { color: #222222 } /* Name.Variable */
+.highlight .ow { color: #999999 } /* Operator.Word */
+.highlight .mb { color: #000000 } /* Literal.Number.Bin */
+.highlight .mf { color: #000000 } /* Literal.Number.Float */
+.highlight .mh { color: #000000 } /* Literal.Number.Hex */
+.highlight .mi { color: #000000 } /* Literal.Number.Integer */
+.highlight .mo { color: #000000 } /* Literal.Number.Oct */
+.highlight .sb { color: #a67f59 } /* Literal.String.Backtick */
+.highlight .sc { color: #a67f59 } /* Literal.String.Char */
+.highlight .sd { color: #a67f59 } /* Literal.String.Doc */
+.highlight .s2 { color: #a67f59 } /* Literal.String.Double */
+.highlight .se { color: #a67f59 } /* Literal.String.Escape */
+.highlight .sh { color: #a67f59 } /* Literal.String.Heredoc */
+.highlight .si { color: #a67f59 } /* Literal.String.Interpol */
+.highlight .sx { color: #a67f59 } /* Literal.String.Other */
+.highlight .sr { color: #a67f59 } /* Literal.String.Regex */
+.highlight .s1 { color: #a67f59 } /* Literal.String.Single */
+.highlight .ss { color: #a67f59 } /* Literal.String.Symbol */
+.highlight .vc { color: #0077aa } /* Name.Variable.Class */
+.highlight .vg { color: #0077aa } /* Name.Variable.Global */
+.highlight .vi { color: #0077aa } /* Name.Variable.Instance */
+.highlight .il { color: #000000 } /* Literal.Number.Integer.Long */
+</style>
+  <link href="https://www.w3.org/StyleSheets/TR/2016/W3C-CR" rel="stylesheet" type="text/css">
+ <script src="//www.w3.org/scripts/TR/2016/fixup.js"></script>
  <body class="h-entry">
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72"> </a> </p>
    <h1 class="p-name no-ref" id="title">Encoding</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">W3C Candidate Recommendation, <time class="dt-updated" datetime="2017-04-08">8 April 2017</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">W3C Candidate Recommendation, <time class="dt-updated" datetime="2017-07-14">14 July 2017</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
-     <dd><a class="u-url" href="https://www.w3.org/TR/2017/CR-encoding-20170408/">https://www.w3.org/TR/2017/CR-encoding-20170408/</a>
+     <dd><a class="u-url" href="https://www.w3.org/TR/2017/CR-encoding-20170714/">https://www.w3.org/TR/2017/CR-encoding-20170714/</a>
      <dt>Latest published version:
      <dd><a href="https://www.w3.org/TR/encoding/">https://www.w3.org/TR/encoding/</a>
      <dt>Editor's Draft:
      <dd><a href="https://encoding.spec.whatwg.org/">https://encoding.spec.whatwg.org/</a>
      <dt>Previous Versions:
-     <dd><a href="https://www.w3.org/TR/2016/CR-encoding-20161215/" rel="previous">https://www.w3.org/TR/2016/CR-encoding-20161215/</a>
+     <dd><a href="https://www.w3.org/TR/2017/CR-encoding-20170413/" rel="prev">https://www.w3.org/TR/2017/CR-encoding-20170413/</a>
      <dt class="editor">Editors:
      <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:annevk@annevk.nl">Anne van Kesteren</a>
      <dd class="editor p-author h-card vcard"><span class="p-name fn">Joshua Bell</span> (<span class="p-org org">Google</span>)
      <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:addison@amazon.com">Addison Phillips</a> (<span class="p-org org">Invited Expert</span>)
     </dl>
-          <dt>Implementation report:</dt>
+    
+    <dt>Implementation report:</dt>
       <dd><a href="https://www.w3.org/International/docs/encoding/implementation-report">https://www.w3.org/International/docs/encoding/implementation-report</a></dd>
       <dt>Bug tracker:</dt>
       <dd><a href="https://github.com/whatwg/encoding/issues">file a bug</a> (<a href="https://github.com/whatwg/encoding/issues">open bugs</a>)</dd>
       <dt>Github:</dt>
       <dd>
         <a href="https://github.com/whatwg/encoding/">repository</a>
-      </dd>
+   </dd>
    </div>
    <div data-fill-with="warning"></div>
    <p class="copyright" data-fill-with="copyright"><a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2017 <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="http://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="http://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>). W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply. </p>
    <hr title="Separator for header">
   </div>
-  <h2 class="no-num no-toc no-ref heading settled" id="abstract"><span class="content">Abstract</span></h2>
   <div class="p-summary" data-fill-with="abstract">
-	      <p>The utf-8 encoding is the most appropriate encoding for interchange of Unicode, the universal coded character set. Therefore for new protocols and formats, as well as existing formats deployed in new contexts, this specification requires (and defines) the utf-8 encoding. </p>
+   <h2 class="no-num no-toc no-ref heading settled" id="abstract"><span class="content">Abstract</span></h2>
+    <p>The utf-8 encoding is the most appropriate encoding for interchange of Unicode, the universal coded character set. Therefore for new protocols and formats, as well as existing formats deployed in new contexts, this specification requires (and defines) the utf-8 encoding. </p>
     <p>The other (legacy) encodings have been defined to some extent in the past. However, user agents have not always implemented them in the same way, have not always used the same labels, and often differ in dealing with undefined and former proprietary areas of encodings. This specification addresses those gaps so that new user agents do not have to reverse engineer encoding implementations and existing user agents can converge. </p>
+
   </div>
   <h2 class="no-num no-toc no-ref heading settled" id="status"><span class="content">Status of this document</span></h2>
   <div data-fill-with="status">
@@ -297,7 +301,7 @@ pre.idl.highlight { color: #708090; }
 		Other documents may supersede this document.
 		A list of current W3C publications and the latest revision of this technical report
 		can be found in the <a href="https://www.w3.org/TR/">W3C technical reports index at https://www.w3.org/TR/.</a></em> </p>
-  <p class="stability" id="wip">The body of this spec is an exact copy of the WHATWG version as of the date of its publication, intended to provide a stable reference for other specifications. For the latest updates, including changes since this snapshot was published, please look at the <a href="http://encoding.spec.whatwg.org/">WHATWG version</a>.
+		  <p class="stability" id="wip">The body of this spec is an exact copy of the WHATWG version as of the date of its publication, intended to provide a stable reference for other specifications. For the latest updates, including changes since this snapshot was published, please look at the <a href="http://encoding.spec.whatwg.org/">WHATWG version</a>.
 <input onclick="closeWarning(this.parentNode)" type="button" value="X"></p>
   <script>
    function closeWarning(element) {
@@ -314,8 +318,8 @@ pre.idl.highlight { color: #708090; }
   </script>
 
 
-    <p>This is a snapshot of the WHATWG document, as of 8 April 2017, published with the knowledge of the WHATWG editors. No changes have been made in the body of this document other than to align with <abbr title="World Wide Web Consortium">W3C</abbr> house styles. The primary reason that <abbr title="World Wide Web Consortium">W3C</abbr> is publishing this document is so that HTML5 and other specifications may normatively refer to a stable <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation.</p>
-    <p>This update of the Candidate Recommendation reflects editorial changes made to the WHATWG version since its previous publication as CR.</p>
+    <p>This is a snapshot of the WHATWG document, as of 14 July 2017, published with the knowledge of the WHATWG editors. No changes have been made in the body of this document other than to align with <abbr title="World Wide Web Consortium">W3C</abbr> house styles. The primary reason that <abbr title="World Wide Web Consortium">W3C</abbr> is publishing this document is so that HTML5 and other specifications may normatively refer to a stable <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation.</p>
+    <p>This update of the Candidate Recommendation takes into account changes made to the editor's draft since its previous publication as CR. These changes are largely due to issues discovered during implementation.</p>
     <div class="note">
       <div class="note-title marker" aria-level="3" role="heading" id="h-note1"><span>Note</span></div>
       <div class="">
@@ -325,10 +329,10 @@ pre.idl.highlight { color: #708090; }
           <p>To make it easier to track comments, please raise separate issues or emails for each comment, and point to the section you are commenting on&nbsp; using a URL for the dated version of the document.</p>
         </div>
       </div>
-    </div>
+</div>
    <p> This document was produced by the <a href="https://www.w3.org/International/core/">Internationalization Working Group</a> as a Candidate Recommendation.
 	This document is intended to become a W3C Recommendation.
-	This document will remain a Candidate Recommendation at least until <time class="status-deadline" datetime="2016-12-20">20 December 2016</time> in order
+	This document will remain a Candidate Recommendation at least until <time class="status-deadline" datetime="2017-07-28">28 July 2017</time> in order
 	to ensure the opportunity for wide review. </p>
    <p> If you wish to make comments regarding this document,
 	please send them to <a href="www-international@w3.org">www-international@w3.org</a> (<a href="mailto:www-international-request@w3.org">subscribe</a>, <a href="https://lists.w3.org/Archives/Public/www-international/">archives</a>). </p>
@@ -344,8 +348,6 @@ pre.idl.highlight { color: #708090; }
    <p> This document is governed by the <a href="https://www.w3.org/2017/Process-20170301/" id="w3c_process_revision">1 March 2017 W3C Process Document</a>. </p>
    <p> For changes since the last draft,
 	see the <a href="#changes">Changes</a> section. </p>
-   <p>Please see the Working Group's <a href="https://www.w3.org/International/docs/encoding/implementation-report">implementation report</a>.</p>
-
    <p></p>
   </div>
   <div data-fill-with="at-risk"></div>
@@ -476,8 +478,8 @@ pre.idl.highlight { color: #708090; }
      </ol>
     <li><a href="#browser-ui"><span class="secno">15</span> <span class="content">Browser UI</span></a>
     <li><a href="#implementation-considerations"><span class="secno"></span> <span class="content">Implementation considerations</span></a>
-    <li><a href="#changes"><span class="secno"></span> <span class="content">Changes</span></a>
     <li><a href="#acknowledgments"><span class="secno"></span> <span class="content">Acknowledgments</span></a>
+    <li><a href="#changes"><span class="secno"></span> <span class="content">Changes</span></a>
     <li>
      <a href="#references"><span class="secno"></span> <span class="content">References</span></a>
      <ol class="toc">
@@ -1159,8 +1161,9 @@ changed, so has the <a data-link-type="dfn" href="#index" id="ref-for-index-6">i
    <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="index-pointer">index pointer</dfn> for <var>code point</var> in <var>index</var> is the <em>first</em> pointer corresponding to <var>code point</var> in <var>index</var>, or null if <var>code point</var> is not in <var>index</var>. </p>
    <div class="note" id="visualization" role="note">
     <a class="self-link" href="#visualization"></a> 
-    <p>There is a non-normative visualization for each index other than <a data-link-type="dfn" href="#index-gb18030-ranges" id="ref-for-index-gb18030-ranges-1">index gb18030 ranges</a>. <a data-link-type="dfn" href="#index-jis0208" id="ref-for-index-jis0208-1">index jis0208</a> also has an alternative <a data-link-type="dfn" href="#shift_jis" id="ref-for-shift_jis-3">Shift_JIS</a> visualization. Additionally, there is
- visualization of the Basic Multilingual Plane coverage of each index other than <a data-link-type="dfn" href="#index-gb18030-ranges" id="ref-for-index-gb18030-ranges-2">index gb18030 ranges</a>. </p>
+    <p>There is a non-normative visualization for each <a data-link-type="dfn" href="#index" id="ref-for-index-7">index</a> other than <a data-link-type="dfn" href="#index-gb18030-ranges" id="ref-for-index-gb18030-ranges-1">index gb18030 ranges</a> and <a data-link-type="dfn" href="#index-iso-2022-jp-katakana" id="ref-for-index-iso-2022-jp-katakana-1">index ISO-2022-JP katakana</a>. <a data-link-type="dfn" href="#index-jis0208" id="ref-for-index-jis0208-1">index jis0208</a> also has an
+ alternative <a data-link-type="dfn" href="#shift_jis" id="ref-for-shift_jis-3">Shift_JIS</a> visualization. Additionally, there is visualization of the Basic
+ Multilingual Plane coverage of each index other than <a data-link-type="dfn" href="#index-gb18030-ranges" id="ref-for-index-gb18030-ranges-2">index gb18030 ranges</a> and <a data-link-type="dfn" href="#index-iso-2022-jp-katakana" id="ref-for-index-iso-2022-jp-katakana-2">index ISO-2022-JP katakana</a>. </p>
     <p>The legend for the visualizations is: </p>
     <ul class="visualizationlegend">
      <li class="unmapped">Unmapped 
@@ -1181,25 +1184,25 @@ changed, so has the <a data-link-type="dfn" href="#index" id="ref-for-index-6">i
      <li class="ext">CJK Unified Ideographs Extension A 
     </ul>
    </div>
-   <p>These are the <a data-link-type="dfn" href="#index" id="ref-for-index-7">indexes</a> defined by this
+   <p>These are the <a data-link-type="dfn" href="#index" id="ref-for-index-8">indexes</a> defined by this
 specification, excluding <a data-link-type="dfn" href="#index-single-byte" id="ref-for-index-single-byte-1">index single-byte</a>, which have their own table: </p>
    <table>
     <tbody>
      <tr>
-      <th colspan="4"><a data-link-type="dfn" href="#index" id="ref-for-index-8">Index</a>
+      <th colspan="4"><a data-link-type="dfn" href="#index" id="ref-for-index-9">Index</a>
       <th>Notes 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="index-big5">index Big5</dfn> 
       <td><a href="https://encoding.spec.whatwg.org/index-big5.txt">index-big5.txt</a> 
-      <td><a href="https://encoding.spec.whatwg.org/big5.html">index Big5 visualization</a> 
-      <td><a href="https://encoding.spec.whatwg.org/big5-bmp.html">index Big5 BMP coverage</a> 
+      <td><a href="big5.html">index Big5 visualization</a> 
+      <td><a href="big5-bmp.html">index Big5 BMP coverage</a> 
       <td>This matches the Big5 standard in combination with the
   Hong Kong Supplementary Character Set and other common extensions. 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="index-euc-kr">index EUC-KR</dfn> 
       <td><a href="https://encoding.spec.whatwg.org/index-euc-kr.txt">index-euc-kr.txt</a> 
-      <td><a href="https://encoding.spec.whatwg.org/euc-kr.html">index EUC-KR visualization</a> 
-      <td><a href="https://encoding.spec.whatwg.org/euc-kr-bmp.html">index EUC-KR BMP coverage</a> 
+      <td><a href="euc-kr.html">index EUC-KR visualization</a> 
+      <td><a href="euc-kr-bmp.html">index EUC-KR BMP coverage</a> 
       <td>This matches the KS X 1001 standard and the Unified Hangul Code, more commonly known together
   as Windows Codepage 949. It covers the Hangul Syllables block of Unicode in its entirety. The
   Hangul block whose top left corner in the visualization is at pointer 9026 is in the Unicode
@@ -1208,8 +1211,8 @@ specification, excluding <a data-link-type="dfn" href="#index-single-byte" id="r
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="index-gb18030">index gb18030</dfn> 
       <td><a href="https://encoding.spec.whatwg.org/index-gb18030.txt">index-gb18030.txt</a> 
-      <td><a href="https://encoding.spec.whatwg.org/gb18030.html">index gb18030 visualization</a> 
-      <td><a href="https://encoding.spec.whatwg.org/gb18030-bmp.html">index gb18030 BMP coverage</a> 
+      <td><a href="gb18030.html">index gb18030 visualization</a> 
+      <td><a href="gb18030-bmp.html">index gb18030 BMP coverage</a> 
       <td>This matches the GB18030-2005 standard for code points encoded as two bytes, except for
   0xA3 0xA0 which maps to U+3000 to be compatible with deployed content. This index covers the
   CJK Unified Ideographs block of Unicode in its entirety. Entries from that block that are above or
@@ -1217,23 +1220,28 @@ specification, excluding <a data-link-type="dfn" href="#index-single-byte" id="r
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="index-gb18030-ranges">index gb18030 ranges</dfn> 
       <td colspan="3"><a href="https://encoding.spec.whatwg.org/index-gb18030-ranges.txt">index-gb18030-ranges.txt</a> 
-      <td>This <a data-link-type="dfn" href="#index" id="ref-for-index-9">index</a> works different from all others. Listing all code points would result
+      <td>This <a data-link-type="dfn" href="#index" id="ref-for-index-10">index</a> works different from all others. Listing all code points would result
   in over a million items whereas they can be represented neatly in 207 ranges combined with trivial
   limit checks. It therefore only superficially matches the GB18030-2005 standard for code points
   encoded as four bytes. See also <a data-link-type="dfn" href="#index-gb18030-ranges-code-point" id="ref-for-index-gb18030-ranges-code-point-1">index gb18030 ranges code point</a> and <a data-link-type="dfn" href="#index-gb18030-ranges-pointer" id="ref-for-index-gb18030-ranges-pointer-1">index gb18030 ranges pointer</a> below. 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="index-jis0208">index jis0208</dfn> 
       <td><a href="https://encoding.spec.whatwg.org/index-jis0208.txt">index-jis0208.txt</a> 
-      <td><a href="https://encoding.spec.whatwg.org/jis0208.html">index jis0208 visualization</a>, <a href="shift_jis.html">Shift_JIS visualization</a> 
-      <td><a href="https://encoding.spec.whatwg.org/jis0208-bmp.html">index jis0208 BMP coverage</a> 
+      <td><a href="jis0208.html">index jis0208 visualization</a>, <a href="shift_jis.html">Shift_JIS visualization</a> 
+      <td><a href="jis0208-bmp.html">index jis0208 BMP coverage</a> 
       <td>This is the JIS X 0208 standard including formerly proprietary
   extensions from IBM and NEC. 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="index-jis0212">index jis0212</dfn> 
       <td><a href="https://encoding.spec.whatwg.org/index-jis0212.txt">index-jis0212.txt</a> 
-      <td><a href="https://encoding.spec.whatwg.org/jis0212.html">index jis0212 visualization</a> 
-      <td><a href="https://encoding.spec.whatwg.org/jis0212-bmp.html">index jis0212 BMP coverage</a> 
+      <td><a href="jis0212.html">index jis0212 visualization</a> 
+      <td><a href="jis0212-bmp.html">index jis0212 BMP coverage</a> 
       <td>This is the JIS X 0212 standard. It is only used by the <a data-link-type="dfn" href="#euc-jp-decoder" id="ref-for-euc-jp-decoder-1">EUC-JP decoder</a> due to lack of widespread support elsewhere. 
+     <tr>
+      <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="index-iso-2022-jp-katakana">index ISO-2022-JP katakana</dfn> 
+      <td colspan="3"><a href="https://encoding.spec.whatwg.org/index-iso-2022-jp-katakana.txt">index-iso-2022-jp-katakana.txt</a> 
+      <td>This maps halfwidth to fullwidth katakana as per Unicode Normalization Form KC, except that
+  U+FF9E and U+FF9F map to U+309B and U+309C rather than U+3099 and U+309A. It is only used by the <a data-link-type="dfn" href="#iso-2022-jp-encoder" id="ref-for-iso-2022-jp-encoder-1">ISO-2022-JP encoder</a>. <a data-link-type="biblio" href="#biblio-unicode">[UNICODE]</a> 
    </table>
    <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="index-gb18030-ranges-code-point">index gb18030 ranges code point</dfn> for <var>pointer</var> is
 the return value of these steps: </p>
@@ -1287,10 +1295,8 @@ these steps: </p>
      <p>Return the <a data-link-type="dfn" href="#index-pointer" id="ref-for-index-pointer-2">index pointer</a> for <var>code point</var> in <var>index</var>. </p>
    </ol>
    <hr>
-   <p class="note no-backref" role="note">All <a data-link-type="dfn" href="#index" id="ref-for-index-10">indexes</a> are also available as
-non-normative <a href="https://encoding.spec.whatwg.org/indexes.json">indexes.json</a> resource.
-(<a data-link-type="dfn" href="#index-gb18030-ranges" id="ref-for-index-gb18030-ranges-5">index gb18030 ranges</a> has a slightly different format here, to be able
-to represent ranges.) </p>
+   <p class="note no-backref" role="note">All <a data-link-type="dfn" href="#index" id="ref-for-index-11">indexes</a> are also available as a non-normative <a href="https://encoding.spec.whatwg.org/indexes.json">indexes.json</a> resource. (<a data-link-type="dfn" href="#index-gb18030-ranges" id="ref-for-index-gb18030-ranges-5">Index gb18030 ranges</a> has a slightly
+different format here, to be able to represent ranges.) </p>
    <h2 class="heading settled" data-level="6" id="specification-hooks"><span class="secno">6. </span><span class="content">Specification hooks</span><a class="self-link" href="#specification-hooks"></a></h2>
    <p class="note" role="note">The algorithms <a data-link-type="dfn" href="#decode" id="ref-for-decode-1">decode</a>, <a data-link-type="dfn" href="#utf-8-decode" id="ref-for-utf-8-decode-1">UTF-8 decode</a>, <a data-link-type="dfn" href="#utf-8-decode-without-bom" id="ref-for-utf-8-decode-without-bom-1">UTF-8 decode without BOM</a>, <a data-link-type="dfn" href="#utf-8-decode-without-bom-or-fail" id="ref-for-utf-8-decode-without-bom-or-fail-1">UTF-8 decode without BOM or fail</a>, <a data-link-type="dfn" href="#encode" id="ref-for-encode-1">encode</a>, and <a data-link-type="dfn" href="#utf-8-encode" id="ref-for-utf-8-encode-1">UTF-8 encode</a> are intended for usage by other specifications. <a data-link-type="dfn" href="#utf-8-decode" id="ref-for-utf-8-decode-2">UTF-8 decode</a> is to be used by new formats. The <a data-link-type="dfn" href="#concept-encoding-get" id="ref-for-concept-encoding-get-1">get an encoding</a> algorithm can be used first to turn a <a data-link-type="dfn" href="#label" id="ref-for-label-9">label</a> into an <a data-link-type="dfn" href="#encoding" id="ref-for-encoding-18">encoding</a>. </p>
    <p>To <dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="decode">decode</dfn> a byte stream <var>stream</var> using
@@ -1405,27 +1411,27 @@ this API. </p>
 <pre><code class="lang-javascript highlight"><span class="kd">function</span> encodeArrayOfStrings<span class="p">(</span>strings<span class="p">)</span> <span class="p">{</span>
   <span class="kd">var</span> encoder<span class="p">,</span> encoded<span class="p">,</span> len<span class="p">,</span> bytes<span class="p">,</span> view<span class="p">,</span> offset<span class="p">;</span>
 
-  encoder <span class="o">=</span> <span class="k">new</span> TextEncoder<span class="p">(</span><span class="p">)</span><span class="p">;</span>
-  encoded <span class="o">=</span> <span class="p">[</span><span class="p">]</span><span class="p">;</span>
+  encoder <span class="o">=</span> <span class="k">new</span> TextEncoder<span class="p">();</span>
+  encoded <span class="o">=</span> <span class="p">[];</span>
 
   len <span class="o">=</span> Uint32Array<span class="p">.</span>BYTES_PER_ELEMENT<span class="p">;</span>
   <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> i <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> i <span class="o">&lt;</span> strings<span class="p">.</span>length<span class="p">;</span> i<span class="o">++</span><span class="p">)</span> <span class="p">{</span>
     len <span class="o">+=</span> Uint32Array<span class="p">.</span>BYTES_PER_ELEMENT<span class="p">;</span>
-    encoded<span class="p">[</span>i<span class="p">]</span> <span class="o">=</span> encoder<span class="p">.</span>encode<span class="p">(</span>strings<span class="p">[</span>i<span class="p">]</span><span class="p">)</span><span class="p">;</span>
-    len <span class="o">+=</span> encoded<span class="p">[</span>i<span class="p">]</span><span class="p">.</span>byteLength<span class="p">;</span>
+    encoded<span class="p">[</span>i<span class="p">]</span> <span class="o">=</span> encoder<span class="p">.</span>encode<span class="p">(</span>strings<span class="p">[</span>i<span class="p">]);</span>
+    len <span class="o">+=</span> encoded<span class="p">[</span>i<span class="p">].</span>byteLength<span class="p">;</span>
   <span class="p">}</span>
 
-  bytes <span class="o">=</span> <span class="k">new</span> Uint8Array<span class="p">(</span>len<span class="p">)</span><span class="p">;</span>
-  view <span class="o">=</span> <span class="k">new</span> DataView<span class="p">(</span>bytes<span class="p">.</span>buffer<span class="p">)</span><span class="p">;</span>
+  bytes <span class="o">=</span> <span class="k">new</span> Uint8Array<span class="p">(</span>len<span class="p">);</span>
+  view <span class="o">=</span> <span class="k">new</span> DataView<span class="p">(</span>bytes<span class="p">.</span>buffer<span class="p">);</span>
   offset <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-  view<span class="p">.</span>setUint32<span class="p">(</span>offset<span class="p">,</span> strings<span class="p">.</span>length<span class="p">)</span><span class="p">;</span>
+  view<span class="p">.</span>setUint32<span class="p">(</span>offset<span class="p">,</span> strings<span class="p">.</span>length<span class="p">);</span>
   offset <span class="o">+=</span> Uint32Array<span class="p">.</span>BYTES_PER_ELEMENT<span class="p">;</span>
   <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> i <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> i <span class="o">&lt;</span> encoded<span class="p">.</span>length<span class="p">;</span> i <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-    len <span class="o">=</span> encoded<span class="p">[</span>i<span class="p">]</span><span class="p">.</span>byteLength<span class="p">;</span>
-    view<span class="p">.</span>setUint32<span class="p">(</span>offset<span class="p">,</span> len<span class="p">)</span><span class="p">;</span>
+    len <span class="o">=</span> encoded<span class="p">[</span>i<span class="p">].</span>byteLength<span class="p">;</span>
+    view<span class="p">.</span>setUint32<span class="p">(</span>offset<span class="p">,</span> len<span class="p">);</span>
     offset <span class="o">+=</span> Uint32Array<span class="p">.</span>BYTES_PER_ELEMENT<span class="p">;</span>
-    bytes<span class="p">.</span>set<span class="p">(</span>encoded<span class="p">[</span>i<span class="p">]</span><span class="p">,</span> offset<span class="p">)</span><span class="p">;</span>
+    bytes<span class="p">.</span>set<span class="p">(</span>encoded<span class="p">[</span>i<span class="p">],</span> offset<span class="p">);</span>
     offset <span class="o">+=</span> len<span class="p">;</span>
   <span class="p">}</span>
   <span class="k">return</span> bytes<span class="p">.</span>buffer<span class="p">;</span>
@@ -1435,40 +1441,40 @@ this API. </p>
 <pre><code class="lang-javascript highlight"><span class="kd">function</span> decodeArrayOfStrings<span class="p">(</span>buffer<span class="p">,</span> encoding<span class="p">)</span> <span class="p">{</span>
   <span class="kd">var</span> decoder<span class="p">,</span> view<span class="p">,</span> offset<span class="p">,</span> num_strings<span class="p">,</span> strings<span class="p">,</span> len<span class="p">;</span>
 
-  decoder <span class="o">=</span> <span class="k">new</span> TextDecoder<span class="p">(</span>encoding<span class="p">)</span><span class="p">;</span>
-  view <span class="o">=</span> <span class="k">new</span> DataView<span class="p">(</span>buffer<span class="p">)</span><span class="p">;</span>
+  decoder <span class="o">=</span> <span class="k">new</span> TextDecoder<span class="p">(</span>encoding<span class="p">);</span>
+  view <span class="o">=</span> <span class="k">new</span> DataView<span class="p">(</span>buffer<span class="p">);</span>
   offset <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-  strings <span class="o">=</span> <span class="p">[</span><span class="p">]</span><span class="p">;</span>
+  strings <span class="o">=</span> <span class="p">[];</span>
 
-  num_strings <span class="o">=</span> view<span class="p">.</span>getUint32<span class="p">(</span>offset<span class="p">)</span><span class="p">;</span>
+  num_strings <span class="o">=</span> view<span class="p">.</span>getUint32<span class="p">(</span>offset<span class="p">);</span>
   offset <span class="o">+=</span> Uint32Array<span class="p">.</span>BYTES_PER_ELEMENT<span class="p">;</span>
   <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> i <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> i <span class="o">&lt;</span> num_strings<span class="p">;</span> i<span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    len <span class="o">=</span> view<span class="p">.</span>getUint32<span class="p">(</span>offset<span class="p">)</span><span class="p">;</span>
+    len <span class="o">=</span> view<span class="p">.</span>getUint32<span class="p">(</span>offset<span class="p">);</span>
     offset <span class="o">+=</span> Uint32Array<span class="p">.</span>BYTES_PER_ELEMENT<span class="p">;</span>
     strings<span class="p">[</span>i<span class="p">]</span> <span class="o">=</span> decoder<span class="p">.</span>decode<span class="p">(</span>
-      <span class="k">new</span> DataView<span class="p">(</span>view<span class="p">.</span>buffer<span class="p">,</span> offset<span class="p">,</span> len<span class="p">)</span><span class="p">)</span><span class="p">;</span>
+      <span class="k">new</span> DataView<span class="p">(</span>view<span class="p">.</span>buffer<span class="p">,</span> offset<span class="p">,</span> len<span class="p">));</span>
     offset <span class="o">+=</span> len<span class="p">;</span>
   <span class="p">}</span>
   <span class="k">return</span> strings<span class="p">;</span>
 <span class="p">}</span></code></pre>
    </div>
    <h3 class="heading settled" data-level="7.1" id="interface-textdecoder"><span class="secno">7.1. </span><span class="content">Interface <code class="idl"><a data-link-type="idl" href="#textdecoder" id="ref-for-textdecoder-1">TextDecoder</a></code></span><a class="self-link" href="#interface-textdecoder"></a></h3>
-<pre class="idl highlight def"><span class="kt">dictionary</span> <dfn class="nv dfn-paneled idl-code" data-dfn-type="dictionary" data-export="" id="textdecoderoptions">TextDecoderOptions</dfn> {
-  <a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-boolean"><span class="kt">boolean</span></a> <dfn class="nv idl-code" data-default="false" data-dfn-for="TextDecoderOptions" data-dfn-type="dict-member" data-export="" data-type="boolean " id="dom-textdecoderoptions-fatal">fatal<a class="self-link" href="#dom-textdecoderoptions-fatal"></a></dfn> = <span class="kt">false</span>;
-  <a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-boolean"><span class="kt">boolean</span></a> <dfn class="nv idl-code" data-default="false" data-dfn-for="TextDecoderOptions" data-dfn-type="dict-member" data-export="" data-type="boolean " id="dom-textdecoderoptions-ignorebom">ignoreBOM<a class="self-link" href="#dom-textdecoderoptions-ignorebom"></a></dfn> = <span class="kt">false</span>;
+<pre class="idl highlight def"><span class="kt">dictionary</span> <dfn class="nv dfn-paneled idl-code" data-dfn-type="dictionary" data-export="" id="textdecoderoptions"><code>TextDecoderOptions</code></dfn> {
+  <a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-boolean"><span class="kt">boolean</span></a> <dfn class="nv idl-code" data-default="false" data-dfn-for="TextDecoderOptions" data-dfn-type="dict-member" data-export="" data-type="boolean " id="dom-textdecoderoptions-fatal"><code>fatal</code><a class="self-link" href="#dom-textdecoderoptions-fatal"></a></dfn> = <span class="kt">false</span>;
+  <a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-boolean"><span class="kt">boolean</span></a> <dfn class="nv idl-code" data-default="false" data-dfn-for="TextDecoderOptions" data-dfn-type="dict-member" data-export="" data-type="boolean " id="dom-textdecoderoptions-ignorebom"><code>ignoreBOM</code><a class="self-link" href="#dom-textdecoderoptions-ignorebom"></a></dfn> = <span class="kt">false</span>;
 };
 
-<span class="kt">dictionary</span> <dfn class="nv dfn-paneled idl-code" data-dfn-type="dictionary" data-export="" id="textdecodeoptions">TextDecodeOptions</dfn> {
-  <a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-boolean"><span class="kt">boolean</span></a> <dfn class="nv idl-code" data-default="false" data-dfn-for="TextDecodeOptions" data-dfn-type="dict-member" data-export="" data-type="boolean " id="dom-textdecodeoptions-stream">stream<a class="self-link" href="#dom-textdecodeoptions-stream"></a></dfn> = <span class="kt">false</span>;
+<span class="kt">dictionary</span> <dfn class="nv dfn-paneled idl-code" data-dfn-type="dictionary" data-export="" id="textdecodeoptions"><code>TextDecodeOptions</code></dfn> {
+  <a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-boolean"><span class="kt">boolean</span></a> <dfn class="nv idl-code" data-default="false" data-dfn-for="TextDecodeOptions" data-dfn-type="dict-member" data-export="" data-type="boolean " id="dom-textdecodeoptions-stream"><code>stream</code><a class="self-link" href="#dom-textdecodeoptions-stream"></a></dfn> = <span class="kt">false</span>;
 };
 
-[<a class="nv idl-code" data-link-type="constructor" href="#dom-textdecoder" id="ref-for-dom-textdecoder-1">Constructor</a>(<span class="kt">optional</span> <a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-DOMString"><span class="kt">DOMString</span></a> <dfn class="nv idl-code" data-dfn-for="TextDecoder/TextDecoder(label, options)" data-dfn-type="argument" data-export="" id="dom-textdecoder-textdecoder-label-options-label">label<a class="self-link" href="#dom-textdecoder-textdecoder-label-options-label"></a></dfn> = "utf-8", <span class="kt">optional</span> <a class="n" data-link-type="idl-name" href="#textdecoderoptions" id="ref-for-textdecoderoptions-1">TextDecoderOptions</a> <dfn class="nv idl-code" data-dfn-for="TextDecoder/TextDecoder(label, options)" data-dfn-type="argument" data-export="" id="dom-textdecoder-textdecoder-label-options-options">options<a class="self-link" href="#dom-textdecoder-textdecoder-label-options-options"></a></dfn>),
+[<a class="nv idl-code" data-link-type="constructor" href="#dom-textdecoder" id="ref-for-dom-textdecoder-1">Constructor</a>(<span class="kt">optional</span> <a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-DOMString"><span class="kt">DOMString</span></a> <dfn class="nv idl-code" data-dfn-for="TextDecoder/TextDecoder(label, options)" data-dfn-type="argument" data-export="" id="dom-textdecoder-textdecoder-label-options-label"><code>label</code><a class="self-link" href="#dom-textdecoder-textdecoder-label-options-label"></a></dfn> = "utf-8", <span class="kt">optional</span> <a class="n" data-link-type="idl-name" href="#textdecoderoptions" id="ref-for-textdecoderoptions-1">TextDecoderOptions</a> <dfn class="nv idl-code" data-dfn-for="TextDecoder/TextDecoder(label, options)" data-dfn-type="argument" data-export="" id="dom-textdecoder-textdecoder-label-options-options"><code>options</code><a class="self-link" href="#dom-textdecoder-textdecoder-label-options-options"></a></dfn>),
  <a class="nv idl-code" data-link-type="extended-attribute" href="https://heycam.github.io/webidl/#Exposed">Exposed</a>=(<span class="n">Window</span>,<span class="n">Worker</span>)]
-<span class="kt">interface</span> <dfn class="nv dfn-paneled idl-code" data-dfn-type="interface" data-export="" id="textdecoder">TextDecoder</dfn> {
+<span class="kt">interface</span> <dfn class="nv dfn-paneled idl-code" data-dfn-type="interface" data-export="" id="textdecoder"><code>TextDecoder</code></dfn> {
   <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-DOMString"><span class="kt">DOMString</span></a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="DOMString" href="#dom-textdecoder-encoding" id="ref-for-dom-textdecoder-encoding-1">encoding</a>;
   <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-boolean"><span class="kt">boolean</span></a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="boolean" href="#dom-textdecoder-fatal" id="ref-for-dom-textdecoder-fatal-1">fatal</a>;
   <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-boolean"><span class="kt">boolean</span></a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="boolean" href="#dom-textdecoder-ignorebom" id="ref-for-dom-textdecoder-ignorebom-1">ignoreBOM</a>;
-  <a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-USVString"><span class="kt">USVString</span></a> <a class="nv idl-code" data-link-type="method" href="#dom-textdecoder-decode" id="ref-for-dom-textdecoder-decode-1">decode</a>(<span class="kt">optional</span> <a class="n" data-link-type="idl-name" href="https://heycam.github.io/webidl/#BufferSource">BufferSource</a> <dfn class="nv idl-code" data-dfn-for="TextDecoder/decode(input, options), TextDecoder/decode(input), TextDecoder/decode()" data-dfn-type="argument" data-export="" id="dom-textdecoder-decode-input-options-input">input<a class="self-link" href="#dom-textdecoder-decode-input-options-input"></a></dfn>, <span class="kt">optional</span> <a class="n" data-link-type="idl-name" href="#textdecodeoptions" id="ref-for-textdecodeoptions-1">TextDecodeOptions</a> <dfn class="nv idl-code" data-dfn-for="TextDecoder/decode(input, options), TextDecoder/decode(input), TextDecoder/decode()" data-dfn-type="argument" data-export="" id="dom-textdecoder-decode-input-options-options">options<a class="self-link" href="#dom-textdecoder-decode-input-options-options"></a></dfn>);
+  <a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-USVString"><span class="kt">USVString</span></a> <a class="nv idl-code" data-link-type="method" href="#dom-textdecoder-decode" id="ref-for-dom-textdecoder-decode-1">decode</a>(<span class="kt">optional</span> <a class="n" data-link-type="idl-name" href="https://heycam.github.io/webidl/#BufferSource">BufferSource</a> <dfn class="nv idl-code" data-dfn-for="TextDecoder/decode(input, options), TextDecoder/decode(input), TextDecoder/decode()" data-dfn-type="argument" data-export="" id="dom-textdecoder-decode-input-options-input"><code>input</code><a class="self-link" href="#dom-textdecoder-decode-input-options-input"></a></dfn>, <span class="kt">optional</span> <a class="n" data-link-type="idl-name" href="#textdecodeoptions" id="ref-for-textdecodeoptions-1">TextDecodeOptions</a> <dfn class="nv idl-code" data-dfn-for="TextDecoder/decode(input, options), TextDecoder/decode(input), TextDecoder/decode()" data-dfn-type="argument" data-export="" id="dom-textdecoder-decode-input-options-options"><code>options</code><a class="self-link" href="#dom-textdecoder-decode-input-options-options"></a></dfn>);
 };</pre>
    <p>A <code class="idl"><a data-link-type="idl" href="#textdecoder" id="ref-for-textdecoder-2">TextDecoder</a></code> object has an associated <dfn class="dfn-paneled" data-dfn-for="TextDecoder" data-dfn-type="dfn" data-noexport="" id="textdecoder-encoding">encoding</dfn>, <dfn class="dfn-paneled" data-dfn-for="TextDecoder" data-dfn-type="dfn" data-noexport="" id="textdecoder-decoder">decoder</dfn>, <dfn class="dfn-paneled" data-dfn-for="TextDecoder" data-dfn-type="dfn" data-noexport="" id="textdecoder-stream">stream</dfn>, <dfn class="dfn-paneled" data-dfn-for="TextDecoder" data-dfn-type="dfn" data-noexport="" id="textdecoder-ignore-bom-flag">ignore BOM flag</dfn> (initially unset), <dfn class="dfn-paneled" data-dfn-for="TextDecoder" data-dfn-type="dfn" data-noexport="" id="textdecoder-bom-seen-flag">BOM seen flag</dfn> (initially unset), <dfn class="dfn-paneled" data-dfn-for="TextDecoder" data-dfn-type="dfn" data-noexport="" id="textdecoder-error-mode">error mode</dfn> (initially "<code>replacement</code>"), and <dfn class="dfn-paneled" data-dfn-for="TextDecoder" data-dfn-type="dfn" data-noexport="" id="textdecoder-do-not-flush-flag">do not flush flag</dfn> (initially unset). </p>
    <p>A <code class="idl"><a data-link-type="idl" href="#textdecoder" id="ref-for-textdecoder-3">TextDecoder</a></code> object also has an associated <dfn class="dfn-paneled" data-dfn-for="TextDecoder" data-dfn-type="dfn" data-noexport="" id="concept-td-serialize">serialize stream</dfn> algorithm, that given a <a data-link-type="dfn" href="#concept-stream" id="ref-for-concept-stream-14">stream</a> <var>stream</var>, runs these steps: </p>
@@ -1481,8 +1487,7 @@ this API. </p>
       <li>
        <p>Let <var>token</var> be the result of <a data-link-type="dfn" href="#concept-stream-read" id="ref-for-concept-stream-read-5">reading</a> from <var>stream</var>. </p>
       <li>
-       <p>If <a data-link-type="dfn" href="#textdecoder-encoding" id="ref-for-textdecoder-encoding-1">encoding</a> is <a data-link-type="dfn" href="#utf-8" id="ref-for-utf-8-14">UTF-8</a>, <a data-link-type="dfn" href="#utf-16be" id="ref-for-utf-16be-7">UTF-16BE</a>, or <a data-link-type="dfn" href="#utf-16le" id="ref-for-utf-16le-7">UTF-16LE</a>, and <a data-link-type="dfn" href="#textdecoder-ignore-bom-flag" id="ref-for-textdecoder-ignore-bom-flag-1">ignore BOM flag</a> and <a data-link-type="dfn" href="#textdecoder-bom-seen-flag" id="ref-for-textdecoder-bom-seen-flag-1">BOM seen flag</a> are unset, then
-    run these subsubsteps: </p>
+       <p>If <a data-link-type="dfn" href="#textdecoder-encoding" id="ref-for-textdecoder-encoding-1">encoding</a> is <a data-link-type="dfn" href="#utf-8" id="ref-for-utf-8-14">UTF-8</a>, <a data-link-type="dfn" href="#utf-16be" id="ref-for-utf-16be-7">UTF-16BE</a>, or <a data-link-type="dfn" href="#utf-16le" id="ref-for-utf-16le-7">UTF-16LE</a>, and <a data-link-type="dfn" href="#textdecoder-ignore-bom-flag" id="ref-for-textdecoder-ignore-bom-flag-1">ignore BOM flag</a> and <a data-link-type="dfn" href="#textdecoder-bom-seen-flag" id="ref-for-textdecoder-bom-seen-flag-1">BOM seen flag</a> are unset, then: </p>
        <ol>
         <li>
          <p>If <var>token</var> is U+FEFF, then set <a data-link-type="dfn" href="#textdecoder-bom-seen-flag" id="ref-for-textdecoder-bom-seen-flag-2">BOM seen flag</a>. </p>
@@ -1502,7 +1507,7 @@ the <a data-link-type="dfn" href="#decode" id="ref-for-decode-2">decode</a> algo
 control. </p>
    <hr>
    <dl class="domintro">
-    <dt><code><var>decoder</var> = new <a class="idl-code" data-link-type="constructor">TextDecoder([<var>label</var> = "utf-8" [, <var>options</var>]])</a></code> 
+    <dt><code><var>decoder</var> = new <a class="idl-code" data-link-type="constructor" href="#dom-textdecoder" id="ref-for-dom-textdecoder-2">TextDecoder([<var>label</var> = "utf-8" [, <var>options</var>]])</a></code> 
     <dd>
      <p>Returns a new <code class="idl"><a data-link-type="idl" href="#textdecoder" id="ref-for-textdecoder-4">TextDecoder</a></code> object. </p>
      <p>If <var>label</var> is either not a <a data-link-type="dfn" href="#label" id="ref-for-label-10">label</a> or is a <a data-link-type="dfn" href="#label" id="ref-for-label-11">label</a> for <a data-link-type="dfn" href="#replacement" id="ref-for-replacement-6">replacement</a>, <a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-throw">throws</a> a <code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#exceptiondef-rangeerror">RangeError</a></code>. </p>
@@ -1516,21 +1521,21 @@ control. </p>
     <dt><code><var>decoder</var> . <a class="idl-code" data-link-type="attribute" href="#dom-textdecoder-ignorebom" id="ref-for-dom-textdecoder-ignorebom-2">ignoreBOM</a></code> 
     <dd>
      <p>Returns true if <a data-link-type="dfn" href="#textdecoder-ignore-bom-flag" id="ref-for-textdecoder-ignore-bom-flag-2">ignore BOM flag</a> is set, and false otherwise. </p>
-    <dt><code><var>decoder</var> . <a class="idl-code" data-link-type="method">decode([<var>input</var> [, <var>options</var>]])</a></code> 
+    <dt><code><var>decoder</var> . <a class="idl-code" data-link-type="method" href="#dom-textdecoder-decode" id="ref-for-dom-textdecoder-decode-2">decode([<var>input</var> [, <var>options</var>]])</a></code> 
     <dd>
-     <p>Returns the result of running <a data-link-type="dfn" href="#textdecoder-encoding" id="ref-for-textdecoder-encoding-3">encoding</a>’s <a data-link-type="dfn" href="#decoder" id="ref-for-decoder-12">decoder</a>. The method can
-  be invoked zero or more times with <var>options</var>’s <code>stream</code> set to true, and then
-  once without <var>options</var>’s <code>stream</code> (or set to false), to process a fragmented
-  stream. If the invocation without <var>options</var>’s <code>stream</code> (or set to false) has
-  no <var>input</var>, it’s clearest to omit both arguments. </p>
-<pre class="example" id="example-end-of-stream"><a class="self-link" href="#example-end-of-stream"></a><code class="lang-javascript highlight"><span class="kd">var</span> string <span class="o">=</span> <span class="s2">""</span><span class="p">,</span> decoder <span class="o">=</span> <span class="k">new</span> TextDecoder<span class="p">(</span>encoding<span class="p">)</span><span class="p">,</span> buffer<span class="p">;</span>
-<span class="k">while</span><span class="p">(</span>buffer <span class="o">=</span> next_chunk<span class="p">(</span><span class="p">)</span><span class="p">)</span> <span class="p">{</span>
-  string <span class="o">+=</span> decoder<span class="p">.</span>decode<span class="p">(</span>buffer<span class="p">,</span> <span class="p">{</span>stream<span class="o">:</span><span class="kc">true</span><span class="p">}</span><span class="p">)</span><span class="p">;</span>
+     <p>Returns the result of running <a data-link-type="dfn" href="#textdecoder-encoding" id="ref-for-textdecoder-encoding-3">encoding</a>’s <a data-link-type="dfn" href="#decoder" id="ref-for-decoder-12">decoder</a>. The
+  method can be invoked zero or more times with <var>options</var>’s <code>stream</code> set to
+  true, and then once without <var>options</var>’s <code>stream</code> (or set to false), to process
+  a fragmented stream. If the invocation without <var>options</var>’s <code>stream</code> (or set to
+  false) has no <var>input</var>, it’s clearest to omit both arguments. </p>
+<pre class="example" id="example-end-of-stream"><a class="self-link" href="#example-end-of-stream"></a><code class="lang-javascript highlight"><span class="kd">var</span> string <span class="o">=</span> <span class="s2">""</span><span class="p">,</span> decoder <span class="o">=</span> <span class="k">new</span> TextDecoder<span class="p">(</span>encoding<span class="p">),</span> buffer<span class="p">;</span>
+<span class="k">while</span><span class="p">(</span>buffer <span class="o">=</span> next_chunk<span class="p">())</span> <span class="p">{</span>
+  string <span class="o">+=</span> decoder<span class="p">.</span>decode<span class="p">(</span>buffer<span class="p">,</span> <span class="p">{</span>stream<span class="o">:</span><span class="kc">true</span><span class="p">});</span>
 <span class="p">}</span>
-string <span class="o">+=</span> decoder<span class="p">.</span>decode<span class="p">(</span><span class="p">)</span><span class="p">;</span> <span class="c1">// end-of-stream</span></code></pre>
+string <span class="o">+=</span> decoder<span class="p">.</span>decode<span class="p">();</span> <span class="c1">// end-of-stream</span></code></pre>
      <p>If the <a data-link-type="dfn" href="#textdecoder-error-mode" id="ref-for-textdecoder-error-mode-2">error mode</a> is "<code>fatal</code>" and <a data-link-type="dfn" href="#textdecoder-encoding" id="ref-for-textdecoder-encoding-4">encoding</a>’s <a data-link-type="dfn" href="#decoder" id="ref-for-decoder-13">decoder</a> returns <a data-link-type="dfn" href="#error" id="ref-for-error-5">error</a>, <a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-throw">throws</a> a <code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#exceptiondef-typeerror">TypeError</a></code>. </p>
    </dl>
-   <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="TextDecoder" data-dfn-type="constructor" data-export="" id="dom-textdecoder"><code>TextDecoder(<var>label</var>, <var>options</var>)</code></dfn> constructor, when invoked, must run these steps: </p>
+   <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="TextDecoder" data-dfn-type="constructor" data-export="" id="dom-textdecoder"><code><code>TextDecoder(<var>label</var>, <var>options</var>)</code></code></dfn> constructor, when invoked, must run these steps: </p>
    <ol>
     <li>
      <p>Let <var>encoding</var> be the result of <a data-link-type="dfn" href="#concept-encoding-get" id="ref-for-concept-encoding-get-2">getting an encoding</a> from <var>label</var>. </p>
@@ -1547,23 +1552,22 @@ string <span class="o">+=</span> decoder<span class="p">.</span>decode<span clas
     <li>
      <p>Return <var>dec</var>. </p>
    </ol>
-   <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="TextDecoder" data-dfn-type="attribute" data-export="" id="dom-textdecoder-encoding"><code>encoding</code></dfn> attribute’s getter must return <a data-link-type="dfn" href="#textdecoder-encoding" id="ref-for-textdecoder-encoding-6">encoding</a>’s <a data-link-type="dfn" href="#name" id="ref-for-name-4">name</a> in <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#ascii-lowercase">ASCII lowercase</a>. </p>
-   <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="TextDecoder" data-dfn-type="attribute" data-export="" id="dom-textdecoder-fatal"><code>fatal</code></dfn> attribute’s getter must return true
+   <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="TextDecoder" data-dfn-type="attribute" data-export="" id="dom-textdecoder-encoding"><code><code>encoding</code></code></dfn> attribute’s getter must return <a data-link-type="dfn" href="#textdecoder-encoding" id="ref-for-textdecoder-encoding-6">encoding</a>’s <a data-link-type="dfn" href="#name" id="ref-for-name-4">name</a> in <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#ascii-lowercase">ASCII lowercase</a>. </p>
+   <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="TextDecoder" data-dfn-type="attribute" data-export="" id="dom-textdecoder-fatal"><code><code>fatal</code></code></dfn> attribute’s getter must return true
 if <a data-link-type="dfn" href="#textdecoder-error-mode" id="ref-for-textdecoder-error-mode-4">error mode</a> is "<code>fatal</code>", and false otherwise. </p>
-   <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="TextDecoder" data-dfn-type="attribute" data-export="" id="dom-textdecoder-ignorebom"><code>ignoreBOM</code></dfn> attribute’s getter must return
+   <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="TextDecoder" data-dfn-type="attribute" data-export="" id="dom-textdecoder-ignorebom"><code><code>ignoreBOM</code></code></dfn> attribute’s getter must return
 true if <a data-link-type="dfn" href="#textdecoder-ignore-bom-flag" id="ref-for-textdecoder-ignore-bom-flag-4">ignore BOM flag</a> is set, and false otherwise. </p>
-   <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="TextDecoder" data-dfn-type="method" data-export="" data-lt="decode(input, options)|decode(input)|decode()" id="dom-textdecoder-decode"><code>decode(<var>input</var>, <var>options</var>)</code></dfn> method, when invoked, must run these steps: </p>
+   <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="TextDecoder" data-dfn-type="method" data-export="" data-lt="decode(input, options)|decode(input)|decode()" id="dom-textdecoder-decode"><code><code>decode(<var>input</var>, <var>options</var>)</code></code></dfn> method, when invoked, must run these steps: </p>
    <ol>
     <li>
-     <p>If the <a data-link-type="dfn" href="#textdecoder-do-not-flush-flag" id="ref-for-textdecoder-do-not-flush-flag-1">do not flush flag</a> is unset, set <a data-link-type="dfn" href="#textdecoder-decoder" id="ref-for-textdecoder-decoder-1">decoder</a> to a new <a data-link-type="dfn" href="#textdecoder-encoding" id="ref-for-textdecoder-encoding-7">encoding</a>’s <a data-link-type="dfn" href="#decoder" id="ref-for-decoder-14">decoder</a>, set <a data-link-type="dfn" href="#textdecoder-stream" id="ref-for-textdecoder-stream-1">stream</a> to a
- new <a data-link-type="dfn" href="#concept-stream" id="ref-for-concept-stream-15">stream</a>, and unset the <a data-link-type="dfn" href="#textdecoder-bom-seen-flag" id="ref-for-textdecoder-bom-seen-flag-4">BOM seen flag</a>. </p>
+     <p>If the <a data-link-type="dfn" href="#textdecoder-do-not-flush-flag" id="ref-for-textdecoder-do-not-flush-flag-1">do not flush flag</a> is unset, set <a data-link-type="dfn" href="#textdecoder-decoder" id="ref-for-textdecoder-decoder-1">decoder</a> to a new <a data-link-type="dfn" href="#textdecoder-encoding" id="ref-for-textdecoder-encoding-7">encoding</a>’s <a data-link-type="dfn" href="#decoder" id="ref-for-decoder-14">decoder</a>, set <a data-link-type="dfn" href="#textdecoder-stream" id="ref-for-textdecoder-stream-1">stream</a> to a new <a data-link-type="dfn" href="#concept-stream" id="ref-for-concept-stream-15">stream</a>, and unset the <a data-link-type="dfn" href="#textdecoder-bom-seen-flag" id="ref-for-textdecoder-bom-seen-flag-4">BOM seen flag</a>. </p>
     <li>
      <p>If <var>options</var>’s <code>stream</code> is true, set the <a data-link-type="dfn" href="#textdecoder-do-not-flush-flag" id="ref-for-textdecoder-do-not-flush-flag-2">do not flush flag</a>, and unset the <a data-link-type="dfn" href="#textdecoder-do-not-flush-flag" id="ref-for-textdecoder-do-not-flush-flag-3">do not flush flag</a> otherwise. </p>
     <li>
      <p>If <var>input</var> is given, then <a data-link-type="dfn" href="#concept-stream-push" id="ref-for-concept-stream-push-3">push</a> a <a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-get-buffer-source-copy">copy of</a> <var>input</var> to <a data-link-type="dfn" href="#textdecoder-stream" id="ref-for-textdecoder-stream-2">stream</a>. </p>
      <p class="note" role="note">Implementations are strongly encouraged to use an implementation strategy that
   avoids this copy. When doing so they will have to make sure that changes to <var>input</var> do
-  not affect future calls to <a class="idl-code" data-link-type="method" href="#dom-textdecoder-decode" id="ref-for-dom-textdecoder-decode-2"><code>decode()</code></a>. </p>
+  not affect future calls to <a class="idl-code" data-link-type="method" href="#dom-textdecoder-decode" id="ref-for-dom-textdecoder-decode-3"><code>decode()</code></a>. </p>
     <li>
      <p>Let <var>output</var> be a new <a data-link-type="dfn" href="#concept-stream" id="ref-for-concept-stream-16">stream</a>. </p>
     <li>
@@ -1573,32 +1577,31 @@ true if <a data-link-type="dfn" href="#textdecoder-ignore-bom-flag" id="ref-for-
        <p>Let <var>token</var> be the result of <a data-link-type="dfn" href="#concept-stream-read" id="ref-for-concept-stream-read-6">reading</a> from <a data-link-type="dfn" href="#textdecoder-stream" id="ref-for-textdecoder-stream-3">stream</a>. </p>
       <li>
        <p>If <var>token</var> is <a data-link-type="dfn" href="#end-of-stream" id="ref-for-end-of-stream-5">end-of-stream</a> and the <a data-link-type="dfn" href="#textdecoder-do-not-flush-flag" id="ref-for-textdecoder-do-not-flush-flag-4">do not flush flag</a> is set, then return <var>output</var>, <a data-link-type="dfn" href="#concept-td-serialize" id="ref-for-concept-td-serialize-1">serialized</a>. </p>
-       <p class="note" role="note">The way streaming works is to not handle <a data-link-type="dfn" href="#end-of-stream" id="ref-for-end-of-stream-6">end-of-stream</a> here when the <a data-link-type="dfn" href="#textdecoder-do-not-flush-flag" id="ref-for-textdecoder-do-not-flush-flag-5">do not flush flag</a> is set and to not unset that flag. That way in a subsequent invocation <a data-link-type="dfn" href="#textdecoder-decoder" id="ref-for-textdecoder-decoder-2">decoder</a> is not set anew in the first step of the algorithm and its state is preserved. </p>
+       <p class="note" role="note">The way streaming works is to not handle <a data-link-type="dfn" href="#end-of-stream" id="ref-for-end-of-stream-6">end-of-stream</a> here when the <a data-link-type="dfn" href="#textdecoder-do-not-flush-flag" id="ref-for-textdecoder-do-not-flush-flag-5">do not flush flag</a> is set and to not unset that flag. That way in a
+    subsequent invocation <a data-link-type="dfn" href="#textdecoder-decoder" id="ref-for-textdecoder-decoder-2">decoder</a> is not set anew in the first step of the
+    algorithm and its state is preserved. </p>
       <li>
-       <p>Otherwise, run these subsubsteps: </p>
+       <p>Otherwise: </p>
        <ol>
         <li>
          <p>Let <var>result</var> be the result of <a data-link-type="dfn" href="#concept-encoding-process" id="ref-for-concept-encoding-process-2">processing</a> <var>token</var> for <a data-link-type="dfn" href="#textdecoder-decoder" id="ref-for-textdecoder-decoder-3">decoder</a>, <a data-link-type="dfn" href="#textdecoder-stream" id="ref-for-textdecoder-stream-4">stream</a>, <var>output</var>, and <a data-link-type="dfn" href="#textdecoder-error-mode" id="ref-for-textdecoder-error-mode-5">error mode</a>. </p>
         <li>
          <p>If <var>result</var> is <a data-link-type="dfn" href="#finished" id="ref-for-finished-2">finished</a>, then return <var>output</var>, <a data-link-type="dfn" href="#concept-td-serialize" id="ref-for-concept-td-serialize-2">serialized</a>. </p>
         <li>
-         <p>Otherwise, if <var>result</var> is <a data-link-type="dfn" href="#error" id="ref-for-error-6">error</a>, <a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-throw">throw</a> a <code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#exceptiondef-typeerror">TypeError</a></code>. </p>
-        <li>
-         <p>Otherwise, do nothing. </p>
+         <p>Otherwise, if <var>result</var> is <a data-link-type="dfn" href="#error" id="ref-for-error-6">error</a>, then <a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-throw">throw</a> a <code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#exceptiondef-typeerror">TypeError</a></code>. </p>
        </ol>
      </ol>
    </ol>
    <h3 class="heading settled" data-level="7.2" id="interface-textencoder"><span class="secno">7.2. </span><span class="content">Interface <code class="idl"><a data-link-type="idl" href="#textencoder" id="ref-for-textencoder-2">TextEncoder</a></code></span><a class="self-link" href="#interface-textencoder"></a></h3>
 <pre class="idl highlight def">[<a class="nv idl-code" data-link-type="constructor" href="#dom-textencoder" id="ref-for-dom-textencoder-1">Constructor</a>,
  <a class="nv idl-code" data-link-type="extended-attribute" href="https://heycam.github.io/webidl/#Exposed">Exposed</a>=(<span class="n">Window</span>,<span class="n">Worker</span>)]
-<span class="kt">interface</span> <dfn class="nv dfn-paneled idl-code" data-dfn-type="interface" data-export="" id="textencoder">TextEncoder</dfn> {
+<span class="kt">interface</span> <dfn class="nv dfn-paneled idl-code" data-dfn-type="interface" data-export="" id="textencoder"><code>TextEncoder</code></dfn> {
   <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-DOMString"><span class="kt">DOMString</span></a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="DOMString" href="#dom-textencoder-encoding" id="ref-for-dom-textencoder-encoding-1">encoding</a>;
-  [<a class="nv idl-code" data-link-type="extended-attribute" href="https://heycam.github.io/webidl/#NewObject">NewObject</a>] <a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-Uint8Array"><span class="kt">Uint8Array</span></a> <a class="nv idl-code" data-link-type="method" href="#dom-textencoder-encode" id="ref-for-dom-textencoder-encode-1">encode</a>(<span class="kt">optional</span> <a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-USVString"><span class="kt">USVString</span></a> <dfn class="nv idl-code" data-dfn-for="TextEncoder/encode(input), TextEncoder/encode()" data-dfn-type="argument" data-export="" id="dom-textencoder-encode-input-input">input<a class="self-link" href="#dom-textencoder-encode-input-input"></a></dfn> = "");
+  [<a class="nv idl-code" data-link-type="extended-attribute" href="https://heycam.github.io/webidl/#NewObject">NewObject</a>] <a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-Uint8Array"><span class="kt">Uint8Array</span></a> <a class="nv idl-code" data-link-type="method" href="#dom-textencoder-encode" id="ref-for-dom-textencoder-encode-1">encode</a>(<span class="kt">optional</span> <a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-USVString"><span class="kt">USVString</span></a> <dfn class="nv idl-code" data-dfn-for="TextEncoder/encode(input), TextEncoder/encode()" data-dfn-type="argument" data-export="" id="dom-textencoder-encode-input-input"><code>input</code><a class="self-link" href="#dom-textencoder-encode-input-input"></a></dfn> = "");
 };</pre>
    <p>A <code class="idl"><a data-link-type="idl" href="#textencoder" id="ref-for-textencoder-3">TextEncoder</a></code> object has an associated <dfn class="dfn-paneled" data-dfn-for="TextEncoder" data-dfn-type="dfn" data-noexport="" id="textencoder-encoder">encoder</dfn>. </p>
    <p class="note no-backref" role="note">A <code class="idl"><a data-link-type="idl" href="#textencoder" id="ref-for-textencoder-4">TextEncoder</a></code> object offers no <var>label</var> argument as it only
-supports <a data-link-type="dfn" href="#utf-8" id="ref-for-utf-8-15">UTF-8</a>. It also offers no <code>stream</code> option as no <a data-link-type="dfn" href="#encoder" id="ref-for-encoder-9">encoder</a> requires
-buffering of scalar values. </p>
+supports <a data-link-type="dfn" href="#utf-8" id="ref-for-utf-8-15">UTF-8</a>. It also offers no <code>stream</code> option as no <a data-link-type="dfn" href="#encoder" id="ref-for-encoder-9">encoder</a> requires buffering of scalar values. </p>
    <hr>
    <dl class="domintro">
     <dt><code><var>encoder</var> = new <a class="idl-code" data-link-type="constructor" href="#dom-textencoder" id="ref-for-dom-textencoder-2">TextEncoder()</a></code> 
@@ -1607,11 +1610,11 @@ buffering of scalar values. </p>
     <dt><code><var>encoder</var> . <a class="idl-code" data-link-type="attribute" href="#dom-textencoder-encoding" id="ref-for-dom-textencoder-encoding-2">encoding</a></code> 
     <dd>
      <p>Returns "<code>utf-8</code>". </p>
-    <dt><code><var>encoder</var> . <a class="idl-code" data-link-type="method">encode([<var>input</var> = ""])</a></code> 
+    <dt><code><var>encoder</var> . <a class="idl-code" data-link-type="method" href="#dom-textencoder-encode" id="ref-for-dom-textencoder-encode-2">encode([<var>input</var> = ""])</a></code> 
     <dd>
      <p>Returns the result of running <a data-link-type="dfn" href="#utf-8" id="ref-for-utf-8-16">UTF-8</a>’s <a data-link-type="dfn" href="#encoder" id="ref-for-encoder-10">encoder</a>. </p>
    </dl>
-   <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="TextEncoder" data-dfn-type="constructor" data-export="" id="dom-textencoder"><code>TextEncoder()</code></dfn> constructor, when invoked, must run these steps: </p>
+   <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="TextEncoder" data-dfn-type="constructor" data-export="" id="dom-textencoder"><code><code>TextEncoder()</code></code></dfn> constructor, when invoked, must run these steps: </p>
    <ol>
     <li>
      <p>Let <var>enc</var> be a new <code class="idl"><a data-link-type="idl" href="#textencoder" id="ref-for-textencoder-6">TextEncoder</a></code> object. </p>
@@ -1620,9 +1623,9 @@ buffering of scalar values. </p>
     <li>
      <p>Return <var>enc</var>. </p>
    </ol>
-   <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="TextEncoder" data-dfn-type="attribute" data-export="" id="dom-textencoder-encoding"><code>encoding</code></dfn> attribute’s getter must return
+   <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="TextEncoder" data-dfn-type="attribute" data-export="" id="dom-textencoder-encoding"><code><code>encoding</code></code></dfn> attribute’s getter must return
 "<code>utf-8</code>". </p>
-   <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="TextEncoder" data-dfn-type="method" data-export="" data-lt="encode(input)|encode()" id="dom-textencoder-encode"><code>encode(<var>input</var>)</code></dfn> method, when invoked,
+   <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="TextEncoder" data-dfn-type="method" data-export="" data-lt="encode(input)|encode()" id="dom-textencoder-encode"><code><code>encode(<var>input</var>)</code></code></dfn> method, when invoked,
 must run these steps: </p>
    <ol>
     <li>
@@ -1630,7 +1633,7 @@ must run these steps: </p>
     <li>
      <p>Let <var>output</var> be a new <a data-link-type="dfn" href="#concept-stream" id="ref-for-concept-stream-18">stream</a>. </p>
     <li>
-     <p>While true, run these substeps: </p>
+     <p>While true: </p>
      <ol>
       <li>
        <p>Let <var>token</var> be the result of <a data-link-type="dfn" href="#concept-stream-read" id="ref-for-concept-stream-read-7">reading</a> from <var>input</var>. </p>
@@ -1699,8 +1702,7 @@ must run these steps: </p>
      </dl>
      <p>Return <a data-link-type="dfn" href="#continue" id="ref-for-continue-4">continue</a>. </p>
     <li>
-     <p>If <var>byte</var> is not in the range <a data-link-type="dfn" href="#utf-8-lower-boundary" id="ref-for-utf-8-lower-boundary-3">UTF-8 lower boundary</a> to <a data-link-type="dfn" href="#utf-8-upper-boundary" id="ref-for-utf-8-upper-boundary-3">UTF-8 upper boundary</a>, inclusive,
-  run these substeps: </p>
+     <p>If <var>byte</var> is not in the range <a data-link-type="dfn" href="#utf-8-lower-boundary" id="ref-for-utf-8-lower-boundary-3">UTF-8 lower boundary</a> to <a data-link-type="dfn" href="#utf-8-upper-boundary" id="ref-for-utf-8-upper-boundary-3">UTF-8 upper boundary</a>, inclusive, then: </p>
      <ol>
       <li>
        <p>Set <a data-link-type="dfn" href="#utf-8-code-point" id="ref-for-utf-8-code-point-4">UTF-8 code point</a>, <a data-link-type="dfn" href="#utf-8-bytes-needed" id="ref-for-utf-8-bytes-needed-7">UTF-8 bytes needed</a>, and <a data-link-type="dfn" href="#utf-8-bytes-seen" id="ref-for-utf-8-bytes-seen-1">UTF-8 bytes seen</a> to 0,
@@ -1755,7 +1757,7 @@ achieve the same result are obviously fine, even encouraged). <a data-link-type=
      <p>Let <var>bytes</var> be a byte sequence whose first byte is
  (<var>code point</var> >> (6 × <var>count</var>)) + <var>offset</var>. </p>
     <li>
-     <p>Run these substeps while <var>count</var> is greater than 0: </p>
+     <p>While <var>count</var> is greater than 0: </p>
      <ol>
       <li>
        <p>Set <var>temp</var> to <var>code point</var> >> (6 × (<var>count</var> − 1)). </p>
@@ -1774,7 +1776,7 @@ is included here for completeness. <a data-link-type="biblio" href="#biblio-unic
 nothing, is a <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="single-byte-encoding">single-byte encoding</dfn>. <a data-link-type="dfn" href="#single-byte-encoding" id="ref-for-single-byte-encoding-1">Single-byte encodings</a> share the <a data-link-type="dfn" href="#decoder" id="ref-for-decoder-17">decoder</a> and <a data-link-type="dfn" href="#encoder" id="ref-for-encoder-13">encoder</a>. <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="index-single-byte">Index single-byte</dfn>,
 as referenced by the <a data-link-type="dfn" href="#single-byte-decoder" id="ref-for-single-byte-decoder-1">single-byte decoder</a> and <a data-link-type="dfn" href="#single-byte-encoder" id="ref-for-single-byte-encoder-1">single-byte encoder</a>,  is defined by the following table, and
 depends on the <a data-link-type="dfn" href="#single-byte-encoding" id="ref-for-single-byte-encoding-2">single-byte encoding</a> in use. All but two <a data-link-type="dfn" href="#single-byte-encoding" id="ref-for-single-byte-encoding-3">single-byte encodings</a> have a
-unique <a data-link-type="dfn" href="#index" id="ref-for-index-11">index</a>. </p>
+unique <a data-link-type="dfn" href="#index" id="ref-for-index-12">index</a>. </p>
    <table>
     <tbody>
      <tr>
@@ -1967,35 +1969,38 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
     <li>
      <p>If <var>byte</var> is <a data-link-type="dfn" href="#end-of-stream" id="ref-for-end-of-stream-13">end-of-stream</a>, and <a data-link-type="dfn" href="#gb18030-first" id="ref-for-gb18030-first-2">gb18030 first</a>, <a data-link-type="dfn" href="#gb18030-second" id="ref-for-gb18030-second-2">gb18030 second</a>, or <a data-link-type="dfn" href="#gb18030-third" id="ref-for-gb18030-third-2">gb18030 third</a> is not 0x00, set <a data-link-type="dfn" href="#gb18030-first" id="ref-for-gb18030-first-3">gb18030 first</a>, <a data-link-type="dfn" href="#gb18030-second" id="ref-for-gb18030-second-3">gb18030 second</a>, and <a data-link-type="dfn" href="#gb18030-third" id="ref-for-gb18030-third-3">gb18030 third</a> to 0x00, and return <a data-link-type="dfn" href="#error" id="ref-for-error-13">error</a>. </p>
     <li>
-     <p>If <a data-link-type="dfn" href="#gb18030-third" id="ref-for-gb18030-third-4">gb18030 third</a> is not 0x00, run these substeps: </p>
+     <p>If <a data-link-type="dfn" href="#gb18030-third" id="ref-for-gb18030-third-4">gb18030 third</a> is not 0x00, then: </p>
      <ol>
       <li>
-       <p>Let <var>code point</var> be null. </p>
+       <p>If <var>byte</var> is not in the range 0x30 to 0x39, inclusive, then: </p>
+       <ol>
+        <li>
+         <p><a data-link-type="dfn" href="#concept-stream-prepend" id="ref-for-concept-stream-prepend-6">Prepend</a> <a data-link-type="dfn" href="#gb18030-second" id="ref-for-gb18030-second-4">gb18030 second</a>, <a data-link-type="dfn" href="#gb18030-third" id="ref-for-gb18030-third-5">gb18030 third</a>, and <var>byte</var> to <var>stream</var>. </p>
+        <li>
+         <p>Set <a data-link-type="dfn" href="#gb18030-first" id="ref-for-gb18030-first-4">gb18030 first</a>, <a data-link-type="dfn" href="#gb18030-second" id="ref-for-gb18030-second-5">gb18030 second</a>, and <a data-link-type="dfn" href="#gb18030-third" id="ref-for-gb18030-third-6">gb18030 third</a> to 0x00. </p>
+        <li>
+         <p>Return <a data-link-type="dfn" href="#error" id="ref-for-error-14">error</a>. </p>
+       </ol>
       <li>
-       <p>If <var>byte</var> is in the range 0x30 to 0x39, inclusive, set <var>code point</var> to the <a data-link-type="dfn" href="#index-gb18030-ranges-code-point" id="ref-for-index-gb18030-ranges-code-point-2">index gb18030 ranges code point</a> for
-   ((<a data-link-type="dfn" href="#gb18030-first" id="ref-for-gb18030-first-4">gb18030 first</a> − 0x81) × (10 × 126 × 10)) +
-   ((<a data-link-type="dfn" href="#gb18030-second" id="ref-for-gb18030-second-4">gb18030 second</a> − 0x30) × (10 × 126)) +
-   ((<a data-link-type="dfn" href="#gb18030-third" id="ref-for-gb18030-third-5">gb18030 third</a> − 0x81) × 10) + <var>byte</var> − 0x30. </p>
+       <p>Let <var>code point</var> be the <a data-link-type="dfn" href="#index-gb18030-ranges-code-point" id="ref-for-index-gb18030-ranges-code-point-2">index gb18030 ranges code point</a> for
+   ((<a data-link-type="dfn" href="#gb18030-first" id="ref-for-gb18030-first-5">gb18030 first</a> − 0x81) × (10 × 126 × 10)) +
+   ((<a data-link-type="dfn" href="#gb18030-second" id="ref-for-gb18030-second-6">gb18030 second</a> − 0x30) × (10 × 126)) +
+   ((<a data-link-type="dfn" href="#gb18030-third" id="ref-for-gb18030-third-7">gb18030 third</a> − 0x81) × 10) + <var>byte</var> − 0x30. </p>
       <li>
-       <p>Let <var>buffer</var> be a byte sequence consisting of <a data-link-type="dfn" href="#gb18030-second" id="ref-for-gb18030-second-5">gb18030 second</a>, <a data-link-type="dfn" href="#gb18030-third" id="ref-for-gb18030-third-6">gb18030 third</a>, and <var>byte</var>, in
-   order. </p>
-      <li>
-       <p>Set <a data-link-type="dfn" href="#gb18030-first" id="ref-for-gb18030-first-5">gb18030 first</a>, <a data-link-type="dfn" href="#gb18030-second" id="ref-for-gb18030-second-6">gb18030 second</a>, and <a data-link-type="dfn" href="#gb18030-third" id="ref-for-gb18030-third-7">gb18030 third</a> to 0x00. </p>
-      <li>
-       <p>If <var>code point</var> is null, <a data-link-type="dfn" href="#concept-stream-prepend" id="ref-for-concept-stream-prepend-6">prepend</a> <var>buffer</var> to <var>stream</var> and return <a data-link-type="dfn" href="#error" id="ref-for-error-14">error</a>. </p>
+       <p>If <var>code point</var> is null, return <a data-link-type="dfn" href="#error" id="ref-for-error-15">error</a>. </p>
       <li>
        <p>Return a code point whose value is <var>code point</var>. </p>
      </ol>
     <li>
-     <p>If <a data-link-type="dfn" href="#gb18030-second" id="ref-for-gb18030-second-7">gb18030 second</a> is not 0x00, run these substeps: </p>
+     <p>If <a data-link-type="dfn" href="#gb18030-second" id="ref-for-gb18030-second-7">gb18030 second</a> is not 0x00, then: </p>
      <ol>
       <li>
        <p>If <var>byte</var> is in the range 0x81 to 0xFE, inclusive, set <a data-link-type="dfn" href="#gb18030-third" id="ref-for-gb18030-third-8">gb18030 third</a> to <var>byte</var> and return <a data-link-type="dfn" href="#continue" id="ref-for-continue-6">continue</a>. </p>
       <li>
-       <p><a data-link-type="dfn" href="#concept-stream-prepend" id="ref-for-concept-stream-prepend-7">Prepend</a> <a data-link-type="dfn" href="#gb18030-second" id="ref-for-gb18030-second-8">gb18030 second</a> followed by <var>byte</var> to <var>stream</var>, set <a data-link-type="dfn" href="#gb18030-first" id="ref-for-gb18030-first-6">gb18030 first</a> and <a data-link-type="dfn" href="#gb18030-second" id="ref-for-gb18030-second-9">gb18030 second</a> to 0x00, and return <a data-link-type="dfn" href="#error" id="ref-for-error-15">error</a>. </p>
+       <p><a data-link-type="dfn" href="#concept-stream-prepend" id="ref-for-concept-stream-prepend-7">Prepend</a> <a data-link-type="dfn" href="#gb18030-second" id="ref-for-gb18030-second-8">gb18030 second</a> followed by <var>byte</var> to <var>stream</var>, set <a data-link-type="dfn" href="#gb18030-first" id="ref-for-gb18030-first-6">gb18030 first</a> and <a data-link-type="dfn" href="#gb18030-second" id="ref-for-gb18030-second-9">gb18030 second</a> to 0x00, and return <a data-link-type="dfn" href="#error" id="ref-for-error-16">error</a>. </p>
      </ol>
     <li>
-     <p>If <a data-link-type="dfn" href="#gb18030-first" id="ref-for-gb18030-first-7">gb18030 first</a> is not 0x00, run these substeps: </p>
+     <p>If <a data-link-type="dfn" href="#gb18030-first" id="ref-for-gb18030-first-7">gb18030 first</a> is not 0x00, then: </p>
      <ol>
       <li>
        <p>If <var>byte</var> is in the range 0x30 to 0x39, inclusive, set <a data-link-type="dfn" href="#gb18030-second" id="ref-for-gb18030-second-10">gb18030 second</a> to <var>byte</var> and return <a data-link-type="dfn" href="#continue" id="ref-for-continue-7">continue</a>. </p>
@@ -2011,11 +2016,11 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
       <li>
        <p>Let <var>code point</var> be null if <var>pointer</var> is null and the <a data-link-type="dfn" href="#index-code-point" id="ref-for-index-code-point-2">index code point</a> for <var>pointer</var> in <a data-link-type="dfn" href="#index-gb18030" id="ref-for-index-gb18030-1">index gb18030</a> otherwise. </p>
       <li>
-       <p>If <var>code point</var> is null and <var>byte</var> is an <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#ascii-byte">ASCII byte</a>, <a data-link-type="dfn" href="#concept-stream-prepend" id="ref-for-concept-stream-prepend-8">prepend</a> <var>byte</var> to <var>stream</var>. </p>
+       <p>If <var>code point</var> is non-null, return a code point whose value is <var>code point</var>. </p>
       <li>
-       <p>If <var>code point</var> is null, return <a data-link-type="dfn" href="#error" id="ref-for-error-16">error</a>. </p>
+       <p>If <var>byte</var> is an <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#ascii-byte">ASCII byte</a>, <a data-link-type="dfn" href="#concept-stream-prepend" id="ref-for-concept-stream-prepend-8">prepend</a> <var>byte</var> to <var>stream</var>. </p>
       <li>
-       <p>Return a code point whose value is <var>code point</var>. </p>
+       <p>Return <a data-link-type="dfn" href="#error" id="ref-for-error-17">error</a>. </p>
      </ol>
     <li>
      <p>If <var>byte</var> is an <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#ascii-byte">ASCII byte</a>, return
@@ -2025,7 +2030,7 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
     <li>
      <p>If <var>byte</var> is in the range 0x81 to 0xFE, inclusive, set <a data-link-type="dfn" href="#gb18030-first" id="ref-for-gb18030-first-10">gb18030 first</a> to <var>byte</var> and return <a data-link-type="dfn" href="#continue" id="ref-for-continue-8">continue</a>. </p>
     <li>
-     <p>Return <a data-link-type="dfn" href="#error" id="ref-for-error-17">error</a>. </p>
+     <p>Return <a data-link-type="dfn" href="#error" id="ref-for-error-18">error</a>. </p>
    </ol>
    <h4 class="heading settled" data-dfn-type="dfn" data-export="" data-level="10.2.2" data-lt="gb18030 encoder" id="gb18030-encoder"><span class="secno">10.2.2. </span><span class="content">gb18030 encoder</span><a class="self-link" href="#gb18030-encoder"></a></h4>
    <p><a data-link-type="dfn" href="#gb18030" id="ref-for-gb18030-7">gb18030</a>’s <a data-link-type="dfn" href="#encoder" id="ref-for-encoder-18">encoder</a> has an associated <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="gbk-flag">GBK flag</dfn> (initially unset). </p>
@@ -2037,7 +2042,7 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
      <p>If <var>code point</var> is an <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#ascii-code-point">ASCII code point</a>, return
  a byte whose value is <var>code point</var>. </p>
     <li>
-     <p>If <var>code point</var> is U+E5E5, return <a data-link-type="dfn" href="#error" id="ref-for-error-18">error</a> with <var>code point</var>. </p>
+     <p>If <var>code point</var> is U+E5E5, return <a data-link-type="dfn" href="#error" id="ref-for-error-19">error</a> with <var>code point</var>. </p>
      <p class="note" role="note"><a data-link-type="dfn" href="#index-gb18030" id="ref-for-index-gb18030-2">Index gb18030</a> maps 0xA3 0xA0 to U+3000 rather than U+E5E5 for
   compatibility with deployed content. Therefore it cannot roundtrip. </p>
     <li>
@@ -2046,7 +2051,7 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
     <li>
      <p>Let <var>pointer</var> be the <a data-link-type="dfn" href="#index-pointer" id="ref-for-index-pointer-4">index pointer</a> for <var>code point</var> in <a data-link-type="dfn" href="#index-gb18030" id="ref-for-index-gb18030-3">index gb18030</a>. </p>
     <li>
-     <p>If <var>pointer</var> is not null, run these substeps: </p>
+     <p>If <var>pointer</var> is non-null, then: </p>
      <ol>
       <li>
        <p>Let <var>lead</var> be <var>pointer</var> / 190 + 0x81. </p>
@@ -2059,7 +2064,7 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
        <p>Return two bytes whose values are <var>lead</var> and <var>trail</var> + <var>offset</var>. </p>
      </ol>
     <li>
-     <p>If <a data-link-type="dfn" href="#gbk-flag" id="ref-for-gbk-flag-3">GBK flag</a> is set, return <a data-link-type="dfn" href="#error" id="ref-for-error-19">error</a> with <var>code point</var>. </p>
+     <p>If <a data-link-type="dfn" href="#gbk-flag" id="ref-for-gbk-flag-3">GBK flag</a> is set, return <a data-link-type="dfn" href="#error" id="ref-for-error-20">error</a> with <var>code point</var>. </p>
     <li>
      <p>Set <var>pointer</var> to the <a data-link-type="dfn" href="#index-gb18030-ranges-pointer" id="ref-for-index-gb18030-ranges-pointer-2">index gb18030 ranges pointer</a> for <var>code point</var>. </p>
     <li>
@@ -2084,11 +2089,11 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
    <p><a data-link-type="dfn" href="#big5" id="ref-for-big5-3">Big5</a>’s <a data-link-type="dfn" href="#decoder" id="ref-for-decoder-24">decoder</a>’s <a data-link-type="dfn" href="#handler" id="ref-for-handler-9">handler</a>, given a <var>stream</var> and <var>byte</var>, runs these steps:</p>
    <ol>
     <li>
-     <p>If <var>byte</var> is <a data-link-type="dfn" href="#end-of-stream" id="ref-for-end-of-stream-15">end-of-stream</a> and <a data-link-type="dfn" href="#big5-lead" id="ref-for-big5-lead-1">Big5 lead</a> is not 0x00, set <a data-link-type="dfn" href="#big5-lead" id="ref-for-big5-lead-2">Big5 lead</a> to 0x00 and return <a data-link-type="dfn" href="#error" id="ref-for-error-20">error</a>. </p>
+     <p>If <var>byte</var> is <a data-link-type="dfn" href="#end-of-stream" id="ref-for-end-of-stream-15">end-of-stream</a> and <a data-link-type="dfn" href="#big5-lead" id="ref-for-big5-lead-1">Big5 lead</a> is not 0x00, set <a data-link-type="dfn" href="#big5-lead" id="ref-for-big5-lead-2">Big5 lead</a> to 0x00 and return <a data-link-type="dfn" href="#error" id="ref-for-error-21">error</a>. </p>
     <li>
      <p>If <var>byte</var> is <a data-link-type="dfn" href="#end-of-stream" id="ref-for-end-of-stream-16">end-of-stream</a> and <a data-link-type="dfn" href="#big5-lead" id="ref-for-big5-lead-3">Big5 lead</a> is 0x00, return <a data-link-type="dfn" href="#finished" id="ref-for-finished-10">finished</a>. </p>
     <li>
-     <p>If <a data-link-type="dfn" href="#big5-lead" id="ref-for-big5-lead-4">Big5 lead</a> is not 0x00, let <var>lead</var> be <a data-link-type="dfn" href="#big5-lead" id="ref-for-big5-lead-5">Big5 lead</a>, let <var>pointer</var> be null, set <a data-link-type="dfn" href="#big5-lead" id="ref-for-big5-lead-6">Big5 lead</a> to 0x00, and then run these substeps: </p>
+     <p>If <a data-link-type="dfn" href="#big5-lead" id="ref-for-big5-lead-4">Big5 lead</a> is not 0x00, let <var>lead</var> be <a data-link-type="dfn" href="#big5-lead" id="ref-for-big5-lead-5">Big5 lead</a>, let <var>pointer</var> be null, set <a data-link-type="dfn" href="#big5-lead" id="ref-for-big5-lead-6">Big5 lead</a> to 0x00, and then: </p>
      <ol>
       <li>
        <p>Let <var>offset</var> be 0x40 if <var>byte</var> is
@@ -2123,16 +2128,16 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
           <td>U+00EA U+030C
           <td>ê̌ (LATIN SMALL LETTER E WITH CIRCUMFLEX AND CARON) 
        </table>
-       <p class="note" role="note">Since <a data-link-type="dfn" href="#index" id="ref-for-index-12">indexes</a> are limited to
+       <p class="note" role="note">Since <a data-link-type="dfn" href="#index" id="ref-for-index-13">indexes</a> are limited to
     single code points this table is used for these pointers. </p>
       <li>
        <p>Let <var>code point</var> be null if <var>pointer</var> is null and the <a data-link-type="dfn" href="#index-code-point" id="ref-for-index-code-point-3">index code point</a> for <var>pointer</var> in <a data-link-type="dfn" href="#index-big5" id="ref-for-index-big5-2">index Big5</a> otherwise. </p>
       <li>
-       <p>If <var>code point</var> is null and <var>byte</var> is an <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#ascii-byte">ASCII byte</a>, <a data-link-type="dfn" href="#concept-stream-prepend" id="ref-for-concept-stream-prepend-9">prepend</a> <var>byte</var> to <var>stream</var>. </p>
+       <p>If <var>code point</var> is non-null, return a code point whose value is <var>code point</var>. </p>
       <li>
-       <p>If <var>code point</var> is null, return <a data-link-type="dfn" href="#error" id="ref-for-error-21">error</a>. </p>
+       <p>If <var>byte</var> is an <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#ascii-byte">ASCII byte</a>, <a data-link-type="dfn" href="#concept-stream-prepend" id="ref-for-concept-stream-prepend-9">prepend</a> <var>byte</var> to <var>stream</var>. </p>
       <li>
-       <p>Return a code point whose value is <var>code point</var>. </p>
+       <p>Return <a data-link-type="dfn" href="#error" id="ref-for-error-22">error</a>. </p>
      </ol>
     <li>
      <p>If <var>byte</var> is an <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#ascii-byte">ASCII byte</a>, return
@@ -2140,7 +2145,7 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
     <li>
      <p>If <var>byte</var> is in the range 0x81 to 0xFE, inclusive, set <a data-link-type="dfn" href="#big5-lead" id="ref-for-big5-lead-7">Big5 lead</a> to <var>byte</var> and return <a data-link-type="dfn" href="#continue" id="ref-for-continue-9">continue</a>. </p>
     <li>
-     <p>Return <a data-link-type="dfn" href="#error" id="ref-for-error-22">error</a>. </p>
+     <p>Return <a data-link-type="dfn" href="#error" id="ref-for-error-23">error</a>. </p>
    </ol>
    <h4 class="heading settled" data-dfn-type="dfn" data-export="" data-level="11.1.2" data-lt="Big5 encoder" id="big5-encoder"><span class="secno">11.1.2. </span><span class="content">Big5 encoder</span><a class="self-link" href="#big5-encoder"></a></h4>
    <p><a data-link-type="dfn" href="#big5" id="ref-for-big5-4">Big5</a>’s <a data-link-type="dfn" href="#encoder" id="ref-for-encoder-20">encoder</a>’s <a data-link-type="dfn" href="#handler" id="ref-for-handler-10">handler</a>, given a <var>stream</var> and <var>code point</var>, runs these steps: </p>
@@ -2153,7 +2158,7 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
     <li>
      <p>Let <var>pointer</var> be the <a data-link-type="dfn" href="#index-big5-pointer" id="ref-for-index-big5-pointer-1">index Big5 pointer</a> for <var>code point</var>. </p>
     <li>
-     <p>If <var>pointer</var> is null, return <a data-link-type="dfn" href="#error" id="ref-for-error-23">error</a> with <var>code point</var>. </p>
+     <p>If <var>pointer</var> is null, return <a data-link-type="dfn" href="#error" id="ref-for-error-24">error</a> with <var>code point</var>. </p>
     <li>
      <p>Let <var>lead</var> be <var>pointer</var> / 157 + 0x81. </p>
     <li>
@@ -2171,7 +2176,7 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
    <p><a data-link-type="dfn" href="#euc-jp" id="ref-for-euc-jp-3">EUC-JP</a>’s <a data-link-type="dfn" href="#decoder" id="ref-for-decoder-26">decoder</a>’s <a data-link-type="dfn" href="#handler" id="ref-for-handler-11">handler</a>, given a <var>stream</var> and <var>byte</var>, runs these steps: </p>
    <ol>
     <li>
-     <p>If <var>byte</var> is <a data-link-type="dfn" href="#end-of-stream" id="ref-for-end-of-stream-18">end-of-stream</a> and <a data-link-type="dfn" href="#euc-jp-lead" id="ref-for-euc-jp-lead-1">EUC-JP lead</a> is not 0x00, set <a data-link-type="dfn" href="#euc-jp-lead" id="ref-for-euc-jp-lead-2">EUC-JP lead</a> to 0x00, and return <a data-link-type="dfn" href="#error" id="ref-for-error-24">error</a>. </p>
+     <p>If <var>byte</var> is <a data-link-type="dfn" href="#end-of-stream" id="ref-for-end-of-stream-18">end-of-stream</a> and <a data-link-type="dfn" href="#euc-jp-lead" id="ref-for-euc-jp-lead-1">EUC-JP lead</a> is not 0x00, set <a data-link-type="dfn" href="#euc-jp-lead" id="ref-for-euc-jp-lead-2">EUC-JP lead</a> to 0x00, and return <a data-link-type="dfn" href="#error" id="ref-for-error-25">error</a>. </p>
     <li>
      <p>If <var>byte</var> is <a data-link-type="dfn" href="#end-of-stream" id="ref-for-end-of-stream-19">end-of-stream</a> and <a data-link-type="dfn" href="#euc-jp-lead" id="ref-for-euc-jp-lead-3">EUC-JP lead</a> is 0x00, return <a data-link-type="dfn" href="#finished" id="ref-for-finished-12">finished</a>. </p>
     <li>
@@ -2182,7 +2187,7 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
      <p>If <a data-link-type="dfn" href="#euc-jp-lead" id="ref-for-euc-jp-lead-6">EUC-JP lead</a> is 0x8F and <var>byte</var> is in the range
  0xA1 to 0xFE, inclusive, set the <a data-link-type="dfn" href="#euc-jp-jis0212-flag" id="ref-for-euc-jp-jis0212-flag-1">EUC-JP jis0212 flag</a>, set <a data-link-type="dfn" href="#euc-jp-lead" id="ref-for-euc-jp-lead-7">EUC-JP lead</a> to <var>byte</var>, and return <a data-link-type="dfn" href="#continue" id="ref-for-continue-10">continue</a>. </p>
     <li>
-     <p>If <a data-link-type="dfn" href="#euc-jp-lead" id="ref-for-euc-jp-lead-8">EUC-JP lead</a> is not 0x00, let <var>lead</var> be <a data-link-type="dfn" href="#euc-jp-lead" id="ref-for-euc-jp-lead-9">EUC-JP lead</a>, set <a data-link-type="dfn" href="#euc-jp-lead" id="ref-for-euc-jp-lead-10">EUC-JP lead</a> to 0x00, and run these substeps: </p>
+     <p>If <a data-link-type="dfn" href="#euc-jp-lead" id="ref-for-euc-jp-lead-8">EUC-JP lead</a> is not 0x00, let <var>lead</var> be <a data-link-type="dfn" href="#euc-jp-lead" id="ref-for-euc-jp-lead-9">EUC-JP lead</a>, set <a data-link-type="dfn" href="#euc-jp-lead" id="ref-for-euc-jp-lead-10">EUC-JP lead</a> to 0x00, and then: </p>
      <ol>
       <li>
        <p>Let <var>code point</var> be null. </p>
@@ -2194,11 +2199,11 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
       <li>
        <p>Unset the <a data-link-type="dfn" href="#euc-jp-jis0212-flag" id="ref-for-euc-jp-jis0212-flag-3">EUC-JP jis0212 flag</a>. </p>
       <li>
-       <p>If <var>byte</var> is not in the range 0xA1 to 0xFE, inclusive, <a data-link-type="dfn" href="#concept-stream-prepend" id="ref-for-concept-stream-prepend-10">prepend</a> <var>byte</var> to <var>stream</var>. </p>
+       <p>If <var>code point</var> is non-null, return a code point whose value is <var>code point</var>. </p>
       <li>
-       <p>If <var>code point</var> is null, return <a data-link-type="dfn" href="#error" id="ref-for-error-25">error</a>. </p>
+       <p>If <var>byte</var> is an <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#ascii-byte">ASCII byte</a>, <a data-link-type="dfn" href="#concept-stream-prepend" id="ref-for-concept-stream-prepend-10">prepend</a> <var>byte</var> to <var>stream</var>. </p>
       <li>
-       <p>Return a code point whose value is <var>code point</var>. </p>
+       <p>Return <a data-link-type="dfn" href="#error" id="ref-for-error-26">error</a>. </p>
      </ol>
     <li>
      <p>If <var>byte</var> is an <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#ascii-byte">ASCII byte</a>, return
@@ -2207,7 +2212,7 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
      <p>If <var>byte</var> is 0x8E, 0x8F, or in the range 0xA1 to
  0xFE, inclusive, set <a data-link-type="dfn" href="#euc-jp-lead" id="ref-for-euc-jp-lead-11">EUC-JP lead</a> to <var>byte</var> and return <a data-link-type="dfn" href="#continue" id="ref-for-continue-11">continue</a>. </p>
     <li>
-     <p>Return <a data-link-type="dfn" href="#error" id="ref-for-error-26">error</a>. </p>
+     <p>Return <a data-link-type="dfn" href="#error" id="ref-for-error-27">error</a>. </p>
    </ol>
    <h4 class="heading settled" data-dfn-type="dfn" data-export="" data-level="12.1.2" data-lt="EUC-JP encoder" id="euc-jp-encoder"><span class="secno">12.1.2. </span><span class="content">EUC-JP encoder</span><a class="self-link" href="#euc-jp-encoder"></a></h4>
    <p><a data-link-type="dfn" href="#euc-jp" id="ref-for-euc-jp-4">EUC-JP</a>’s <a data-link-type="dfn" href="#encoder" id="ref-for-encoder-21">encoder</a>’s <a data-link-type="dfn" href="#handler" id="ref-for-handler-12">handler</a>, given a <var>stream</var> and <var>code point</var>, runs these steps: </p>
@@ -2230,7 +2235,7 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
      <p>Let <var>pointer</var> be the <a data-link-type="dfn" href="#index-pointer" id="ref-for-index-pointer-5">index pointer</a> for <var>code point</var> in <a data-link-type="dfn" href="#index-jis0208" id="ref-for-index-jis0208-5">index jis0208</a>. </p>
      <p class="note" role="note">If <var>pointer</var> is non-null, it is less than 8836 due to the nature of <a data-link-type="dfn" href="#index-jis0208" id="ref-for-index-jis0208-6">index jis0208</a> and the <a data-link-type="dfn" href="#index-pointer" id="ref-for-index-pointer-6">index pointer</a> operation. </p>
     <li>
-     <p>If <var>pointer</var> is null, return <a data-link-type="dfn" href="#error" id="ref-for-error-27">error</a> with <var>code point</var>. </p>
+     <p>If <var>pointer</var> is null, return <a data-link-type="dfn" href="#error" id="ref-for-error-28">error</a> with <var>code point</var>. </p>
     <li>
      <p>Let <var>lead</var> be <var>pointer</var> / 94 + 0xA1. </p>
     <li>
@@ -2259,7 +2264,7 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
        <p>Return <a data-link-type="dfn" href="#finished" id="ref-for-finished-14">finished</a>. </p>
       <dt>Otherwise 
       <dd>
-       <p>Unset the <a data-link-type="dfn" href="#iso-2022-jp-output-flag" id="ref-for-iso-2022-jp-output-flag-2">ISO-2022-JP output flag</a> and return <a data-link-type="dfn" href="#error" id="ref-for-error-28">error</a>. </p>
+       <p>Unset the <a data-link-type="dfn" href="#iso-2022-jp-output-flag" id="ref-for-iso-2022-jp-output-flag-2">ISO-2022-JP output flag</a> and return <a data-link-type="dfn" href="#error" id="ref-for-error-29">error</a>. </p>
      </dl>
     <dt><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="ISO-2022-JP decoder Roman" data-noexport="" id="iso-2022-jp-decoder-roman">Roman</dfn> 
     <dd>
@@ -2283,9 +2288,9 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
        <p>Return <a data-link-type="dfn" href="#finished" id="ref-for-finished-15">finished</a>. </p>
       <dt>Otherwise 
       <dd>
-       <p>Unset the <a data-link-type="dfn" href="#iso-2022-jp-output-flag" id="ref-for-iso-2022-jp-output-flag-6">ISO-2022-JP output flag</a> and return <a data-link-type="dfn" href="#error" id="ref-for-error-29">error</a>. </p>
+       <p>Unset the <a data-link-type="dfn" href="#iso-2022-jp-output-flag" id="ref-for-iso-2022-jp-output-flag-6">ISO-2022-JP output flag</a> and return <a data-link-type="dfn" href="#error" id="ref-for-error-30">error</a>. </p>
      </dl>
-    <dt><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="ISO-2022-JP decoder Katakana" data-noexport="" id="iso-2022-jp-decoder-katakana">Katakana</dfn> 
+    <dt><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="ISO-2022-JP decoder katakana" data-noexport="" id="iso-2022-jp-decoder-katakana">katakana</dfn> 
     <dd>
      <p>Based on <var>byte</var>: </p>
      <dl class="switch">
@@ -2301,7 +2306,7 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
        <p>Return <a data-link-type="dfn" href="#finished" id="ref-for-finished-16">finished</a>. </p>
       <dt>Otherwise 
       <dd>
-       <p>Unset the <a data-link-type="dfn" href="#iso-2022-jp-output-flag" id="ref-for-iso-2022-jp-output-flag-8">ISO-2022-JP output flag</a> and return <a data-link-type="dfn" href="#error" id="ref-for-error-30">error</a>. </p>
+       <p>Unset the <a data-link-type="dfn" href="#iso-2022-jp-output-flag" id="ref-for-iso-2022-jp-output-flag-8">ISO-2022-JP output flag</a> and return <a data-link-type="dfn" href="#error" id="ref-for-error-31">error</a>. </p>
      </dl>
     <dt><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="ISO-2022-JP decoder lead byte" data-noexport="" id="iso-2022-jp-decoder-lead-byte">Lead byte</dfn> 
     <dd>
@@ -2318,7 +2323,7 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
        <p>Return <a data-link-type="dfn" href="#finished" id="ref-for-finished-17">finished</a>. </p>
       <dt>Otherwise 
       <dd>
-       <p>Unset the <a data-link-type="dfn" href="#iso-2022-jp-output-flag" id="ref-for-iso-2022-jp-output-flag-10">ISO-2022-JP output flag</a> and return <a data-link-type="dfn" href="#error" id="ref-for-error-31">error</a>. </p>
+       <p>Unset the <a data-link-type="dfn" href="#iso-2022-jp-output-flag" id="ref-for-iso-2022-jp-output-flag-10">ISO-2022-JP output flag</a> and return <a data-link-type="dfn" href="#error" id="ref-for-error-32">error</a>. </p>
      </dl>
     <dt><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="ISO-2022-JP decoder trail byte" data-noexport="" id="iso-2022-jp-decoder-trail-byte">Trail byte</dfn> 
     <dd>
@@ -2326,7 +2331,7 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
      <dl class="switch">
       <dt>0x1B 
       <dd>
-       <p>Set <a data-link-type="dfn" href="#iso-2022-jp-decoder-state" id="ref-for-iso-2022-jp-decoder-state-7">ISO-2022-JP decoder state</a> to <a data-link-type="dfn" href="#iso-2022-jp-decoder-escape-start" id="ref-for-iso-2022-jp-decoder-escape-start-5">escape start</a> and return <a data-link-type="dfn" href="#error" id="ref-for-error-32">error</a>. </p>
+       <p>Set <a data-link-type="dfn" href="#iso-2022-jp-decoder-state" id="ref-for-iso-2022-jp-decoder-state-7">ISO-2022-JP decoder state</a> to <a data-link-type="dfn" href="#iso-2022-jp-decoder-escape-start" id="ref-for-iso-2022-jp-decoder-escape-start-5">escape start</a> and return <a data-link-type="dfn" href="#error" id="ref-for-error-33">error</a>. </p>
       <dt>0x21 to 0x7E 
       <dd>
        <ol>
@@ -2338,16 +2343,16 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
         <li>
          <p>Let <var>code point</var> be the <a data-link-type="dfn" href="#index-code-point" id="ref-for-index-code-point-5">index code point</a> for <var>pointer</var> in <a data-link-type="dfn" href="#index-jis0208" id="ref-for-index-jis0208-7">index jis0208</a>. </p>
         <li>
-         <p>If <var>code point</var> is null, return <a data-link-type="dfn" href="#error" id="ref-for-error-33">error</a>. </p>
+         <p>If <var>code point</var> is null, return <a data-link-type="dfn" href="#error" id="ref-for-error-34">error</a>. </p>
         <li>
          <p>Return a code point whose value is <var>code point</var>. </p>
        </ol>
       <dt><a data-link-type="dfn" href="#end-of-stream" id="ref-for-end-of-stream-25">end-of-stream</a> 
       <dd>
-       <p>Set the <a data-link-type="dfn" href="#iso-2022-jp-decoder-state" id="ref-for-iso-2022-jp-decoder-state-9">ISO-2022-JP decoder state</a> to <a data-link-type="dfn" href="#iso-2022-jp-decoder-lead-byte" id="ref-for-iso-2022-jp-decoder-lead-byte-2">lead byte</a>, <a data-link-type="dfn" href="#concept-stream-prepend" id="ref-for-concept-stream-prepend-11">prepend</a> <var>byte</var> to <var>stream</var>, and return <a data-link-type="dfn" href="#error" id="ref-for-error-34">error</a>. </p>
+       <p>Set the <a data-link-type="dfn" href="#iso-2022-jp-decoder-state" id="ref-for-iso-2022-jp-decoder-state-9">ISO-2022-JP decoder state</a> to <a data-link-type="dfn" href="#iso-2022-jp-decoder-lead-byte" id="ref-for-iso-2022-jp-decoder-lead-byte-2">lead byte</a>, <a data-link-type="dfn" href="#concept-stream-prepend" id="ref-for-concept-stream-prepend-11">prepend</a> <var>byte</var> to <var>stream</var>, and return <a data-link-type="dfn" href="#error" id="ref-for-error-35">error</a>. </p>
       <dt>Otherwise 
       <dd>
-       <p>Set <a data-link-type="dfn" href="#iso-2022-jp-decoder-state" id="ref-for-iso-2022-jp-decoder-state-10">ISO-2022-JP decoder state</a> to <a data-link-type="dfn" href="#iso-2022-jp-decoder-lead-byte" id="ref-for-iso-2022-jp-decoder-lead-byte-3">lead byte</a> and return <a data-link-type="dfn" href="#error" id="ref-for-error-35">error</a>. </p>
+       <p>Set <a data-link-type="dfn" href="#iso-2022-jp-decoder-state" id="ref-for-iso-2022-jp-decoder-state-10">ISO-2022-JP decoder state</a> to <a data-link-type="dfn" href="#iso-2022-jp-decoder-lead-byte" id="ref-for-iso-2022-jp-decoder-lead-byte-3">lead byte</a> and return <a data-link-type="dfn" href="#error" id="ref-for-error-36">error</a>. </p>
      </dl>
     <dt><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="ISO-2022-JP decoder escape start" data-noexport="" id="iso-2022-jp-decoder-escape-start">Escape start</dfn> 
     <dd>
@@ -2357,7 +2362,7 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
       <li>
        <p><a data-link-type="dfn" href="#concept-stream-prepend" id="ref-for-concept-stream-prepend-12">Prepend</a> <var>byte</var> to <var>stream</var>. </p>
       <li>
-       <p>Unset the <a data-link-type="dfn" href="#iso-2022-jp-output-flag" id="ref-for-iso-2022-jp-output-flag-11">ISO-2022-JP output flag</a>, set <a data-link-type="dfn" href="#iso-2022-jp-decoder-state" id="ref-for-iso-2022-jp-decoder-state-12">ISO-2022-JP decoder state</a> to <a data-link-type="dfn" href="#iso-2022-jp-decoder-output-state" id="ref-for-iso-2022-jp-decoder-output-state-1">ISO-2022-JP decoder output state</a>, and return <a data-link-type="dfn" href="#error" id="ref-for-error-36">error</a>. </p>
+       <p>Unset the <a data-link-type="dfn" href="#iso-2022-jp-output-flag" id="ref-for-iso-2022-jp-output-flag-11">ISO-2022-JP output flag</a>, set <a data-link-type="dfn" href="#iso-2022-jp-decoder-state" id="ref-for-iso-2022-jp-decoder-state-12">ISO-2022-JP decoder state</a> to <a data-link-type="dfn" href="#iso-2022-jp-decoder-output-state" id="ref-for-iso-2022-jp-decoder-output-state-1">ISO-2022-JP decoder output state</a>, and return <a data-link-type="dfn" href="#error" id="ref-for-error-37">error</a>. </p>
      </ol>
     <dt><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="ISO-2022-JP decoder escape" data-noexport="" id="iso-2022-jp-decoder-escape">Escape</dfn> 
     <dd>
@@ -2371,12 +2376,12 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
       <li>
        <p>If <var>lead</var> is 0x28 and <var>byte</var> is 0x4A, set <var>state</var> to <a data-link-type="dfn" href="#iso-2022-jp-decoder-roman" id="ref-for-iso-2022-jp-decoder-roman-1">Roman</a>. </p>
       <li>
-       <p>If <var>lead</var> is 0x28 and <var>byte</var> is 0x49, set <var>state</var> to <a data-link-type="dfn" href="#iso-2022-jp-decoder-katakana" id="ref-for-iso-2022-jp-decoder-katakana-1">Katakana</a>. </p>
+       <p>If <var>lead</var> is 0x28 and <var>byte</var> is 0x49, set <var>state</var> to <a data-link-type="dfn" href="#iso-2022-jp-decoder-katakana" id="ref-for-iso-2022-jp-decoder-katakana-1">katakana</a>. </p>
       <li>
        <p>If <var>lead</var> is 0x24 and <var>byte</var> is either
    0x40 or 0x42, set <var>state</var> to <a data-link-type="dfn" href="#iso-2022-jp-decoder-lead-byte" id="ref-for-iso-2022-jp-decoder-lead-byte-4">lead byte</a>. </p>
       <li>
-       <p>If <var>state</var> is non-null, run these substeps: </p>
+       <p>If <var>state</var> is non-null, then: </p>
        <ol>
         <li>
          <p>Set <a data-link-type="dfn" href="#iso-2022-jp-decoder-state" id="ref-for-iso-2022-jp-decoder-state-13">ISO-2022-JP decoder state</a> and <a data-link-type="dfn" href="#iso-2022-jp-decoder-output-state" id="ref-for-iso-2022-jp-decoder-output-state-2">ISO-2022-JP decoder output state</a> to <var>state</var>. </p>
@@ -2385,12 +2390,12 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
         <li>
          <p>Set the <a data-link-type="dfn" href="#iso-2022-jp-output-flag" id="ref-for-iso-2022-jp-output-flag-13">ISO-2022-JP output flag</a>. </p>
         <li>
-         <p>Return <a data-link-type="dfn" href="#continue" id="ref-for-continue-18">continue</a>, if <var>output flag</var> is unset, and <a data-link-type="dfn" href="#error" id="ref-for-error-37">error</a> otherwise. </p>
+         <p>Return <a data-link-type="dfn" href="#continue" id="ref-for-continue-18">continue</a>, if <var>output flag</var> is unset, and <a data-link-type="dfn" href="#error" id="ref-for-error-38">error</a> otherwise. </p>
        </ol>
       <li>
        <p><a data-link-type="dfn" href="#concept-stream-prepend" id="ref-for-concept-stream-prepend-13">Prepend</a> <var>lead</var> and <var>byte</var> to <var>stream</var>. </p>
       <li>
-       <p>Unset the <a data-link-type="dfn" href="#iso-2022-jp-output-flag" id="ref-for-iso-2022-jp-output-flag-14">ISO-2022-JP output flag</a>, set <a data-link-type="dfn" href="#iso-2022-jp-decoder-state" id="ref-for-iso-2022-jp-decoder-state-14">ISO-2022-JP decoder state</a> to <a data-link-type="dfn" href="#iso-2022-jp-decoder-output-state" id="ref-for-iso-2022-jp-decoder-output-state-3">ISO-2022-JP decoder output state</a> and return <a data-link-type="dfn" href="#error" id="ref-for-error-38">error</a>. </p>
+       <p>Unset the <a data-link-type="dfn" href="#iso-2022-jp-output-flag" id="ref-for-iso-2022-jp-output-flag-14">ISO-2022-JP output flag</a>, set <a data-link-type="dfn" href="#iso-2022-jp-decoder-state" id="ref-for-iso-2022-jp-decoder-state-14">ISO-2022-JP decoder state</a> to <a data-link-type="dfn" href="#iso-2022-jp-decoder-output-state" id="ref-for-iso-2022-jp-decoder-output-state-3">ISO-2022-JP decoder output state</a> and return <a data-link-type="dfn" href="#error" id="ref-for-error-39">error</a>. </p>
      </ol>
    </dl>
    <h4 class="heading settled dfn-paneled" data-dfn-type="dfn" data-export="" data-level="12.2.2" data-lt="ISO-2022-JP encoder" id="iso-2022-jp-encoder"><span class="secno">12.2.2. </span><span class="content">ISO-2022-JP encoder</span></h4>
@@ -2404,13 +2409,13 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
      <p>If <var>code point</var> is <a data-link-type="dfn" href="#end-of-stream" id="ref-for-end-of-stream-27">end-of-stream</a> and <a data-link-type="dfn" href="#iso-2022-jp-encoder-state" id="ref-for-iso-2022-jp-encoder-state-3">ISO-2022-JP encoder state</a> is <a data-link-type="dfn" href="#iso-2022-jp-encoder-ascii" id="ref-for-iso-2022-jp-encoder-ascii-4">ASCII</a>, return <a data-link-type="dfn" href="#finished" id="ref-for-finished-18">finished</a>. </p>
     <li>
      <p>If <a data-link-type="dfn" href="#iso-2022-jp-encoder-state" id="ref-for-iso-2022-jp-encoder-state-4">ISO-2022-JP encoder state</a> is <a data-link-type="dfn" href="#iso-2022-jp-encoder-ascii" id="ref-for-iso-2022-jp-encoder-ascii-5">ASCII</a> or <a data-link-type="dfn" href="#iso-2022-jp-encoder-roman" id="ref-for-iso-2022-jp-encoder-roman-1">Roman</a>, and <var>code point</var> is U+000E, U+000F,
-  or U+001B, return <a data-link-type="dfn" href="#error" id="ref-for-error-39">error</a> with U+FFFD. </p>
+  or U+001B, return <a data-link-type="dfn" href="#error" id="ref-for-error-40">error</a> with U+FFFD. </p>
      <p class="note" role="note">This returns U+FFFD rather than <var>code point</var> to prevent attacks. </p>
     <li>
      <p>If <a data-link-type="dfn" href="#iso-2022-jp-encoder-state" id="ref-for-iso-2022-jp-encoder-state-5">ISO-2022-JP encoder state</a> is <a data-link-type="dfn" href="#iso-2022-jp-encoder-ascii" id="ref-for-iso-2022-jp-encoder-ascii-6">ASCII</a> and <var>code point</var> is an <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#ascii-code-point">ASCII code point</a>, return a byte whose value is <var>code point</var>. </p>
     <li>
-     <p>If <a data-link-type="dfn" href="#iso-2022-jp-encoder-state" id="ref-for-iso-2022-jp-encoder-state-6">ISO-2022-JP encoder state</a> is <a data-link-type="dfn" href="#iso-2022-jp-encoder-roman" id="ref-for-iso-2022-jp-encoder-roman-2">Roman</a> and <var>code point</var> is an <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#ascii-code-point">ASCII code point</a>, excluding U+005C and U+007E, or is U+00A5 or U+203E, run
-  these substeps: </p>
+     <p>If <a data-link-type="dfn" href="#iso-2022-jp-encoder-state" id="ref-for-iso-2022-jp-encoder-state-6">ISO-2022-JP encoder state</a> is <a data-link-type="dfn" href="#iso-2022-jp-encoder-roman" id="ref-for-iso-2022-jp-encoder-roman-2">Roman</a> and <var>code point</var> is an <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#ascii-code-point">ASCII code point</a>, excluding U+005C and U+007E, or is U+00A5 or
+  U+203E, then: </p>
      <ol>
       <li>
        <p>If <var>code point</var> is an <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#ascii-code-point">ASCII code point</a>, return a byte
@@ -2429,10 +2434,12 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
     <li>
      <p>If <var>code point</var> is U+2212, set it to U+FF0D. </p>
     <li>
+     <p>If <var>code point</var> is in the range U+FF61 to U+FF9F, inclusive, set it to the <a data-link-type="dfn" href="#index-code-point" id="ref-for-index-code-point-6">index code point</a> for <var>code point</var> − 0xFF61 in <a data-link-type="dfn" href="#index-iso-2022-jp-katakana" id="ref-for-index-iso-2022-jp-katakana-3">index ISO-2022-JP katakana</a>. </p>
+    <li>
      <p>Let <var>pointer</var> be the <a data-link-type="dfn" href="#index-pointer" id="ref-for-index-pointer-7">index pointer</a> for <var>code point</var> in <a data-link-type="dfn" href="#index-jis0208" id="ref-for-index-jis0208-8">index jis0208</a>. </p>
      <p class="note" role="note">If <var>pointer</var> is non-null, it is less than 8836 due to the nature of <a data-link-type="dfn" href="#index-jis0208" id="ref-for-index-jis0208-9">index jis0208</a> and the <a data-link-type="dfn" href="#index-pointer" id="ref-for-index-pointer-8">index pointer</a> operation. </p>
     <li>
-     <p>If <var>pointer</var> is null, return <a data-link-type="dfn" href="#error" id="ref-for-error-40">error</a> with <var>code point</var>. </p>
+     <p>If <var>pointer</var> is null, return <a data-link-type="dfn" href="#error" id="ref-for-error-41">error</a> with <var>code point</var>. </p>
     <li>
      <p>If <a data-link-type="dfn" href="#iso-2022-jp-encoder-state" id="ref-for-iso-2022-jp-encoder-state-11">ISO-2022-JP encoder state</a> is not <a data-link-type="dfn" href="#iso-2022-jp-encoder-jis0208" id="ref-for-iso-2022-jp-encoder-jis0208-1">jis0208</a>, <a data-link-type="dfn" href="#concept-stream-prepend" id="ref-for-concept-stream-prepend-17">prepend</a> <var>code point</var> to <var>stream</var>, set <a data-link-type="dfn" href="#iso-2022-jp-encoder-state" id="ref-for-iso-2022-jp-encoder-state-12">ISO-2022-JP encoder state</a> to <a data-link-type="dfn" href="#iso-2022-jp-encoder-jis0208" id="ref-for-iso-2022-jp-encoder-jis0208-2">jis0208</a>, and return three bytes
  0x1B 0x24 0x42. </p>
@@ -2450,11 +2457,11 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
    <ol>
     <li>
      <p>If <var>byte</var> is <a data-link-type="dfn" href="#end-of-stream" id="ref-for-end-of-stream-28">end-of-stream</a> and <a data-link-type="dfn" href="#shift_jis-lead" id="ref-for-shift_jis-lead-1">Shift_JIS lead</a> is not 0x00, set <a data-link-type="dfn" href="#shift_jis-lead" id="ref-for-shift_jis-lead-2">Shift_JIS lead</a> to 0x00 and
- return <a data-link-type="dfn" href="#error" id="ref-for-error-41">error</a>. </p>
+ return <a data-link-type="dfn" href="#error" id="ref-for-error-42">error</a>. </p>
     <li>
      <p>If <var>byte</var> is <a data-link-type="dfn" href="#end-of-stream" id="ref-for-end-of-stream-29">end-of-stream</a> and <a data-link-type="dfn" href="#shift_jis-lead" id="ref-for-shift_jis-lead-3">Shift_JIS lead</a> is 0x00, return <a data-link-type="dfn" href="#finished" id="ref-for-finished-19">finished</a>. </p>
     <li>
-     <p>If <a data-link-type="dfn" href="#shift_jis-lead" id="ref-for-shift_jis-lead-4">Shift_JIS lead</a> is not 0x00, let <var>lead</var> be <a data-link-type="dfn" href="#shift_jis-lead" id="ref-for-shift_jis-lead-5">Shift_JIS lead</a>, let <var>pointer</var> be null, set <a data-link-type="dfn" href="#shift_jis-lead" id="ref-for-shift_jis-lead-6">Shift_JIS lead</a> to 0x00, and then run these substeps: </p>
+     <p>If <a data-link-type="dfn" href="#shift_jis-lead" id="ref-for-shift_jis-lead-4">Shift_JIS lead</a> is not 0x00, let <var>lead</var> be <a data-link-type="dfn" href="#shift_jis-lead" id="ref-for-shift_jis-lead-5">Shift_JIS lead</a>, let <var>pointer</var> be null, set <a data-link-type="dfn" href="#shift_jis-lead" id="ref-for-shift_jis-lead-6">Shift_JIS lead</a> to 0x00, and then: </p>
      <ol>
       <li>
        <p>Let <var>offset</var> be 0x40, if <var>byte</var> is
@@ -2470,13 +2477,13 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
     value is 0xE000 − 8836 + <var>pointer</var>. </p>
        <p class="note" role="note">This is interoperable legacy from Windows known as EUDC. </p>
       <li>
-       <p>Let <var>code point</var> be null, if <var>pointer</var> is null, and the <a data-link-type="dfn" href="#index-code-point" id="ref-for-index-code-point-6">index code point</a> for <var>pointer</var> in <a data-link-type="dfn" href="#index-jis0208" id="ref-for-index-jis0208-10">index jis0208</a> otherwise. </p>
+       <p>Let <var>code point</var> be null, if <var>pointer</var> is null, and the <a data-link-type="dfn" href="#index-code-point" id="ref-for-index-code-point-7">index code point</a> for <var>pointer</var> in <a data-link-type="dfn" href="#index-jis0208" id="ref-for-index-jis0208-10">index jis0208</a> otherwise. </p>
       <li>
-       <p>If <var>code point</var> is null and <var>byte</var> is an <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#ascii-byte">ASCII byte</a>, <a data-link-type="dfn" href="#concept-stream-prepend" id="ref-for-concept-stream-prepend-18">prepend</a> <var>byte</var> to <var>stream</var>. </p>
+       <p>If <var>code point</var> is non-null, return a code point whose value is <var>code point</var>. </p>
       <li>
-       <p>If <var>code point</var> is null, return <a data-link-type="dfn" href="#error" id="ref-for-error-42">error</a>. </p>
+       <p>If <var>byte</var> is an <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#ascii-byte">ASCII byte</a>, <a data-link-type="dfn" href="#concept-stream-prepend" id="ref-for-concept-stream-prepend-18">prepend</a> <var>byte</var> to <var>stream</var>. </p>
       <li>
-       <p>Return a code point whose value is <var>code point</var>. </p>
+       <p>Return <a data-link-type="dfn" href="#error" id="ref-for-error-43">error</a>. </p>
      </ol>
     <li>
      <p>If <var>byte</var> is an <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#ascii-byte">ASCII byte</a> or 0x80, return a code point
@@ -2488,7 +2495,7 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
      <p>If <var>byte</var> is in the range 0x81 to 0x9F, inclusive, or 0xE0 to 0xFC,
  inclusive, set <a data-link-type="dfn" href="#shift_jis-lead" id="ref-for-shift_jis-lead-7">Shift_JIS lead</a> to <var>byte</var> and return <a data-link-type="dfn" href="#continue" id="ref-for-continue-19">continue</a>. </p>
     <li>
-     <p>Return <a data-link-type="dfn" href="#error" id="ref-for-error-43">error</a>. </p>
+     <p>Return <a data-link-type="dfn" href="#error" id="ref-for-error-44">error</a>. </p>
    </ol>
    <h4 class="heading settled" data-dfn-type="dfn" data-export="" data-level="12.3.2" data-lt="Shift_JIS encoder" id="shift_jis-encoder"><span class="secno">12.3.2. </span><span class="content">Shift_JIS encoder</span><a class="self-link" href="#shift_jis-encoder"></a></h4>
    <p><a data-link-type="dfn" href="#shift_jis" id="ref-for-shift_jis-6">Shift_JIS</a>’s <a data-link-type="dfn" href="#encoder" id="ref-for-encoder-24">encoder</a>’s <a data-link-type="dfn" href="#handler" id="ref-for-handler-16">handler</a>, given a <var>stream</var> and <var>code point</var>, runs these steps: </p>
@@ -2510,7 +2517,7 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
     <li>
      <p>Let <var>pointer</var> be the <a data-link-type="dfn" href="#index-shift_jis-pointer" id="ref-for-index-shift_jis-pointer-1">index Shift_JIS pointer</a> for <var>code point</var>. </p>
     <li>
-     <p>If <var>pointer</var> is null, return <a data-link-type="dfn" href="#error" id="ref-for-error-44">error</a> with <var>code point</var>. </p>
+     <p>If <var>pointer</var> is null, return <a data-link-type="dfn" href="#error" id="ref-for-error-45">error</a> with <var>code point</var>. </p>
     <li>
      <p>Let <var>lead</var> be <var>pointer</var> / 188. </p>
     <li>
@@ -2532,25 +2539,24 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
    <ol>
     <li>
      <p>If <var>byte</var> is <a data-link-type="dfn" href="#end-of-stream" id="ref-for-end-of-stream-31">end-of-stream</a> and <a data-link-type="dfn" href="#euc-kr-lead" id="ref-for-euc-kr-lead-1">EUC-KR lead</a> is not 0x00, set <a data-link-type="dfn" href="#euc-kr-lead" id="ref-for-euc-kr-lead-2">EUC-KR lead</a> to 0x00
- and return <a data-link-type="dfn" href="#error" id="ref-for-error-45">error</a>. </p>
+ and return <a data-link-type="dfn" href="#error" id="ref-for-error-46">error</a>. </p>
     <li>
      <p>If <var>byte</var> is <a data-link-type="dfn" href="#end-of-stream" id="ref-for-end-of-stream-32">end-of-stream</a> and <a data-link-type="dfn" href="#euc-kr-lead" id="ref-for-euc-kr-lead-3">EUC-KR lead</a> is 0x00, return <a data-link-type="dfn" href="#finished" id="ref-for-finished-21">finished</a>. </p>
     <li>
-     <p>If <a data-link-type="dfn" href="#euc-kr-lead" id="ref-for-euc-kr-lead-4">EUC-KR lead</a> is not 0x00, let <var>lead</var> be <a data-link-type="dfn" href="#euc-kr-lead" id="ref-for-euc-kr-lead-5">EUC-KR lead</a>, let <var>pointer</var> be null,
-  set <a data-link-type="dfn" href="#euc-kr-lead" id="ref-for-euc-kr-lead-6">EUC-KR lead</a> to 0x00, and then run these substeps: </p>
+     <p>If <a data-link-type="dfn" href="#euc-kr-lead" id="ref-for-euc-kr-lead-4">EUC-KR lead</a> is not 0x00, let <var>lead</var> be <a data-link-type="dfn" href="#euc-kr-lead" id="ref-for-euc-kr-lead-5">EUC-KR lead</a>, let <var>pointer</var> be null, set <a data-link-type="dfn" href="#euc-kr-lead" id="ref-for-euc-kr-lead-6">EUC-KR lead</a> to 0x00, and then: </p>
      <ol>
       <li>
        <p>If <var>byte</var> is in the range  0x41 to 0xFE, inclusive, set <var>pointer</var> to
    (<var>lead</var> − 0x81) × 190 + (<var>byte</var> − 0x41). </p>
       <li>
        <p>Let <var>code point</var> be null, if <var>pointer</var> is null,
-   and the <a data-link-type="dfn" href="#index-code-point" id="ref-for-index-code-point-7">index code point</a> for <var>pointer</var> in <a data-link-type="dfn" href="#index-euc-kr" id="ref-for-index-euc-kr-1">index EUC-KR</a> otherwise. </p>
+   and the <a data-link-type="dfn" href="#index-code-point" id="ref-for-index-code-point-8">index code point</a> for <var>pointer</var> in <a data-link-type="dfn" href="#index-euc-kr" id="ref-for-index-euc-kr-1">index EUC-KR</a> otherwise. </p>
       <li>
-       <p>If <var>code point</var> is null and <var>byte</var> is an <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#ascii-byte">ASCII byte</a>, <a data-link-type="dfn" href="#concept-stream-prepend" id="ref-for-concept-stream-prepend-19">prepend</a> <var>byte</var> to <var>stream</var>. </p>
+       <p>If <var>code point</var> is non-null, return a code point whose value is <var>code point</var>. </p>
       <li>
-       <p>If <var>code point</var> is null, return <a data-link-type="dfn" href="#error" id="ref-for-error-46">error</a>. </p>
+       <p>If <var>byte</var> is an <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#ascii-byte">ASCII byte</a>, <a data-link-type="dfn" href="#concept-stream-prepend" id="ref-for-concept-stream-prepend-19">prepend</a> <var>byte</var> to <var>stream</var>. </p>
       <li>
-       <p>Return a code point whose value is <var>code point</var>. </p>
+       <p>Return <a data-link-type="dfn" href="#error" id="ref-for-error-47">error</a>. </p>
      </ol>
     <li>
      <p>If <var>byte</var> is an <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#ascii-byte">ASCII byte</a>, return
@@ -2558,7 +2564,7 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
     <li>
      <p>If <var>byte</var> is in the range 0x81 to 0xFE, inclusive, set <a data-link-type="dfn" href="#euc-kr-lead" id="ref-for-euc-kr-lead-7">EUC-KR lead</a> to <var>byte</var> and return <a data-link-type="dfn" href="#continue" id="ref-for-continue-20">continue</a>. </p>
     <li>
-     <p>Return <a data-link-type="dfn" href="#error" id="ref-for-error-47">error</a>. </p>
+     <p>Return <a data-link-type="dfn" href="#error" id="ref-for-error-48">error</a>. </p>
    </ol>
    <h4 class="heading settled" data-dfn-type="dfn" data-export="" data-level="13.1.2" data-lt="EUC-KR encoder" id="euc-kr-encoder"><span class="secno">13.1.2. </span><span class="content">EUC-KR encoder</span><a class="self-link" href="#euc-kr-encoder"></a></h4>
    <p><a data-link-type="dfn" href="#euc-kr" id="ref-for-euc-kr-4">EUC-KR</a>’s <a data-link-type="dfn" href="#encoder" id="ref-for-encoder-25">encoder</a>’s <a data-link-type="dfn" href="#handler" id="ref-for-handler-18">handler</a>, given a <var>stream</var> and <var>code point</var>, runs these steps: </p>
@@ -2571,7 +2577,7 @@ consumers of content generated with <a data-link-type="dfn" href="#gbk" id="ref-
     <li>
      <p>Let <var>pointer</var> be the <a data-link-type="dfn" href="#index-pointer" id="ref-for-index-pointer-9">index pointer</a> for <var>code point</var> in <a data-link-type="dfn" href="#index-euc-kr" id="ref-for-index-euc-kr-2">index EUC-KR</a>. </p>
     <li>
-     <p>If <var>pointer</var> is null, return <a data-link-type="dfn" href="#error" id="ref-for-error-48">error</a> with <var>code point</var>. </p>
+     <p>If <var>pointer</var> is null, return <a data-link-type="dfn" href="#error" id="ref-for-error-49">error</a> with <var>code point</var>. </p>
     <li>
      <p>Let <var>lead</var> be <var>pointer</var> / 190 + 0x81. </p>
     <li>
@@ -2591,7 +2597,7 @@ the server and the client. </p>
     <li>
      <p>If <var>byte</var> is <a data-link-type="dfn" href="#end-of-stream" id="ref-for-end-of-stream-34">end-of-stream</a>, return <a data-link-type="dfn" href="#finished" id="ref-for-finished-23">finished</a>. </p>
     <li>
-     <p>If <a data-link-type="dfn" href="#replacement-error-returned-flag" id="ref-for-replacement-error-returned-flag-1">replacement error returned flag</a> is unset, set the <a data-link-type="dfn" href="#replacement-error-returned-flag" id="ref-for-replacement-error-returned-flag-2">replacement error returned flag</a> and return <a data-link-type="dfn" href="#error" id="ref-for-error-49">error</a>. </p>
+     <p>If <a data-link-type="dfn" href="#replacement-error-returned-flag" id="ref-for-replacement-error-returned-flag-1">replacement error returned flag</a> is unset, set the <a data-link-type="dfn" href="#replacement-error-returned-flag" id="ref-for-replacement-error-returned-flag-2">replacement error returned flag</a> and return <a data-link-type="dfn" href="#error" id="ref-for-error-50">error</a>. </p>
     <li>
      <p>Return <a data-link-type="dfn" href="#finished" id="ref-for-finished-24">finished</a>. </p>
    </ol>
@@ -2603,7 +2609,7 @@ has been found to be more accurate in deployed content. Therefore it is not part
    <p><a data-link-type="dfn" href="#shared-utf-16-decoder" id="ref-for-shared-utf-16-decoder-3">shared UTF-16 decoder</a>’s <a data-link-type="dfn" href="#handler" id="ref-for-handler-20">handler</a>, given a <var>stream</var> and <var>byte</var>, runs these steps: </p>
    <ol>
     <li>
-     <p>If <var>byte</var> is <a data-link-type="dfn" href="#end-of-stream" id="ref-for-end-of-stream-35">end-of-stream</a> and either <a data-link-type="dfn" href="#utf-16-lead-byte" id="ref-for-utf-16-lead-byte-1">UTF-16 lead byte</a> or <a data-link-type="dfn" href="#utf-16-lead-surrogate" id="ref-for-utf-16-lead-surrogate-1">UTF-16 lead surrogate</a> is not null, set <a data-link-type="dfn" href="#utf-16-lead-byte" id="ref-for-utf-16-lead-byte-2">UTF-16 lead byte</a> and <a data-link-type="dfn" href="#utf-16-lead-surrogate" id="ref-for-utf-16-lead-surrogate-2">UTF-16 lead surrogate</a> to null, and return <a data-link-type="dfn" href="#error" id="ref-for-error-50">error</a>. </p>
+     <p>If <var>byte</var> is <a data-link-type="dfn" href="#end-of-stream" id="ref-for-end-of-stream-35">end-of-stream</a> and either <a data-link-type="dfn" href="#utf-16-lead-byte" id="ref-for-utf-16-lead-byte-1">UTF-16 lead byte</a> or <a data-link-type="dfn" href="#utf-16-lead-surrogate" id="ref-for-utf-16-lead-surrogate-1">UTF-16 lead surrogate</a> is non-null, set <a data-link-type="dfn" href="#utf-16-lead-byte" id="ref-for-utf-16-lead-byte-2">UTF-16 lead byte</a> and <a data-link-type="dfn" href="#utf-16-lead-surrogate" id="ref-for-utf-16-lead-surrogate-2">UTF-16 lead surrogate</a> to null, and return <a data-link-type="dfn" href="#error" id="ref-for-error-51">error</a>. </p>
     <li>
      <p>If <var>byte</var> is <a data-link-type="dfn" href="#end-of-stream" id="ref-for-end-of-stream-36">end-of-stream</a> and <a data-link-type="dfn" href="#utf-16-lead-byte" id="ref-for-utf-16-lead-byte-3">UTF-16 lead byte</a> and <a data-link-type="dfn" href="#utf-16-lead-surrogate" id="ref-for-utf-16-lead-surrogate-3">UTF-16 lead surrogate</a> are null, return <a data-link-type="dfn" href="#finished" id="ref-for-finished-25">finished</a>. </p>
     <li>
@@ -2620,38 +2626,27 @@ has been found to be more accurate in deployed content. Therefore it is not part
      </dl>
      <p>Then set <a data-link-type="dfn" href="#utf-16-lead-byte" id="ref-for-utf-16-lead-byte-8">UTF-16 lead byte</a> to null. </p>
     <li>
-     <p>If <a data-link-type="dfn" href="#utf-16-lead-surrogate" id="ref-for-utf-16-lead-surrogate-4">UTF-16 lead surrogate</a> is not null, let <var>lead surrogate</var> be <a data-link-type="dfn" href="#utf-16-lead-surrogate" id="ref-for-utf-16-lead-surrogate-5">UTF-16 lead surrogate</a>, set <a data-link-type="dfn" href="#utf-16-lead-surrogate" id="ref-for-utf-16-lead-surrogate-6">UTF-16 lead surrogate</a> to null, and then run these substeps: </p>
+     <p>If <a data-link-type="dfn" href="#utf-16-lead-surrogate" id="ref-for-utf-16-lead-surrogate-4">UTF-16 lead surrogate</a> is non-null, let <var>lead surrogate</var> be <a data-link-type="dfn" href="#utf-16-lead-surrogate" id="ref-for-utf-16-lead-surrogate-5">UTF-16 lead surrogate</a>, set <a data-link-type="dfn" href="#utf-16-lead-surrogate" id="ref-for-utf-16-lead-surrogate-6">UTF-16 lead surrogate</a> to null, and then: </p>
      <ol>
       <li>
        <p>If <var>code unit</var> is in the range U+DC00 to U+DFFF, inclusive,
    return a code point whose value is
    0x10000 + ((<var>lead surrogate</var> − 0xD800) &lt;&lt; 10) + (<var>code unit</var> − 0xDC00). </p>
       <li>
-       <p>Let <var>bytes</var> be the return value of running these subsubsteps: </p>
-       <ol>
-        <li>
-         <p>Let <var>byte1</var> be <var>code unit</var> >> 8. </p>
-        <li>
-         <p>Let <var>byte2</var> be <var>code unit</var> &amp; 0x00FF. </p>
-        <li>
-         <p>Then return the bytes in order, switching on <a data-link-type="dfn" href="#utf-16be-decoder-flag" id="ref-for-utf-16be-decoder-flag-3">UTF-16BE decoder flag</a>: </p>
-         <dl class="switch">
-          <dt>Set 
-          <dd>
-           <p><var>byte1</var>, then <var>byte2</var>. </p>
-          <dt>Unset 
-          <dd>
-           <p><var>byte2</var>, then <var>byte1</var>. </p>
-         </dl>
-       </ol>
+       <p>Let <var>byte1</var> be <var>code unit</var> >> 8. </p>
       <li>
-       <p><a data-link-type="dfn" href="#concept-stream-prepend" id="ref-for-concept-stream-prepend-20">Prepend</a> the <var>bytes</var> to <var>stream</var> and return <a data-link-type="dfn" href="#error" id="ref-for-error-51">error</a>. </p>
+       <p>Let <var>byte2</var> be <var>code unit</var> &amp; 0x00FF. </p>
+      <li>
+       <p>Let <var>bytes</var> be two bytes whose values are <var>byte1</var> and <var>byte2</var>,
+   if the <a data-link-type="dfn" href="#utf-16be-decoder-flag" id="ref-for-utf-16be-decoder-flag-3">UTF-16BE decoder flag</a> is set, and <var>byte2</var> and <var>byte1</var> otherwise. </p>
+      <li>
+       <p><a data-link-type="dfn" href="#concept-stream-prepend" id="ref-for-concept-stream-prepend-20">Prepend</a> the <var>bytes</var> to <var>stream</var> and return <a data-link-type="dfn" href="#error" id="ref-for-error-52">error</a>. </p>
      </ol>
     <li>
      <p>If <var>code unit</var> is in the range U+D800 to U+DBFF, inclusive, set <a data-link-type="dfn" href="#utf-16-lead-surrogate" id="ref-for-utf-16-lead-surrogate-7">UTF-16 lead surrogate</a> to <var>code unit</var> and return <a data-link-type="dfn" href="#continue" id="ref-for-continue-22">continue</a>. </p>
     <li>
      <p>If <var>code unit</var> is in the range U+DC00 to U+DFFF, inclusive,
- return <a data-link-type="dfn" href="#error" id="ref-for-error-52">error</a>. </p>
+ return <a data-link-type="dfn" href="#error" id="ref-for-error-53">error</a>. </p>
     <li>
      <p>Return code point <var>code unit</var>. </p>
    </ol>
@@ -2690,7 +2685,7 @@ it is defined separately as it can be implemented algorithmically. </p>
      <p>If <var>code point</var> is in the range U+F780 to U+F7FF, inclusive, return
  a byte whose value is <var>code point</var> − 0xF780 + 0x80. </p>
     <li>
-     <p>Return <a data-link-type="dfn" href="#error" id="ref-for-error-53">error</a> with <var>code point</var>. </p>
+     <p>Return <a data-link-type="dfn" href="#error" id="ref-for-error-54">error</a> with <var>code point</var>. </p>
    </ol>
    <h2 class="heading settled" data-level="15" id="browser-ui"><span class="secno">15. </span><span class="content">Browser UI</span><a class="self-link" href="#browser-ui"></a></h2>
    <p>Browsers are encouraged to not enable overriding the encoding of a resource. If such a
@@ -2704,28 +2699,15 @@ issues. Browsers also should disable this feature if the resource was decoded us
     <li>
      <p>A single-byte buffer for <a data-link-type="dfn" href="#gb18030" id="ref-for-gb18030-9">gb18030</a> (an <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#ascii-byte">ASCII byte</a>) and <a data-link-type="dfn" href="#iso-2022-jp" id="ref-for-iso-2022-jp-7">ISO-2022-JP</a> (0x24 or
   0x28). </p>
-     <p class="example" id="example-d0f9fcde"><a class="self-link" href="#example-d0f9fcde"></a>For <a data-link-type="dfn" href="#gb18030" id="ref-for-gb18030-10">gb18030</a> when hitting a bogus byte while <a data-link-type="dfn" href="#gb18030-third" id="ref-for-gb18030-third-9">gb18030 third</a> is not
-  0x00, <a data-link-type="dfn" href="#gb18030-second" id="ref-for-gb18030-second-11">gb18030 second</a> could be moved into the single-byte buffer to be returned next, and <a data-link-type="dfn" href="#gb18030-third" id="ref-for-gb18030-third-10">gb18030 third</a> would be the new <a data-link-type="dfn" href="#gb18030-first" id="ref-for-gb18030-first-11">gb18030 first</a>, checked for not being 0x00 after the
-  single-byte buffer was returned and emptied. This is possible as the range for the first and third
-  byte in <a data-link-type="dfn" href="#gb18030" id="ref-for-gb18030-11">gb18030</a> is identical. </p>
+     <p class="example" id="example-gb18030-implementation-strategy"><a class="self-link" href="#example-gb18030-implementation-strategy"></a>For <a data-link-type="dfn" href="#gb18030" id="ref-for-gb18030-10">gb18030</a> when hitting a
+  bogus byte while <a data-link-type="dfn" href="#gb18030-third" id="ref-for-gb18030-third-9">gb18030 third</a> is not 0x00, <a data-link-type="dfn" href="#gb18030-second" id="ref-for-gb18030-second-11">gb18030 second</a> could be moved into the
+  single-byte buffer to be returned next, and <a data-link-type="dfn" href="#gb18030-third" id="ref-for-gb18030-third-10">gb18030 third</a> would be the new <a data-link-type="dfn" href="#gb18030-first" id="ref-for-gb18030-first-11">gb18030 first</a>, checked for not being 0x00 after the single-byte buffer was returned and
+  emptied. This is possible as the range for the first and third byte in <a data-link-type="dfn" href="#gb18030" id="ref-for-gb18030-11">gb18030</a> is
+  identical. </p>
    </ol>
-   <p>The <a data-link-type="dfn" href="#iso-2022-jp-encoder" id="ref-for-iso-2022-jp-encoder-1">ISO-2022-JP encoder</a> needs <a data-link-type="dfn" href="#iso-2022-jp-encoder-state" id="ref-for-iso-2022-jp-encoder-state-13">ISO-2022-JP encoder state</a> as additional state, but
+   <p>The <a data-link-type="dfn" href="#iso-2022-jp-encoder" id="ref-for-iso-2022-jp-encoder-2">ISO-2022-JP encoder</a> needs <a data-link-type="dfn" href="#iso-2022-jp-encoder-state" id="ref-for-iso-2022-jp-encoder-state-13">ISO-2022-JP encoder state</a> as additional state, but
 other than that, none of the <a data-link-type="dfn" href="#encoder" id="ref-for-encoder-27">encoders</a> for <a data-link-type="dfn" href="#encoding" id="ref-for-encoding-25">encodings</a> in this standard
 require additional state or buffers. </p>
-   <h2 class="no-num heading settled" id="changes"><span class="content">Changes</span><a class="self-link" href="#changes"></a></h2>
-   <p>Changes since this document was previously updated are editorial and can be found <a href="https://github.com/whatwg/encoding/commits/master">in the GitHub log</a>. 
-      The following changes have been made since the previous W3C version of this document:</p>
-   <ol>
-    <li>Link web-platform-tests
-    <li>Fix formatting of code and add new to a constructor
-    <li>Add visualizations for the indexes<br>Exposing the PUA code points as PUA in HTML is useful to seeing what those code points map 
-	       to (if to anything) in system fonts, which may give insights about their usage. Exposing singletons (compatibility ideographs and 
-	       scientific units) without normalizing them is useful for having browser "Find" functionality match whatever you get as output of a 
-	       converter you might be developing.
-    <li>Mark certain references non-normative
-    <li>Fixed HTML validation errors.
-    <li>Remove the DOM reference as it’s not actually needed for anything.
-   </ol>
    <h2 class="no-num heading settled" id="acknowledgments"><span class="content">Acknowledgments</span><a class="self-link" href="#acknowledgments"></a></h2>
    <p>There have been a lot of people that have helped make encodings more
 interoperable over the years and thereby furthered the goals of this
@@ -2800,6 +2782,18 @@ was initially written by Joshua Bell (<a href="https://www.google.com/">Google</
    <p>Per <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="license">CC0</a>, to
 the extent possible under law, the editors have waived all copyright and related or
 neighboring rights to this work. </p>
+   <h2 class="no-num heading settled" id="changes"><span class="content">Changes</span><a class="self-link" href="#changes"></a></h2>
+   <p>Changes since this document was previously updated contain both substantive and editorial changes.
+   These can be found <a href="https://github.com/whatwg/encoding/commits/master">in the GitHub log</a>. 
+      The following changes have been made since the previous W3C version of this document:</p>
+   <ol>
+    <li>(substantive) GB18030 Decoder: unwind from fourth byte when it’s not a digit
+    <li>(substantive) ISO-2022-JP Encoder: convert half-width katakana to full-width katakana
+    <li>(substantive) EUC-JP Decoder: only unwind ASCII bytes
+    <li>Remove substeps as a concept
+    <li>Check non-null before null
+    <li>Various editorial changes to make links work and suppress warnings
+   </ol>
   </main>
 <script>
 (function() {
@@ -2938,14 +2932,14 @@ neighboring rights to this work. </p>
    <dt id="biblio-unicode">[UNICODE]
    <dd><a href="http://www.unicode.org/versions/latest/">The Unicode Standard</a>. URL: <a href="http://www.unicode.org/versions/latest/">http://www.unicode.org/versions/latest/</a>
    <dt id="biblio-webidl">[WEBIDL]
-   <dd>Cameron McCormack; Boris Zbarsky; Tobie Langel. <a href="https://www.w3.org/TR/WebIDL-1/">Web IDL</a>. URL: <a href="https://www.w3.org/TR/WebIDL-1/">https://www.w3.org/TR/WebIDL-1/</a>
+   <dd>Cameron McCormack; Boris Zbarsky; Tobie Langel. <a href="https://heycam.github.io/webidl/">Web IDL</a>. URL: <a href="https://heycam.github.io/webidl/">https://heycam.github.io/webidl/</a>
   </dl>
   <h3 class="no-num no-ref heading settled" id="informative"><span class="content">Informative References</span><a class="self-link" href="#informative"></a></h3>
   <dl>
    <dt id="biblio-html">[HTML]
    <dd>Ian Hickson; et al. <a href="https://www.w3.org/TR/html5/">HTML5</a>. W3C Recommendation. URL: <a href="https://www.w3.org/TR/html5/">https://www.w3.org/TR/html5/</a>
-   <dt id="biblio-url">[URL]
-   <dd>Anne van Kesteren. <a href="https://url.spec.whatwg.org/">URL Standard</a>. WHATWG Living Standard. URL: <a href="https://url.spec.whatwg.org/">https://url.spec.whatwg.org/</a>
+  <dt id="biblio-url">[URL]
+   <dd>Anne van Kesteren. <a href="https://url.spec.whatwg.org/">URL Standard</a>. Living Standard. URL: <a href="https://url.spec.whatwg.org/">https://url.spec.whatwg.org/</a>
    <dt id="biblio-xml">[XML]
    <dd>Tim Bray; et al. <a href="https://www.w3.org/TR/xml">Extensible Markup Language (XML) 1.0 (Fifth Edition)</a>. 26 November 2008. REC. URL: <a href="https://www.w3.org/TR/xml">https://www.w3.org/TR/xml</a>
   </dl>
@@ -3169,21 +3163,21 @@ neighboring rights to this work. </p>
     <li><a href="#ref-for-error-8">8.1.1. UTF-8 decoder</a> <a href="#ref-for-error-9">(2)</a> <a href="#ref-for-error-10">(3)</a>
     <li><a href="#ref-for-error-11">9.1. single-byte decoder</a>
     <li><a href="#ref-for-error-12">9.2. single-byte encoder</a>
-    <li><a href="#ref-for-error-13">10.2.1. gb18030 decoder</a> <a href="#ref-for-error-14">(2)</a> <a href="#ref-for-error-15">(3)</a> <a href="#ref-for-error-16">(4)</a> <a href="#ref-for-error-17">(5)</a>
-    <li><a href="#ref-for-error-18">10.2.2. gb18030 encoder</a> <a href="#ref-for-error-19">(2)</a>
-    <li><a href="#ref-for-error-20">11.1.1. Big5 decoder</a> <a href="#ref-for-error-21">(2)</a> <a href="#ref-for-error-22">(3)</a>
-    <li><a href="#ref-for-error-23">11.1.2. Big5 encoder</a>
-    <li><a href="#ref-for-error-24">12.1.1. EUC-JP decoder</a> <a href="#ref-for-error-25">(2)</a> <a href="#ref-for-error-26">(3)</a>
-    <li><a href="#ref-for-error-27">12.1.2. EUC-JP encoder</a>
-    <li><a href="#ref-for-error-28">12.2.1. ISO-2022-JP decoder</a> <a href="#ref-for-error-29">(2)</a> <a href="#ref-for-error-30">(3)</a> <a href="#ref-for-error-31">(4)</a> <a href="#ref-for-error-32">(5)</a> <a href="#ref-for-error-33">(6)</a> <a href="#ref-for-error-34">(7)</a> <a href="#ref-for-error-35">(8)</a> <a href="#ref-for-error-36">(9)</a> <a href="#ref-for-error-37">(10)</a> <a href="#ref-for-error-38">(11)</a>
-    <li><a href="#ref-for-error-39">12.2.2. ISO-2022-JP encoder</a> <a href="#ref-for-error-40">(2)</a>
-    <li><a href="#ref-for-error-41">12.3.1. Shift_JIS decoder</a> <a href="#ref-for-error-42">(2)</a> <a href="#ref-for-error-43">(3)</a>
-    <li><a href="#ref-for-error-44">12.3.2. Shift_JIS encoder</a>
-    <li><a href="#ref-for-error-45">13.1.1. EUC-KR decoder</a> <a href="#ref-for-error-46">(2)</a> <a href="#ref-for-error-47">(3)</a>
-    <li><a href="#ref-for-error-48">13.1.2. EUC-KR encoder</a>
-    <li><a href="#ref-for-error-49">14.1.1. replacement decoder</a>
-    <li><a href="#ref-for-error-50">14.2.1. shared UTF-16 decoder</a> <a href="#ref-for-error-51">(2)</a> <a href="#ref-for-error-52">(3)</a>
-    <li><a href="#ref-for-error-53">14.5.2. x-user-defined encoder</a>
+    <li><a href="#ref-for-error-13">10.2.1. gb18030 decoder</a> <a href="#ref-for-error-14">(2)</a> <a href="#ref-for-error-15">(3)</a> <a href="#ref-for-error-16">(4)</a> <a href="#ref-for-error-17">(5)</a> <a href="#ref-for-error-18">(6)</a>
+    <li><a href="#ref-for-error-19">10.2.2. gb18030 encoder</a> <a href="#ref-for-error-20">(2)</a>
+    <li><a href="#ref-for-error-21">11.1.1. Big5 decoder</a> <a href="#ref-for-error-22">(2)</a> <a href="#ref-for-error-23">(3)</a>
+    <li><a href="#ref-for-error-24">11.1.2. Big5 encoder</a>
+    <li><a href="#ref-for-error-25">12.1.1. EUC-JP decoder</a> <a href="#ref-for-error-26">(2)</a> <a href="#ref-for-error-27">(3)</a>
+    <li><a href="#ref-for-error-28">12.1.2. EUC-JP encoder</a>
+    <li><a href="#ref-for-error-29">12.2.1. ISO-2022-JP decoder</a> <a href="#ref-for-error-30">(2)</a> <a href="#ref-for-error-31">(3)</a> <a href="#ref-for-error-32">(4)</a> <a href="#ref-for-error-33">(5)</a> <a href="#ref-for-error-34">(6)</a> <a href="#ref-for-error-35">(7)</a> <a href="#ref-for-error-36">(8)</a> <a href="#ref-for-error-37">(9)</a> <a href="#ref-for-error-38">(10)</a> <a href="#ref-for-error-39">(11)</a>
+    <li><a href="#ref-for-error-40">12.2.2. ISO-2022-JP encoder</a> <a href="#ref-for-error-41">(2)</a>
+    <li><a href="#ref-for-error-42">12.3.1. Shift_JIS decoder</a> <a href="#ref-for-error-43">(2)</a> <a href="#ref-for-error-44">(3)</a>
+    <li><a href="#ref-for-error-45">12.3.2. Shift_JIS encoder</a>
+    <li><a href="#ref-for-error-46">13.1.1. EUC-KR decoder</a> <a href="#ref-for-error-47">(2)</a> <a href="#ref-for-error-48">(3)</a>
+    <li><a href="#ref-for-error-49">13.1.2. EUC-KR encoder</a>
+    <li><a href="#ref-for-error-50">14.1.1. replacement decoder</a>
+    <li><a href="#ref-for-error-51">14.2.1. shared UTF-16 decoder</a> <a href="#ref-for-error-52">(2)</a> <a href="#ref-for-error-53">(3)</a>
+    <li><a href="#ref-for-error-54">14.5.2. x-user-defined encoder</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="continue">
@@ -3236,9 +3230,9 @@ neighboring rights to this work. </p>
   <aside class="dfn-panel" data-for="index">
    <b><a href="#index">#index</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-index-1">5. Indexes</a> <a href="#ref-for-index-2">(2)</a> <a href="#ref-for-index-3">(3)</a> <a href="#ref-for-index-4">(4)</a> <a href="#ref-for-index-5">(5)</a> <a href="#ref-for-index-6">(6)</a> <a href="#ref-for-index-7">(7)</a> <a href="#ref-for-index-8">(8)</a> <a href="#ref-for-index-9">(9)</a> <a href="#ref-for-index-10">(10)</a>
-    <li><a href="#ref-for-index-11">9. Legacy single-byte encodings</a>
-    <li><a href="#ref-for-index-12">11.1.1. Big5 decoder</a>
+    <li><a href="#ref-for-index-1">5. Indexes</a> <a href="#ref-for-index-2">(2)</a> <a href="#ref-for-index-3">(3)</a> <a href="#ref-for-index-4">(4)</a> <a href="#ref-for-index-5">(5)</a> <a href="#ref-for-index-6">(6)</a> <a href="#ref-for-index-7">(7)</a> <a href="#ref-for-index-8">(8)</a> <a href="#ref-for-index-9">(9)</a> <a href="#ref-for-index-10">(10)</a> <a href="#ref-for-index-11">(11)</a>
+    <li><a href="#ref-for-index-12">9. Legacy single-byte encodings</a>
+    <li><a href="#ref-for-index-13">11.1.1. Big5 decoder</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="index-code-point">
@@ -3249,8 +3243,9 @@ neighboring rights to this work. </p>
     <li><a href="#ref-for-index-code-point-3">11.1.1. Big5 decoder</a>
     <li><a href="#ref-for-index-code-point-4">12.1.1. EUC-JP decoder</a>
     <li><a href="#ref-for-index-code-point-5">12.2.1. ISO-2022-JP decoder</a>
-    <li><a href="#ref-for-index-code-point-6">12.3.1. Shift_JIS decoder</a>
-    <li><a href="#ref-for-index-code-point-7">13.1.1. EUC-KR decoder</a>
+    <li><a href="#ref-for-index-code-point-6">12.2.2. ISO-2022-JP encoder</a>
+    <li><a href="#ref-for-index-code-point-7">12.3.1. Shift_JIS decoder</a>
+    <li><a href="#ref-for-index-code-point-8">13.1.1. EUC-KR decoder</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="index-pointer">
@@ -3306,6 +3301,13 @@ neighboring rights to this work. </p>
    <b><a href="#index-jis0212">#index-jis0212</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="#ref-for-index-jis0212-1">12.1.1. EUC-JP decoder</a>
+   </ul>
+  </aside>
+  <aside class="dfn-panel" data-for="index-iso-2022-jp-katakana">
+   <b><a href="#index-iso-2022-jp-katakana">#index-iso-2022-jp-katakana</a></b><b>Referenced in:</b>
+   <ul>
+    <li><a href="#ref-for-index-iso-2022-jp-katakana-1">5. Indexes</a> <a href="#ref-for-index-iso-2022-jp-katakana-2">(2)</a>
+    <li><a href="#ref-for-index-iso-2022-jp-katakana-3">12.2.2. ISO-2022-JP encoder</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="index-gb18030-ranges-code-point">
@@ -3441,7 +3443,7 @@ neighboring rights to this work. </p>
   <aside class="dfn-panel" data-for="dom-textdecoder">
    <b><a href="#dom-textdecoder">#dom-textdecoder</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-textdecoder-1">7.1. Interface TextDecoder</a>
+    <li><a href="#ref-for-dom-textdecoder-1">7.1. Interface TextDecoder</a> <a href="#ref-for-dom-textdecoder-2">(2)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-textdecoder-encoding">
@@ -3465,7 +3467,7 @@ neighboring rights to this work. </p>
   <aside class="dfn-panel" data-for="dom-textdecoder-decode">
    <b><a href="#dom-textdecoder-decode">#dom-textdecoder-decode</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-textdecoder-decode-1">7.1. Interface TextDecoder</a> <a href="#ref-for-dom-textdecoder-decode-2">(2)</a>
+    <li><a href="#ref-for-dom-textdecoder-decode-1">7.1. Interface TextDecoder</a> <a href="#ref-for-dom-textdecoder-decode-2">(2)</a> <a href="#ref-for-dom-textdecoder-decode-3">(3)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="textencoder">
@@ -3496,7 +3498,7 @@ neighboring rights to this work. </p>
   <aside class="dfn-panel" data-for="dom-textencoder-encode">
    <b><a href="#dom-textencoder-encode">#dom-textencoder-encode</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-textencoder-encode-1">7.2. Interface TextEncoder</a>
+    <li><a href="#ref-for-dom-textencoder-encode-1">7.2. Interface TextEncoder</a> <a href="#ref-for-dom-textencoder-encode-2">(2)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="utf-8">
@@ -3916,7 +3918,8 @@ neighboring rights to this work. </p>
   <aside class="dfn-panel" data-for="iso-2022-jp-encoder">
    <b><a href="#iso-2022-jp-encoder">#iso-2022-jp-encoder</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-iso-2022-jp-encoder-1">Implementation considerations</a>
+    <li><a href="#ref-for-iso-2022-jp-encoder-1">5. Indexes</a>
+    <li><a href="#ref-for-iso-2022-jp-encoder-2">Implementation considerations</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="iso-2022-jp-encoder-state">
