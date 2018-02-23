@@ -4,7 +4,7 @@ Group: WHATWG
 H1: Encoding
 Shortname: encoding
 Status: CR
-Deadline: 2017-07-28
+Deadline: 2018-02-23
 Previous version: https://www.w3.org/TR/2017/CR-encoding-20170413/
 TR: https://www.w3.org/TR/encoding/
 ED: https://encoding.spec.whatwg.org/
@@ -23,6 +23,14 @@ Translate IDs: dictdef-textdecoderoptions textdecoderoptions,dictdef-textdecodeo
 <script src=https://resources.whatwg.org/file-issue.js async></script>
 <script src=https://resources.whatwg.org/commit-snapshot-shortcut-key.js async></script>
 <script src=https://resources.whatwg.org/dfn.js defer></script>
+
+<pre class=link-defaults>
+spec:infra; type:dfn;
+    text:code point
+    text:ascii case-insensitive
+</pre>
+
+<link rel=stylesheet href=visualization-colors.css>
 
 <pre class=link-defaults>
 spec:infra; type:dfn;
@@ -254,6 +262,9 @@ and their <a>labels</a> user agents must support.
 User agents must not support any other <a for=/>encodings</a>
 or <a>labels</a>.
 
+<p class=note>For each encoding, <a lt="ASCII lowercase">ASCII-lowercasing</a> its
+<a for=encoding>name</a> yields one of its <a for=encoding>labels</a>.
+
 <p>Authors must use the <a>UTF-8</a> <a for=/>encoding</a> and must use the
 <a>ASCII case-insensitive</a> "<code>utf-8</code>" <a>label</a> to
 identify it.
@@ -276,10 +287,10 @@ from a string <var>label</var>, run these steps:
  below, return the corresponding <a for=/>encoding</a>, and failure otherwise.
 </ol>
 
-<p class="note no-backref">This is a much simpler and more restrictive algorithm of
-mapping <a>labels</a> to <a for=/>encodings</a> than
-<a href=http://www.unicode.org/reports/tr22/tr22-7.html#Charset_Alias_Matching>section 1.4 of Unicode Technical Standard #22</a>
-prescribes, as that is found to be necessary to be compatible with deployed content.
+<p class="note no-backref">This is a more basic and restrictive algorithm of mapping <a>labels</a>
+to <a for=/>encodings</a> than
+<a href=https://www.unicode.org/reports/tr22/#Charset_Alias_Matching>section 1.4 of Unicode Technical Standard #22</a>
+prescribes, as that is necessary to be compatible with deployed content.
 
 <table>
  <thead>
@@ -582,12 +593,13 @@ prescribes, as that is found to be necessary to be compatible with deployed cont
  <tbody>
   <tr><th colspan=2><a href=#legacy-miscellaneous-encodings>Legacy miscellaneous encodings</a>
   <tr>
-   <td rowspan=5><a>replacement</a>
+   <td rowspan=6><a>replacement</a>
    <td>"<code>csiso2022kr</code>"
   <tr><td>"<code>hz-gb-2312</code>"
   <tr><td>"<code>iso-2022-cn</code>"
   <tr><td>"<code>iso-2022-cn-ext</code>"
   <tr><td>"<code>iso-2022-kr</code>"
+  <tr><td>"<code>replacement</code>"
   <tr>
    <td><a>UTF-16BE</a>
    <td>"<code>utf-16be</code>"
@@ -878,7 +890,7 @@ fallback encoding <var>encoding</var>, run these steps:
   more authoritative than anything else. In a context where HTTP is used this is in violation of the
   semantics of the `<code>Content-Type</code>` header.
 
- <li><p>If <var>BOM seen flag</var> is unset
+ <li><p>If <var>BOM seen flag</var> is unset,
  <a>prepend</a> <var>buffer</var> to <var>stream</var>.
 
  <li><p>Otherwise, if <var>BOM seen flag</var> is set, <var>encoding</var> is not
@@ -1435,7 +1447,7 @@ must run these steps:
 <p class=note>The constraints in the <a>UTF-8 decoder</a> above match
 “Best Practices for Using U+FFFD” from the Unicode standard. No other
 behavior is permitted per the Encoding Standard (other algorithms that
-achieve the same result are obviously fine, even encouraged).
+achieve the same result are fine, even encouraged).
 [[!UNICODE]]
 
 
@@ -1814,7 +1826,7 @@ consumers of content generated with <a>GBK</a>'s <a for=/>encoder</a>.
     its second column (the third column is irrelevant):
 
     <table>
-     <tbody><tr><th>Pointer<th>Code points<th>Notes<!-- http://www.unicode.org/Public/UNIDATA/NamedSequences.txt -->
+     <tbody><tr><th>Pointer<th>Code points<th>Notes<!-- https://www.unicode.org/Public/UNIDATA/NamedSequences.txt -->
      <tr><td>1133<!-- 0x88 0x62 --><td>U+00CA U+0304<td>Ê̄ (LATIN CAPITAL LETTER E WITH CIRCUMFLEX AND MACRON)
      <tr><td>1135<!-- 0x88 0x64 --><td>U+00CA U+030C<td>Ê̌ (LATIN CAPITAL LETTER E WITH CIRCUMFLEX AND CARON)
      <tr><td>1164<!-- 0x88 0xA3 --><td>U+00EA U+0304<td>ê̄ (LATIN SMALL LETTER E WITH CIRCUMFLEX AND MACRON)
@@ -2624,8 +2636,8 @@ it is defined separately as it can be implemented algorithmically.
 <!--
 This encoding is silly, however, the web depends on it:
 
-http://krijnhoetmer.nl/irc-logs/whatwg/20121003#l-461
-http://krijnhoetmer.nl/irc-logs/whatwg/20121010#l-812
+https://krijnhoetmer.nl/irc-logs/whatwg/20121003#l-461
+https://krijnhoetmer.nl/irc-logs/whatwg/20121010#l-812
 
 https://stackoverflow.com/questions/6986789/why-are-some-bytes-prefixed-with-0xf7-when-using-charset-x-user-defined-with-xm
 -->
@@ -2780,20 +2792,10 @@ for being awesome.
 <a href=mailto:annevk@annevk.nl>annevk@annevk.nl</a>). The <a href=#api>API</a> chapter
 was initially written by Joshua Bell (<a href=https://www.google.com/>Google</a>).
 
-<p>Per <a rel=license href=https://creativecommons.org/publicdomain/zero/1.0/>CC0</a>, to
-the extent possible under law, the editors have waived all copyright and related or
-neighboring rights to this work.
-
 <h2 class=no-num id=changes>Changes</h2>
 
-   <p>Changes since this document was previously updated contain both substantive and editorial changes.
-   These can be found <a href="https://github.com/whatwg/encoding/commits/master">in the GitHub log</a>. 
+   <p>Changes since this document was previously updated are editorial and can be found <a href="https://github.com/whatwg/encoding/commits/master">in the GitHub log</a>. 
       The following changes have been made since the previous W3C version of this document:</p>
    <ol>
-	   <li>(substantive) GB18030 Decoder: unwind from fourth byte when it's not a digit</li>
-	   <li>(substantive) ISO-2022-JP Encoder: convert half-width katakana to full-width katakana</li>
-	   <li>(substantive) EUC-JP Decoder: only unwind ASCII bytes</li>
-	   <li>Remove substeps as a concept</li>
-	   <li>Check non-null before null</li>
-	   <li>Various editorial changes to make links work and suppress warnings</li>
+       <li>3 substative changes arising from tests</li>
    </ol>
