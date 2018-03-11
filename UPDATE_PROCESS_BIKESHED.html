@@ -128,7 +128,7 @@ but for now i'll add by hand.  Especially as there's a lot of idiosyncratic stuf
 [3] add the following just after the italic para at the start of the SOTD. 
 
 --
-  <p class="stability" id="wip">The body of this spec is an exact copy of the WHATWG version as of the date of its publication, intended to provide a stable reference for other specifications. For the latest updates, including changes since this snapshot was published, please look at the <a href="http://encoding.spec.whatwg.org/">WHATWG version</a>.
+  <p class="stability" id="wip">The body of this spec is an exact copy of the WHATWG version as of the date of its publication, intended to provide a stable reference for other specifications. For the latest updates, including changes since this snapshot was published, please look at the <a href="https://encoding.spec.whatwg.org/">WHATWG version</a>.
 <input onclick="closeWarning(this.parentNode)" type="button" value="X"></p>
   <script>
    function closeWarning(element) {
@@ -219,4 +219,51 @@ d. just before the body, add
            <script src="//www.w3.org/scripts/TR/2016/fixup.js"></script>
 
 e. move  <link href="https://www.w3.org/StyleSheets/TR/2016/W3C-CR" rel="stylesheet" type="text/css"> below the inline style
+
+[11] various fixes we did for CR version
+
+1. correct ercim and csail links to be https
+2. add   <link rel="stylesheet" href="visualization-colors.css" type="text/css">
+3. check links. http->https is a common error
+
+4. Add the "red box" styles, which local.css seems to have forgotten
+
+--
+<style>
+/* This is the red box styles */
+   .stability {
+     position: fixed;
+     bottom: 0;
+     left: 0; right: 0;
+     margin: 0 auto 0 auto;
+     width: 50%;
+     background: maroon; color: yellow;
+     border-radius: 1em 1em 0 0;
+     box-shadow: 0 0 1em red;
+     padding: 0.5em 1em;
+     text-align: center;
+	 z-index: 1000;
+   }
+   .stability strong {
+     display: block;
+   }
+   .stability input {
+     -moz-appearance: none; -webkit-appearance: none; margin: 0; 
+     border: 0; padding: 0.25em 0.5em; background: transparent; color: black;
+     position: absolute; top: -0.5em; right: 0; font: 1.25em sans-serif; text-align: center;
+   }
+   .stability input:hover {
+     color: white;
+     text-shadow: 0 0 2px black;
+   }
+   .stability input:active {
+     padding: 0.3em 0.45em 0.2em 0.55em;
+   }
+   .stability :link, .stability :visited,
+   .stability :link:hover, .stability :visited:hover {
+     background: transparent;
+     color: white;
+   }
+</style>
+--
 

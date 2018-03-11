@@ -9,7 +9,8 @@
   <meta content="Bikeshed version ae5d415446a9edf0c07d32303ac1d21767d86d57" name="generator">
   <link href="https://www.w3.org/TR/encoding/" rel="canonical">
   <link href="visualization-colors.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://www.w3.org/encoding/local.css" type="text/css">
+  <link rel="stylesheet" href="local.css" type="text/css">
+  <link rel="stylesheet" href="visualization-colors.css" type="text/css">
 <style>/* style-md-lists */
 
 /* This is a weird hack for me not yet following the commonmark spec
@@ -20,6 +21,42 @@
 [data-md] > :last-child {
     margin-bottom: 0;
 }</style>
+<style>
+/* This is the red box styles */
+   .stability {
+     position: fixed;
+     bottom: 0;
+     left: 0; right: 0;
+     margin: 0 auto 0 auto;
+     width: 50%;
+     background: maroon; color: yellow;
+     border-radius: 1em 1em 0 0;
+     box-shadow: 0 0 1em red;
+     padding: 0.5em 1em;
+     text-align: center;
+	 z-index: 1000;
+   }
+   .stability strong {
+     display: block;
+   }
+   .stability input {
+     -moz-appearance: none; -webkit-appearance: none; margin: 0; 
+     border: 0; padding: 0.25em 0.5em; background: transparent; color: black;
+     position: absolute; top: -0.5em; right: 0; font: 1.25em sans-serif; text-align: center;
+   }
+   .stability input:hover {
+     color: white;
+     text-shadow: 0 0 2px black;
+   }
+   .stability input:active {
+     padding: 0.3em 0.45em 0.2em 0.55em;
+   }
+   .stability :link, .stability :visited,
+   .stability :link:hover, .stability :visited:hover {
+     background: transparent;
+     color: white;
+   }
+</style>
 <style>/* style-selflinks */
 
 .heading, .issue, .note, .example, li, dt {
@@ -285,7 +322,7 @@ pre.highlight, pre > code.highlight { display: block; padding: 1em; margin: .5em
    </div>
 
    <div data-fill-with="warning"></div>
-   <p class="copyright" data-fill-with="copyright"><a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2018 <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="http://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="http://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>). W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply. </p>
+   <p class="copyright" data-fill-with="copyright"><a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2018 <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="http://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>). W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply. </p>
    <hr title="Separator for header">
   </div>
   <div class="p-summary" data-fill-with="abstract">
@@ -300,7 +337,7 @@ pre.highlight, pre > code.highlight { display: block; padding: 1em; margin: .5em
 		Other documents may supersede this document.
 		A list of current W3C publications and the latest revision of this technical report
 		can be found in the <a href="https://www.w3.org/TR/">W3C technical reports index at https://www.w3.org/TR/.</a></em> </p>
-		  <p class="stability" id="wip">The body of this spec is an exact copy of the WHATWG version as of the date of its publication, intended to provide a stable reference for other specifications. For the latest updates, including changes since this snapshot was published, please look at the <a href="http://encoding.spec.whatwg.org/">WHATWG version</a>.
+		  <p class="stability" id="wip">The body of this spec is an exact copy of the WHATWG version as of the date of its publication, intended to provide a stable reference for other specifications. For the latest updates, including changes since this snapshot was published, please look at the <a href="https://encoding.spec.whatwg.org/">WHATWG version</a>.
 <input onclick="closeWarning(this.parentNode)" type="button" value="X"></p>
   <script>
    function closeWarning(element) {
@@ -1197,15 +1234,15 @@ specification, excluding <a data-link-type="dfn" href="#index-single-byte" id="r
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="index-big5">index Big5</dfn> 
       <td><a href="https://encoding.spec.whatwg.org/index-big5.txt">index-big5.txt</a> 
-      <td><a href="big5.html">index Big5 visualization</a> 
-      <td><a href="big5-bmp.html">index Big5 BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/big5.html">index Big5 visualization</a> 
+      <td><a href="https://encoding.spec.whatwg.org/big5-bmp.html">index Big5 BMP coverage</a> 
       <td>This matches the Big5 standard in combination with the
   Hong Kong Supplementary Character Set and other common extensions. 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="index-euc-kr">index EUC-KR</dfn> 
       <td><a href="https://encoding.spec.whatwg.org/index-euc-kr.txt">index-euc-kr.txt</a> 
-      <td><a href="euc-kr.html">index EUC-KR visualization</a> 
-      <td><a href="euc-kr-bmp.html">index EUC-KR BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/euc-kr.html">index EUC-KR visualization</a> 
+      <td><a href="https://encoding.spec.whatwg.org/euc-kr-bmp.html">index EUC-KR BMP coverage</a> 
       <td>This matches the KS X 1001 standard and the Unified Hangul Code, more commonly known together
   as Windows Codepage 949. It covers the Hangul Syllables block of Unicode in its entirety. The
   Hangul block whose top left corner in the visualization is at pointer 9026 is in the Unicode
@@ -1214,8 +1251,8 @@ specification, excluding <a data-link-type="dfn" href="#index-single-byte" id="r
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="index-gb18030">index gb18030</dfn> 
       <td><a href="https://encoding.spec.whatwg.org/index-gb18030.txt">index-gb18030.txt</a> 
-      <td><a href="gb18030.html">index gb18030 visualization</a> 
-      <td><a href="gb18030-bmp.html">index gb18030 BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/gb18030.html">index gb18030 visualization</a> 
+      <td><a href="https://encoding.spec.whatwg.org/gb18030-bmp.html">index gb18030 BMP coverage</a> 
       <td>This matches the GB18030-2005 standard for code points encoded as two bytes, except for
   0xA3 0xA0 which maps to U+3000 to be compatible with deployed content. This index covers the
   CJK Unified Ideographs block of Unicode in its entirety. Entries from that block that are above or
@@ -1230,15 +1267,15 @@ specification, excluding <a data-link-type="dfn" href="#index-single-byte" id="r
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="index-jis0208">index jis0208</dfn> 
       <td><a href="https://encoding.spec.whatwg.org/index-jis0208.txt">index-jis0208.txt</a> 
-      <td><a href="jis0208.html">index jis0208 visualization</a>, <a href="shift_jis.html">Shift_JIS visualization</a> 
-      <td><a href="jis0208-bmp.html">index jis0208 BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/jis0208.html">index jis0208 visualization</a>, <a href="shift_jis.html">Shift_JIS visualization</a> 
+      <td><a href="https://encoding.spec.whatwg.org/jis0208-bmp.html">index jis0208 BMP coverage</a> 
       <td>This is the JIS X 0208 standard including formerly proprietary
   extensions from IBM and NEC. 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="index-jis0212">index jis0212</dfn> 
       <td><a href="https://encoding.spec.whatwg.org/index-jis0212.txt">index-jis0212.txt</a> 
-      <td><a href="jis0212.html">index jis0212 visualization</a> 
-      <td><a href="jis0212-bmp.html">index jis0212 BMP coverage</a> 
+      <td><a href="https://encoding.spec.whatwg.org/jis0212.html">index jis0212 visualization</a> 
+      <td><a href="https://encoding.spec.whatwg.org/jis0212-bmp.html">index jis0212 BMP coverage</a> 
       <td>This is the JIS X 0212 standard. It is only used by the <a data-link-type="dfn" href="#euc-jp-decoder" id="ref-for-euc-jp-decoder">EUC-JP decoder</a> due to lack of widespread support elsewhere. 
      <tr>
       <td><dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="index-iso-2022-jp-katakana">index ISO-2022-JP katakana</dfn> 
